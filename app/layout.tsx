@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Villa Alta Guest House | Cartagena",
-  description: "Luxury Boutique Guest House in Cartagena, Colombia",
-  metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL || 'https://hotelvillaalta.com'), 
+  title: "Villa Alta Guest House",
+  viewport: "width=device-width, initial-scale=1",
 };
 
 export default function RootLayout({
@@ -11,6 +10,7 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  // Layout raíz mínimo, la magia ocurre en [locale]/layout.tsx
+  // Este es el layout raíz obligatorio de Next.js
+  // Solo pasamos el contenido, el HTML real está en app/[locale]/layout.tsx
   return children;
 }
