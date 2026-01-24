@@ -144,48 +144,48 @@
           "/hero-back.png"
         ],
         "services": [
-          "1 CAMA KING-SIZE",
-          "TERRAZA PRIVADA",
-          "VISTA AL MAR",
-          "SISTEMA DE SONIDO PREMIUM",
-          "AIRE ACONDICIONADO",
-          "CAFETERA NESPRESSO",
-          "WIFI DE ALTA VELOCIDAD",
-          "JACUZZI PRIVADO"
+          "1 KING-SIZE BED",
+          "PRIVATE TERRACE",
+          "SEA VIEW",
+          "PREMIUM SOUND SYSTEM",
+          "AIR CONDITIONING",
+          "NESPRESSO COFFEE MACHINE",
+          "HIGH SPEED WIFI",
+          "PRIVATE JACUZZI"
         ]
       },
       {
         "id": "03",
-        "titleTop": "ESTUDIO LOFT",
-        "titleBottom": "CENTRO HISTÓRICO",
-        "description": "Un espacio vanguardista que combina muros de piedra original con diseño contemporáneo. Ideal para mentes creativas que desean sumergirse en la historia de la ciudad con todas las comodidades modernas.",
-        "price": "$280/DÍA",
+        "titleTop": "LOFT STUDIO",
+        "titleBottom": "HISTORICAL CENTER",
+        "description": "An avant-garde space that combines original stone walls with contemporary design. Ideal for creative minds who wish to immerse themselves in the history of the city with all the modern comforts.",
+        "price": "$280/DAY",
         "images": [
           "/hero-back4.png",
           "/hero-back.png",
           "/hero-back3.png"
         ],
         "services": [
-          "DISEÑO DE PLANTA ABIERTA",
-          "MUROS DE PIEDRA ORIGINAL",
-          "COCINA GOURMET",
-          "ZONA DE TRABAJO",
-          "AIRE ACONDICIONADO",
-          "SMART TV 65\"",
-          "WIFI DE ALTA VELOCIDAD",
-          "DUCHA TIPO LLUVIA"
+          "OPEN PLAN DESIGN",
+          "ORIGINAL STONE WALLS",
+          "GOURMET CUISINE",
+          "WORK AREA",
+          "AIR CONDITIONING",
+          "SMART TV 65",
+          "HIGH SPEED WIFI",
+          "RAIN SHOWER"
         ]
       }
     ]
   },
   "footer": {
-    "description": "Una joya arquitectónica en el corazón de Cartagena de Indias, donde el lujo medieval se encuentra con el confort moderno para brindarle una estancia inolvidable.",
-    "navigation": "Navegación",
+    "description": "An architectural jewel in the heart of Cartagena de Indias, where medieval luxury meets modern comfort for an unforgettable stay.",
+    "navigation": "Navigation",
     "suites": "Suites",
-    "gastronomy": "Gastronomía",
-    "contact": "Contacto",
-    "location_label": "Ubicación",
-    "reservations_label": "Reservas",
-    "rights": "Todos los derechos reservados."
+    "gastronomy": "Gastronomy",
+    "contact": "Contact",
+    "location_label": "Location",
+    "reservations_label": "Reservations",
+    "rights": "All rights reserved."
   }
 }

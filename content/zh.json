@@ -1,191 +1,191 @@
 {
   "navbar": {
-    "menu": "Menú",
-    "inicio": "Inicio",
-    "reserva": "Reserva ahora",
-    "close": "Cerrar"
+    "menu": "菜单",
+    "inicio": "首页",
+    "reserva": "立即预订",
+    "close": "关闭"
   },
   "hero": {
-    "title": "Villa Alta Guest House"
+    "title": "阿尔塔别墅宾馆"
   },
   "booking": {
-    "arrival": "Llegada / Salida",
-    "rooms": "Habitaciones",
-    "guests": "Huéspedes",
+    "arrival": "抵达/出发",
+    "rooms": "客房",
+    "guests": "宾客",
     "rooms_options": [
-      "1 Habitación",
-      "2 Habitaciones",
-      "3 Habitaciones",
-      "4+ Habitaciones"
+      "1 个卧室",
+      "2 个卧室",
+      "3 个卧室",
+      "4+ 房间"
     ],
     "guests_options": [
-      "2 Adultos / 0 Niños",
-      "1 Adulto / 0 Niños",
-      "2 Adultos / 1 Niño",
-      "2 Adultos / 2 Niños"
+      "2 名成人/0 名儿童",
+      "1 名成人/0 名儿童",
+      "2 名成人/1 名儿童",
+      "2 名成人/2 名儿童"
     ],
-    "cta": "RESERVAR AHORA"
+    "cta": "立即预订"
   },
   "carousel": {
-    "meta": "Villa Alta Guest House, 2026",
-    "heritage": "Patrimonio Arquitectónico",
-    "discover": "Descubrir más"
+    "meta": "阿尔塔别墅宾馆，2026",
+    "heritage": "建筑遗产",
+    "discover": "了解更多信息"
   },
   "gallery": {
-    "title": "Nuestra Galería",
-    "subtitle": "Cada rincón cuenta una historia de sofisticación y confort.",
-    "view_all": "Ver Galería Completa"
+    "title": "我们的画廊",
+    "subtitle": "每一个角落都诉说着精致与舒适。",
+    "view_all": "查看完整图库"
   },
   "reviews": {
-    "title": "Hotel Boutique en Cartagena: Opiniones",
+    "title": "卡塔赫纳精品酒店：评论",
     "overall_score": "8.8",
-    "overall_label": "Fabuloso",
-    "comments_count": "206 comentarios",
-    "categories_title": "Categorías del Hotel:",
+    "overall_label": "美轮美奂",
+    "comments_count": "206 条评论",
+    "categories_title": "酒店类别",
     "categories": [
       {
-        "label": "Servicio al Cliente",
+        "label": "客户服务",
         "score": 9.4
       },
       {
-        "label": "Instalaciones de Lujo",
+        "label": "豪华设施",
         "score": 8.8
       },
       {
-        "label": "Limpieza Impecable",
+        "label": "无可挑剔的清洁",
         "score": 9.2
       },
       {
-        "label": "Confort y Descanso",
+        "label": "舒适与休息",
         "score": 9.3
       },
       {
-        "label": "Calidad - Precio",
+        "label": "质量 - 价格",
         "score": 8.9
       },
       {
-        "label": "Ubicación en el Centro Histórico",
+        "label": "位于历史中心",
         "score": 9.8
       },
       {
-        "label": "Conectividad WiFi",
+        "label": "WiFi 连接",
         "score": 8.2
       }
     ],
     "testimonials": [
       {
-        "text": "“Ubicación perfecta en el Centro Histórico de Cartagena y una habitación de lujo de 2 pisos espectacular.”",
-        "author": "Pulido",
-        "country": "Colombia"
+        "text": "\"卡塔赫纳历史中心的绝佳位置和壮观的两层豪华客房\"。",
+        "author": "抛光",
+        "country": "哥伦比亚"
       },
       {
-        "text": "“La mejor experiencia en un hotel boutique de Cartagena. Excelente ubicación cerca a la Plaza de Santo Domingo, instalaciones lindas, cómodas y sin ruido.”",
-        "author": "Manuela",
-        "country": "Colombia"
+        "text": "\"卡塔赫纳精品酒店的最佳体验。地理位置优越，靠近圣多明各广场，设施齐全，舒适无噪音\"。",
+        "author": "曼努埃拉",
+        "country": "哥伦比亚"
       },
       {
-        "text": "“Perfecta ubicación para conocer Cartagena. El personal del hotel es muy atento. Desayuno exquisito servido en la habitación tipo loft.”",
-        "author": "Beatriz",
-        "country": "España"
+        "text": "\"是了解卡塔赫纳的绝佳地点。酒店工作人员服务周到。在阁楼风格的房间里供应精致的早餐\"。",
+        "author": "贝亚特丽斯",
+        "country": "西班牙"
       },
       {
-        "text": "“El mejor hotel medieval y moderno en Cartagena. Ubicación 10/10 en el corazón histórico, habitación espaciosa, limpia y un diseño hermosísimo.”",
-        "author": "Katherine",
-        "country": "Colombia"
+        "text": "\"卡塔赫纳最好的中世纪现代酒店。酒店位置优越，位于历史中心地带，房间宽敞干净，设计精美。",
+        "author": "凯瑟琳",
+        "country": "哥伦比亚"
       },
       {
-        "text": "“Precioso hotel colonial en Cartagena de Indias. Instalaciones modernas, muy bien ubicado y trato del personal inmejorable.”",
-        "author": "Saúl",
-        "country": "España"
+        "text": "\"卡塔赫纳德印第亚斯美丽的殖民时期酒店。设施现代，地理位置优越，员工的待遇无与伦比\"。",
+        "author": "扫罗",
+        "country": "西班牙"
       },
       {
-        "text": "“Un viaje inolvidable en este hotel del centro histórico. Diseño rústico-lujoso único en Cartagena, las habitaciones dúplex son una maravilla.”",
-        "author": "Diego",
-        "country": "Colombia"
+        "text": "\"在这家位于历史中心的酒店度过了一段难忘的旅程。卡塔赫纳独一无二的乡村豪华设计，复式客房令人赞叹不已\"。",
+        "author": "迪亚戈",
+        "country": "哥伦比亚"
       }
     ]
   },
   "rooms": {
-    "meta_rooms": "HABITACIONES",
-    "label": "Habitación",
-    "next": "Siguiente",
+    "meta_rooms": "房间",
+    "label": "房间",
+    "next": "下一页",
     "list": [
       {
         "id": "01",
-        "titleTop": "CAMA KING-SIZE",
-        "titleBottom": "VISTA AL LAGO",
-        "description": "Las habitaciones del hotel resort están equipadas con aire acondicionado, escritorio, hervidor de agua, minibar, caja fuerte, TV de pantalla plana, balcón y baño privado con ducha. También se proporcionan toallas y ropa de cama en cada habitación. Se sirve un desayuno buffet todas las mañanas.",
-        "price": "$200/DÍA",
+        "titleTop": "特大号床",
+        "titleBottom": "湖景",
+        "description": "度假酒店的客房均配有空调、书桌、水壶、迷你吧、保险箱、平板电视、阳台和带淋浴的私人浴室。每间客房均提供毛巾和床单。每天早晨供应自助早餐。",
+        "price": "200/天",
         "images": [
           "/hero-back.png",
           "/hero-back3.png",
           "/hero-back4.png"
         ],
         "services": [
-          "1 CAMA KING-SIZE",
-          "BALCÓN",
-          "VISTA AL LAGO",
-          "TV DE PANTALLA PLANA",
-          "AIRE ACONDICIONADO",
-          "MINI-BAR",
-          "WIFI GRATUITO",
-          "BAÑERA INDEPENDIENTE"
+          "1 张特大号床",
+          "露台",
+          "湖景",
+          "平板电视",
+          "空调",
+          "迷你酒吧",
+          "免费 WIFI",
+          "独立式浴缸"
         ]
       },
       {
         "id": "02",
-        "titleTop": "SUITE DELUXE",
-        "titleBottom": "VISTA AL MAR",
-        "description": "Nuestra Suite Deluxe ofrece un espacio amplio y sofisticado con techos altos y ventanales que capturan la brisa caribeña. Diseñada para aquellos que buscan una estancia inolvidable en el corazón de Cartagena.",
-        "price": "$350/DÍA",
+        "titleTop": "豪华套房",
+        "titleBottom": "海景",
+        "description": "我们的豪华套房宽敞而精致，高高的天花板和宽大的窗户让您尽享加勒比海的微风。专为在卡塔赫纳市中心寻求难忘住宿体验的客人而设计。",
+        "price": "350/天",
         "images": [
           "/hero-back3.png",
           "/hero-back4.png",
           "/hero-back.png"
         ],
         "services": [
-          "1 CAMA KING-SIZE",
-          "TERRAZA PRIVADA",
-          "VISTA AL MAR",
-          "SISTEMA DE SONIDO PREMIUM",
-          "AIRE ACONDICIONADO",
-          "CAFETERA NESPRESSO",
-          "WIFI DE ALTA VELOCIDAD",
-          "JACUZZI PRIVADO"
+          "1 张特大号床",
+          "私人露台",
+          "海景",
+          "高级音响系统",
+          "空调",
+          "奈斯派索咖啡机",
+          "高速无线网络",
+          "私人按摩浴缸"
         ]
       },
       {
         "id": "03",
-        "titleTop": "ESTUDIO LOFT",
-        "titleBottom": "CENTRO HISTÓRICO",
-        "description": "Un espacio vanguardista que combina muros de piedra original con diseño contemporáneo. Ideal para mentes creativas que desean sumergirse en la historia de la ciudad con todas las comodidades modernas.",
-        "price": "$280/DÍA",
+        "titleTop": "LOFT STUDIO",
+        "titleBottom": "历史中心",
+        "description": "这是一个将原始石墙与现代设计相结合的前卫空间。对于那些既想沉浸于城市历史，又想享受现代舒适生活的创意人士来说，这里是理想之选。",
+        "price": "280 美元/天",
         "images": [
           "/hero-back4.png",
           "/hero-back.png",
           "/hero-back3.png"
         ],
         "services": [
-          "DISEÑO DE PLANTA ABIERTA",
-          "MUROS DE PIEDRA ORIGINAL",
-          "COCINA GOURMET",
-          "ZONA DE TRABAJO",
-          "AIRE ACONDICIONADO",
-          "SMART TV 65\"",
-          "WIFI DE ALTA VELOCIDAD",
-          "DUCHA TIPO LLUVIA"
+          "开放式设计",
+          "原石墙",
+          "美食",
+          "工作区",
+          "空调",
+          "智能电视 65",
+          "高速无线网络",
+          "雨淋"
         ]
       }
     ]
   },
   "footer": {
-    "description": "Una joya arquitectónica en el corazón de Cartagena de Indias, donde el lujo medieval se encuentra con el confort moderno para brindarle una estancia inolvidable.",
-    "navigation": "Navegación",
-    "suites": "Suites",
-    "gastronomy": "Gastronomía",
-    "contact": "Contacto",
-    "location_label": "Ubicación",
-    "reservations_label": "Reservas",
-    "rights": "Todos los derechos reservados."
+    "description": "卡塔赫纳德印第亚斯市中心的建筑瑰宝，中世纪的奢华与现代的舒适交相辉映，为您带来难忘的住宿体验。",
+    "navigation": "导航",
+    "suites": "套间",
+    "gastronomy": "美食",
+    "contact": "联系方式",
+    "location_label": "地点",
+    "reservations_label": "预订",
+    "rights": "保留所有权利。"
   }
 }

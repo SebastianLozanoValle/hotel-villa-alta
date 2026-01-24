@@ -1,191 +1,191 @@
 {
   "navbar": {
-    "menu": "Menú",
-    "inicio": "Inicio",
-    "reserva": "Reserva ahora",
-    "close": "Cerrar"
+    "menu": "Меню",
+    "inicio": "Главная",
+    "reserva": "Забронировать сейчас",
+    "close": "Закрыть"
   },
   "hero": {
-    "title": "Villa Alta Guest House"
+    "title": "Гостевой дом Villa Alta"
   },
   "booking": {
-    "arrival": "Llegada / Salida",
-    "rooms": "Habitaciones",
-    "guests": "Huéspedes",
+    "arrival": "Прибытие / Отъезд",
+    "rooms": "Номера",
+    "guests": "Гости",
     "rooms_options": [
-      "1 Habitación",
-      "2 Habitaciones",
-      "3 Habitaciones",
-      "4+ Habitaciones"
+      "1 Спальня",
+      "2 спальни",
+      "3 спальни",
+      "4+ комнаты"
     ],
     "guests_options": [
-      "2 Adultos / 0 Niños",
-      "1 Adulto / 0 Niños",
-      "2 Adultos / 1 Niño",
-      "2 Adultos / 2 Niños"
+      "2 взрослых / 0 детей",
+      "1 взрослый / 0 детей",
+      "2 взрослых / 1 ребенок",
+      "2 взрослых / 2 детей"
     ],
-    "cta": "RESERVAR AHORA"
+    "cta": "ЗАБРОНИРОВАТЬ НОМЕР"
   },
   "carousel": {
-    "meta": "Villa Alta Guest House, 2026",
-    "heritage": "Patrimonio Arquitectónico",
-    "discover": "Descubrir más"
+    "meta": "Гостевой дом Villa Alta, 2026",
+    "heritage": "Архитектурное наследие",
+    "discover": "Узнать больше"
   },
   "gallery": {
-    "title": "Nuestra Galería",
-    "subtitle": "Cada rincón cuenta una historia de sofisticación y confort.",
-    "view_all": "Ver Galería Completa"
+    "title": "Наша галерея",
+    "subtitle": "Каждый уголок рассказывает историю изысканности и комфорта.",
+    "view_all": "Смотреть полную галерею"
   },
   "reviews": {
-    "title": "Hotel Boutique en Cartagena: Opiniones",
+    "title": "Бутик-отель в Картахене: отзывы",
     "overall_score": "8.8",
-    "overall_label": "Fabuloso",
-    "comments_count": "206 comentarios",
-    "categories_title": "Categorías del Hotel:",
+    "overall_label": "Сказочный",
+    "comments_count": "206 комментариев",
+    "categories_title": "Категории отеля:",
     "categories": [
       {
-        "label": "Servicio al Cliente",
+        "label": "Обслуживание клиентов",
         "score": 9.4
       },
       {
-        "label": "Instalaciones de Lujo",
+        "label": "Роскошные удобства",
         "score": 8.8
       },
       {
-        "label": "Limpieza Impecable",
+        "label": "Безупречная чистота",
         "score": 9.2
       },
       {
-        "label": "Confort y Descanso",
+        "label": "Комфорт и отдых",
         "score": 9.3
       },
       {
-        "label": "Calidad - Precio",
+        "label": "Качество - Цена",
         "score": 8.9
       },
       {
-        "label": "Ubicación en el Centro Histórico",
+        "label": "Расположение в историческом центре",
         "score": 9.8
       },
       {
-        "label": "Conectividad WiFi",
+        "label": "Возможность подключения WiFi",
         "score": 8.2
       }
     ],
     "testimonials": [
       {
-        "text": "“Ubicación perfecta en el Centro Histórico de Cartagena y una habitación de lujo de 2 pisos espectacular.”",
-        "author": "Pulido",
-        "country": "Colombia"
+        "text": "\"Прекрасное расположение в историческом центре Картахены и впечатляющий 2-этажный номер делюкс\".",
+        "author": "Полировка",
+        "country": "Колумбия"
       },
       {
-        "text": "“La mejor experiencia en un hotel boutique de Cartagena. Excelente ubicación cerca a la Plaza de Santo Domingo, instalaciones lindas, cómodas y sin ruido.”",
-        "author": "Manuela",
-        "country": "Colombia"
+        "text": "\"Лучший опыт проживания в бутик-отеле в Картахене. Отличное расположение рядом с площадью Санто-Доминго, прекрасные удобства, комфорт и отсутствие шума.\"",
+        "author": "Мануэла",
+        "country": "Колумбия"
       },
       {
-        "text": "“Perfecta ubicación para conocer Cartagena. El personal del hotel es muy atento. Desayuno exquisito servido en la habitación tipo loft.”",
-        "author": "Beatriz",
-        "country": "España"
+        "text": "\"Идеальное расположение для знакомства с Картахеной. Персонал отеля очень внимателен. Изысканный завтрак подается в комнате в стиле лофт.\"",
+        "author": "Беатрис",
+        "country": "Испания"
       },
       {
-        "text": "“El mejor hotel medieval y moderno en Cartagena. Ubicación 10/10 en el corazón histórico, habitación espaciosa, limpia y un diseño hermosísimo.”",
-        "author": "Katherine",
-        "country": "Colombia"
+        "text": "\"Лучший средневековый и современный отель в Картахене. Расположение 10/10 в историческом центре, просторный, чистый номер и красивый дизайн.\"",
+        "author": "Кэтрин",
+        "country": "Колумбия"
       },
       {
-        "text": "“Precioso hotel colonial en Cartagena de Indias. Instalaciones modernas, muy bien ubicado y trato del personal inmejorable.”",
-        "author": "Saúl",
-        "country": "España"
+        "text": "\"Прекрасный колониальный отель в Картахене-де-Индиас. Современные удобства, очень удачное расположение и непревзойденное отношение персонала.\"",
+        "author": "Сол",
+        "country": "Испания"
       },
       {
-        "text": "“Un viaje inolvidable en este hotel del centro histórico. Diseño rústico-lujoso único en Cartagena, las habitaciones dúplex son una maravilla.”",
-        "author": "Diego",
-        "country": "Colombia"
+        "text": "\"Незабываемое путешествие в этом отеле в историческом центре. Уникальный для Картахены дизайн в деревенском стиле и роскошь, двухуровневые номера - просто чудо\".",
+        "author": "Диего",
+        "country": "Колумбия"
       }
     ]
   },
   "rooms": {
-    "meta_rooms": "HABITACIONES",
-    "label": "Habitación",
-    "next": "Siguiente",
+    "meta_rooms": "НОМЕРА",
+    "label": "Номер",
+    "next": "Следующий",
     "list": [
       {
         "id": "01",
-        "titleTop": "CAMA KING-SIZE",
-        "titleBottom": "VISTA AL LAGO",
-        "description": "Las habitaciones del hotel resort están equipadas con aire acondicionado, escritorio, hervidor de agua, minibar, caja fuerte, TV de pantalla plana, balcón y baño privado con ducha. También se proporcionan toallas y ropa de cama en cada habitación. Se sirve un desayuno buffet todas las mañanas.",
-        "price": "$200/DÍA",
+        "titleTop": "КРОВАТЬ КОРОЛЕВСКОГО РАЗМЕРА",
+        "titleBottom": "ВИД НА ОЗЕРО",
+        "description": "Номера курортного отеля оснащены кондиционером, письменным столом, чайником, мини-баром, сейфом, телевизором с плоским экраном, балконом и собственной ванной комнатой с душем. Полотенца и постельное белье предоставляются в каждом номере. Каждое утро в отеле сервируется завтрак \"шведский стол\".",
+        "price": "200/ДЕНЬ",
         "images": [
           "/hero-back.png",
           "/hero-back3.png",
           "/hero-back4.png"
         ],
         "services": [
-          "1 CAMA KING-SIZE",
-          "BALCÓN",
-          "VISTA AL LAGO",
-          "TV DE PANTALLA PLANA",
-          "AIRE ACONDICIONADO",
+          "1 КРОВАТЬ РАЗМЕРА \"KING-SIZE",
+          "БАЛКОН",
+          "ВИД НА ОЗЕРО",
+          "ТЕЛЕВИЗОР С ПЛОСКИМ ЭКРАНОМ",
+          "КОНДИЦИОНИРОВАНИЕ ВОЗДУХА",
           "MINI-BAR",
-          "WIFI GRATUITO",
-          "BAÑERA INDEPENDIENTE"
+          "БЕСПЛАТНЫЙ WIFI",
+          "ОТДЕЛЬНО СТОЯЩАЯ ВАННА"
         ]
       },
       {
         "id": "02",
-        "titleTop": "SUITE DELUXE",
-        "titleBottom": "VISTA AL MAR",
-        "description": "Nuestra Suite Deluxe ofrece un espacio amplio y sofisticado con techos altos y ventanales que capturan la brisa caribeña. Diseñada para aquellos que buscan una estancia inolvidable en el corazón de Cartagena.",
-        "price": "$350/DÍA",
+        "titleTop": "НОМЕР ЛЮКС",
+        "titleBottom": "ВИД НА МОРЕ",
+        "description": "Наш люкс предлагает просторное и изысканное пространство с высокими потолками и большими окнами, через которые проникает карибский бриз. Он предназначен для тех, кто ищет незабываемый отдых в самом сердце Картахены.",
+        "price": "350/ДЕНЬ",
         "images": [
           "/hero-back3.png",
           "/hero-back4.png",
           "/hero-back.png"
         ],
         "services": [
-          "1 CAMA KING-SIZE",
-          "TERRAZA PRIVADA",
-          "VISTA AL MAR",
-          "SISTEMA DE SONIDO PREMIUM",
-          "AIRE ACONDICIONADO",
-          "CAFETERA NESPRESSO",
-          "WIFI DE ALTA VELOCIDAD",
-          "JACUZZI PRIVADO"
+          "1 КРОВАТЬ РАЗМЕРА \"KING-SIZE",
+          "СОБСТВЕННАЯ ТЕРРАСА",
+          "ВИД НА МОРЕ",
+          "ЗВУКОВАЯ СИСТЕМА ПРЕМИУМ-КЛАССА",
+          "КОНДИЦИОНИРОВАНИЕ ВОЗДУХА",
+          "КОФЕВАРКА NESPRESSO",
+          "ВЫСОКОСКОРОСТНОЙ WI-FI",
+          "ЧАСТНАЯ ДЖАКУЗИ"
         ]
       },
       {
         "id": "03",
-        "titleTop": "ESTUDIO LOFT",
-        "titleBottom": "CENTRO HISTÓRICO",
-        "description": "Un espacio vanguardista que combina muros de piedra original con diseño contemporáneo. Ideal para mentes creativas que desean sumergirse en la historia de la ciudad con todas las comodidades modernas.",
-        "price": "$280/DÍA",
+        "titleTop": "LOFT STUDIO",
+        "titleBottom": "ИСТОРИЧЕСКИЙ ЦЕНТР",
+        "description": "Авангардное пространство, в котором оригинальные каменные стены сочетаются с современным дизайном. Идеально подходит для творческих людей, которые хотят погрузиться в историю города со всеми современными удобствами.",
+        "price": "$280/ДЕНЬ",
         "images": [
           "/hero-back4.png",
           "/hero-back.png",
           "/hero-back3.png"
         ],
         "services": [
-          "DISEÑO DE PLANTA ABIERTA",
-          "MUROS DE PIEDRA ORIGINAL",
-          "COCINA GOURMET",
-          "ZONA DE TRABAJO",
-          "AIRE ACONDICIONADO",
-          "SMART TV 65\"",
-          "WIFI DE ALTA VELOCIDAD",
-          "DUCHA TIPO LLUVIA"
+          "ОТКРЫТАЯ ПЛАНИРОВКА",
+          "ОРИГИНАЛЬНЫЕ КАМЕННЫЕ СТЕНЫ",
+          "ИЗЫСКАННАЯ КУХНЯ",
+          "РАБОЧАЯ ЗОНА",
+          "КОНДИЦИОНИРОВАНИЕ ВОЗДУХА",
+          "SMART TV 65",
+          "ВЫСОКОСКОРОСТНОЙ WI-FI",
+          "ТРОПИЧЕСКИЙ ДУШ"
         ]
       }
     ]
   },
   "footer": {
-    "description": "Una joya arquitectónica en el corazón de Cartagena de Indias, donde el lujo medieval se encuentra con el confort moderno para brindarle una estancia inolvidable.",
-    "navigation": "Navegación",
-    "suites": "Suites",
-    "gastronomy": "Gastronomía",
-    "contact": "Contacto",
-    "location_label": "Ubicación",
-    "reservations_label": "Reservas",
-    "rights": "Todos los derechos reservados."
+    "description": "Архитектурная жемчужина в самом сердце Картахены-де-Индиас, где средневековая роскошь сочетается с современным комфортом, обеспечивая незабываемый отдых.",
+    "navigation": "Навигация",
+    "suites": "Люксы",
+    "gastronomy": "Гастрономия",
+    "contact": "Связаться с",
+    "location_label": "Расположение",
+    "reservations_label": "Бронирование",
+    "rights": "Все права защищены."
   }
 }

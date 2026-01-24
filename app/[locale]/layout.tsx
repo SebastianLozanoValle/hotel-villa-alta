@@ -62,7 +62,14 @@ export default async function LocaleLayout({
     try {
       const dictPath = path.join(process.cwd(), 'content', `${locale}.json`);
       if (fs.existsSync(dictPath)) {
-        dictionary = JSON.parse(fs.readFileSync(dictPath, 'utf8'));
+        const fileContent = fs.readFileSync(dictPath, 'utf8');
+        dictionary = JSON.parse(fileContent);
+        // Verificar que no esté vacío o sea un objeto simple sin traducciones reales
+        if (Object.keys(dictionary).length === 0) {
+          console.warn(`Dictionary for ${locale} is empty.`);
+        }
+      } else {
+        console.warn(`Dictionary file for ${locale} not found at ${dictPath}`);
       }
     } catch (error) {
       console.error(`Error loading dictionary for ${locale}:`, error);

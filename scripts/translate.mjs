@@ -30,10 +30,13 @@ const contentDir = path.join(__dirname, '../content');
 const sourceFile = path.join(contentDir, 'es.json');
 const esContent = JSON.parse(fs.readFileSync(sourceFile, 'utf8'));
 
-async function translateText(text, targetLang) {
+async function translateText(text, targetLang, retryCount = 0) {
   if (!text || typeof text !== 'string' || text.trim() === '' || !isNaN(text)) return text;
   
-  // No traducir si parece un ID o código corto
+  // Ignorar rutas, imágenes, etc.
+  if (text.startsWith('/') || text.includes('.png') || text.includes('.jpg')) return text;
+  
+  // Ignorar IDs cortos
   if (text.length <= 2 && /^[0-9A-Z]+$/.test(text)) return text;
 
   const targetLangCode = targetLang.toUpperCase();
@@ -52,6 +55,13 @@ async function translateText(text, targetLang) {
         source_lang: sourceLangCode,
       }),
     });
+
+    if (response.status === 429) {
+      const waitTime = (retryCount + 1) * 2000;
+      console.warn(`Rate limit alcanzado. Esperando ${waitTime}ms...`);
+      await new Promise(resolve => setTimeout(resolve, waitTime));
+      return translateText(text, targetLang, retryCount + 1);
+    }
 
     if (!response.ok) {
       throw new Error(`DeepL API error: ${response.status}`);
@@ -72,10 +82,16 @@ async function translateObject(obj, targetLang) {
     if (typeof value === 'object' && value !== null) {
       result[key] = await translateObject(value, targetLang);
     } else if (typeof value === 'string') {
+      // No traducir si es una ruta
+      if (value.startsWith('/') || value.includes('.png')) {
+        result[key] = value;
+        continue;
+      }
+      
       console.log(`Traduciendo: ${value.substring(0, 30)}${value.length > 30 ? '...' : ''} -> ${targetLang}`);
       result[key] = await translateText(value, targetLang);
-      // Pequeño delay para no saturar la API
-      await new Promise(resolve => setTimeout(resolve, 100));
+      // Delay base para evitar 429
+      await new Promise(resolve => setTimeout(resolve, 500));
     } else {
       result[key] = value;
     }
@@ -88,11 +104,9 @@ async function main() {
   for (const locale of locales) {
     const targetFile = path.join(contentDir, `${locale}.json`);
     
-    if (fs.existsSync(targetFile)) {
-      console.log(`Archivo para ${locale} ya existe, saltando...`);
-      continue;
-    }
-
+    // Si el archivo existe pero tiene textos en español (porque falló antes), lo borramos para reintentar
+    // Para simplificar, si vas a correr esto, borra los archivos primero.
+    
     console.log(`\nGenerando traducciones para: ${locale.toUpperCase()}`);
     const translatedContent = await translateObject(esContent, locale);
     

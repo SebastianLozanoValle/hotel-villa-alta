@@ -1,191 +1,191 @@
 {
   "navbar": {
-    "menu": "Menú",
-    "inicio": "Inicio",
-    "reserva": "Reserva ahora",
-    "close": "Cerrar"
+    "menu": "Menu",
+    "inicio": "Casa",
+    "reserva": "Prenota ora",
+    "close": "Chiudere"
   },
   "hero": {
     "title": "Villa Alta Guest House"
   },
   "booking": {
-    "arrival": "Llegada / Salida",
-    "rooms": "Habitaciones",
-    "guests": "Huéspedes",
+    "arrival": "Arrivo / Partenza",
+    "rooms": "Camere",
+    "guests": "Ospiti",
     "rooms_options": [
-      "1 Habitación",
-      "2 Habitaciones",
-      "3 Habitaciones",
-      "4+ Habitaciones"
+      "1 Camera da letto",
+      "2 Camere da letto",
+      "3 Camere da letto",
+      "4+ Camere"
     ],
     "guests_options": [
-      "2 Adultos / 0 Niños",
-      "1 Adulto / 0 Niños",
-      "2 Adultos / 1 Niño",
-      "2 Adultos / 2 Niños"
+      "2 adulti / 0 bambini",
+      "1 adulto / 0 bambini",
+      "2 adulti / 1 bambino",
+      "2 adulti / 2 bambini"
     ],
-    "cta": "RESERVAR AHORA"
+    "cta": "PRENOTA ORA"
   },
   "carousel": {
     "meta": "Villa Alta Guest House, 2026",
-    "heritage": "Patrimonio Arquitectónico",
-    "discover": "Descubrir más"
+    "heritage": "Patrimonio architettonico",
+    "discover": "Per saperne di più"
   },
   "gallery": {
-    "title": "Nuestra Galería",
-    "subtitle": "Cada rincón cuenta una historia de sofisticación y confort.",
-    "view_all": "Ver Galería Completa"
+    "title": "La nostra galleria",
+    "subtitle": "Ogni angolo racconta una storia di raffinatezza e comfort.",
+    "view_all": "Visualizza la galleria completa"
   },
   "reviews": {
-    "title": "Hotel Boutique en Cartagena: Opiniones",
+    "title": "Hotel di charme a Cartagena: recensioni",
     "overall_score": "8.8",
-    "overall_label": "Fabuloso",
-    "comments_count": "206 comentarios",
-    "categories_title": "Categorías del Hotel:",
+    "overall_label": "Favoloso",
+    "comments_count": "206 commenti",
+    "categories_title": "Categorie di hotel:",
     "categories": [
       {
-        "label": "Servicio al Cliente",
+        "label": "Servizio clienti",
         "score": 9.4
       },
       {
-        "label": "Instalaciones de Lujo",
+        "label": "Strutture di lusso",
         "score": 8.8
       },
       {
-        "label": "Limpieza Impecable",
+        "label": "Pulizia impeccabile",
         "score": 9.2
       },
       {
-        "label": "Confort y Descanso",
+        "label": "Comfort e riposo",
         "score": 9.3
       },
       {
-        "label": "Calidad - Precio",
+        "label": "Qualità - Prezzo",
         "score": 8.9
       },
       {
-        "label": "Ubicación en el Centro Histórico",
+        "label": "Posizione nel centro storico",
         "score": 9.8
       },
       {
-        "label": "Conectividad WiFi",
+        "label": "Connettività WiFi",
         "score": 8.2
       }
     ],
     "testimonials": [
       {
-        "text": "“Ubicación perfecta en el Centro Histórico de Cartagena y una habitación de lujo de 2 pisos espectacular.”",
-        "author": "Pulido",
+        "text": "\"Posizione perfetta nel centro storico di Cartagena e una spettacolare camera deluxe a 2 piani.\"",
+        "author": "Lucidatura",
         "country": "Colombia"
       },
       {
-        "text": "“La mejor experiencia en un hotel boutique de Cartagena. Excelente ubicación cerca a la Plaza de Santo Domingo, instalaciones lindas, cómodas y sin ruido.”",
+        "text": "\"La migliore esperienza in un hotel boutique a Cartagena. Ottima posizione vicino alla Plaza de Santo Domingo, belle strutture, confortevoli e nessun rumore.\"",
         "author": "Manuela",
         "country": "Colombia"
       },
       {
-        "text": "“Perfecta ubicación para conocer Cartagena. El personal del hotel es muy atento. Desayuno exquisito servido en la habitación tipo loft.”",
+        "text": "\"Posizione perfetta per conoscere Cartagena. Il personale dell'hotel è molto attento. Squisita la colazione servita nella sala in stile loft\".",
         "author": "Beatriz",
-        "country": "España"
+        "country": "Spagna"
       },
       {
-        "text": "“El mejor hotel medieval y moderno en Cartagena. Ubicación 10/10 en el corazón histórico, habitación espaciosa, limpia y un diseño hermosísimo.”",
+        "text": "\"Il miglior hotel medievale e moderno di Cartagena. Posizione 10/10 nel cuore storico, camera spaziosa, pulita e dal bel design.\"",
         "author": "Katherine",
         "country": "Colombia"
       },
       {
-        "text": "“Precioso hotel colonial en Cartagena de Indias. Instalaciones modernas, muy bien ubicado y trato del personal inmejorable.”",
-        "author": "Saúl",
-        "country": "España"
+        "text": "\"Bellissimo hotel coloniale a Cartagena de Indias. Strutture moderne, molto ben posizionate e il trattamento del personale è imbattibile.\"",
+        "author": "Saul",
+        "country": "Spagna"
       },
       {
-        "text": "“Un viaje inolvidable en este hotel del centro histórico. Diseño rústico-lujoso único en Cartagena, las habitaciones dúplex son una maravilla.”",
+        "text": "\"Un viaggio indimenticabile in questo hotel del centro storico. Design rustico-lussuoso unico a Cartagena, le camere duplex sono una meraviglia\".",
         "author": "Diego",
         "country": "Colombia"
       }
     ]
   },
   "rooms": {
-    "meta_rooms": "HABITACIONES",
-    "label": "Habitación",
-    "next": "Siguiente",
+    "meta_rooms": "CAMERE",
+    "label": "La camera",
+    "next": "Avanti",
     "list": [
       {
         "id": "01",
-        "titleTop": "CAMA KING-SIZE",
-        "titleBottom": "VISTA AL LAGO",
-        "description": "Las habitaciones del hotel resort están equipadas con aire acondicionado, escritorio, hervidor de agua, minibar, caja fuerte, TV de pantalla plana, balcón y baño privado con ducha. También se proporcionan toallas y ropa de cama en cada habitación. Se sirve un desayuno buffet todas las mañanas.",
-        "price": "$200/DÍA",
+        "titleTop": "LETTO KING-SIZE",
+        "titleBottom": "VISTA LAGO",
+        "description": "Le camere dell'hotel resort sono dotate di aria condizionata, scrivania, bollitore, minibar, cassaforte, TV a schermo piatto, balcone e bagno privato con doccia. Ogni camera dispone di asciugamani e biancheria da letto. Ogni mattina viene servita una colazione a buffet.",
+        "price": "200/GIORNO",
         "images": [
           "/hero-back.png",
           "/hero-back3.png",
           "/hero-back4.png"
         ],
         "services": [
-          "1 CAMA KING-SIZE",
-          "BALCÓN",
-          "VISTA AL LAGO",
-          "TV DE PANTALLA PLANA",
-          "AIRE ACONDICIONADO",
+          "1 LETTO KING SIZE",
+          "BALCONE",
+          "VISTA LAGO",
+          "TV A SCHERMO PIATTO",
+          "ARIA CONDIZIONATA",
           "MINI-BAR",
           "WIFI GRATUITO",
-          "BAÑERA INDEPENDIENTE"
+          "VASCA FREESTANDING"
         ]
       },
       {
         "id": "02",
         "titleTop": "SUITE DELUXE",
-        "titleBottom": "VISTA AL MAR",
-        "description": "Nuestra Suite Deluxe ofrece un espacio amplio y sofisticado con techos altos y ventanales que capturan la brisa caribeña. Diseñada para aquellos que buscan una estancia inolvidable en el corazón de Cartagena.",
-        "price": "$350/DÍA",
+        "titleBottom": "VISTA MARE",
+        "description": "La nostra Suite Deluxe offre uno spazio spazioso e sofisticato con soffitti alti e grandi finestre che catturano la brezza dei Caraibi. Pensata per chi cerca un soggiorno indimenticabile nel cuore di Cartagena.",
+        "price": "350/GIORNO",
         "images": [
           "/hero-back3.png",
           "/hero-back4.png",
           "/hero-back.png"
         ],
         "services": [
-          "1 CAMA KING-SIZE",
-          "TERRAZA PRIVADA",
-          "VISTA AL MAR",
-          "SISTEMA DE SONIDO PREMIUM",
-          "AIRE ACONDICIONADO",
-          "CAFETERA NESPRESSO",
-          "WIFI DE ALTA VELOCIDAD",
-          "JACUZZI PRIVADO"
+          "1 LETTO KING SIZE",
+          "TERRAZZA PRIVATA",
+          "VISTA MARE",
+          "SISTEMA AUDIO PREMIUM",
+          "ARIA CONDIZIONATA",
+          "MACCHINA DA CAFFÈ NESPRESSO",
+          "WIFI AD ALTA VELOCITÀ",
+          "VASCA IDROMASSAGGIO PRIVATA"
         ]
       },
       {
         "id": "03",
-        "titleTop": "ESTUDIO LOFT",
-        "titleBottom": "CENTRO HISTÓRICO",
-        "description": "Un espacio vanguardista que combina muros de piedra original con diseño contemporáneo. Ideal para mentes creativas que desean sumergirse en la historia de la ciudad con todas las comodidades modernas.",
-        "price": "$280/DÍA",
+        "titleTop": "STUDIO LOFT",
+        "titleBottom": "CENTRO STORICO",
+        "description": "Uno spazio all'avanguardia che combina pareti in pietra originali e design contemporaneo. Ideale per le menti creative che desiderano immergersi nella storia della città con tutti i comfort moderni.",
+        "price": "$280/GIORNO",
         "images": [
           "/hero-back4.png",
           "/hero-back.png",
           "/hero-back3.png"
         ],
         "services": [
-          "DISEÑO DE PLANTA ABIERTA",
-          "MUROS DE PIEDRA ORIGINAL",
-          "COCINA GOURMET",
-          "ZONA DE TRABAJO",
-          "AIRE ACONDICIONADO",
-          "SMART TV 65\"",
-          "WIFI DE ALTA VELOCIDAD",
-          "DUCHA TIPO LLUVIA"
+          "DESIGN A PIANTA APERTA",
+          "MURI IN PIETRA ORIGINALI",
+          "CUCINA GOURMET",
+          "AREA DI LAVORO",
+          "ARIA CONDIZIONATA",
+          "SMART TV 65",
+          "WIFI AD ALTA VELOCITÀ",
+          "DOCCIA DI PIOGGIA"
         ]
       }
     ]
   },
   "footer": {
-    "description": "Una joya arquitectónica en el corazón de Cartagena de Indias, donde el lujo medieval se encuentra con el confort moderno para brindarle una estancia inolvidable.",
-    "navigation": "Navegación",
-    "suites": "Suites",
-    "gastronomy": "Gastronomía",
-    "contact": "Contacto",
-    "location_label": "Ubicación",
-    "reservations_label": "Reservas",
-    "rights": "Todos los derechos reservados."
+    "description": "Un gioiello architettonico nel cuore di Cartagena de Indias, dove il lusso medievale incontra il comfort moderno per un soggiorno indimenticabile.",
+    "navigation": "Navigazione",
+    "suites": "Suite",
+    "gastronomy": "Gastronomia",
+    "contact": "Contatto",
+    "location_label": "Posizione",
+    "reservations_label": "Prenotazioni",
+    "rights": "Tutti i diritti riservati."
   }
 }

@@ -1,191 +1,191 @@
 {
   "navbar": {
-    "menu": "Menú",
-    "inicio": "Inicio",
-    "reserva": "Reserva ahora",
-    "close": "Cerrar"
+    "menu": "メニュー",
+    "inicio": "ホーム",
+    "reserva": "予約する",
+    "close": "閉じる"
   },
   "hero": {
-    "title": "Villa Alta Guest House"
+    "title": "ヴィラ・アルタ・ゲストハウス"
   },
   "booking": {
-    "arrival": "Llegada / Salida",
-    "rooms": "Habitaciones",
-    "guests": "Huéspedes",
+    "arrival": "到着/出発",
+    "rooms": "客室",
+    "guests": "ゲスト",
     "rooms_options": [
-      "1 Habitación",
-      "2 Habitaciones",
-      "3 Habitaciones",
-      "4+ Habitaciones"
+      "1ベッドルーム",
+      "2ベッドルーム",
+      "3ベッドルーム",
+      "4部屋以上"
     ],
     "guests_options": [
-      "2 Adultos / 0 Niños",
-      "1 Adulto / 0 Niños",
-      "2 Adultos / 1 Niño",
-      "2 Adultos / 2 Niños"
+      "大人2名 / 子供0名",
+      "大人1名 / 子供0名",
+      "大人2名 / 子供1名",
+      "大人2名 / 子供2名"
     ],
-    "cta": "RESERVAR AHORA"
+    "cta": "今すぐ予約"
   },
   "carousel": {
-    "meta": "Villa Alta Guest House, 2026",
-    "heritage": "Patrimonio Arquitectónico",
-    "discover": "Descubrir más"
+    "meta": "ヴィラ・アルタ・ゲストハウス、2026年",
+    "heritage": "建築遺産",
+    "discover": "詳細はこちら"
   },
   "gallery": {
-    "title": "Nuestra Galería",
-    "subtitle": "Cada rincón cuenta una historia de sofisticación y confort.",
-    "view_all": "Ver Galería Completa"
+    "title": "ギャラリー",
+    "subtitle": "隅々まで洗練と快適さを物語る。",
+    "view_all": "ギャラリーを見る"
   },
   "reviews": {
-    "title": "Hotel Boutique en Cartagena: Opiniones",
+    "title": "カルタヘナのブティックホテル: 口コミ",
     "overall_score": "8.8",
-    "overall_label": "Fabuloso",
-    "comments_count": "206 comentarios",
-    "categories_title": "Categorías del Hotel:",
+    "overall_label": "素晴らしい",
+    "comments_count": "206件のコメント",
+    "categories_title": "ホテルのカテゴリー",
     "categories": [
       {
-        "label": "Servicio al Cliente",
+        "label": "カスタマーサービス",
         "score": 9.4
       },
       {
-        "label": "Instalaciones de Lujo",
+        "label": "豪華設備",
         "score": 8.8
       },
       {
-        "label": "Limpieza Impecable",
+        "label": "完璧な清潔さ",
         "score": 9.2
       },
       {
-        "label": "Confort y Descanso",
+        "label": "快適さと休息",
         "score": 9.3
       },
       {
-        "label": "Calidad - Precio",
+        "label": "品質 - 価格",
         "score": 8.9
       },
       {
-        "label": "Ubicación en el Centro Histórico",
+        "label": "歴史地区のロケーション",
         "score": 9.8
       },
       {
-        "label": "Conectividad WiFi",
+        "label": "WiFi接続",
         "score": 8.2
       }
     ],
     "testimonials": [
       {
-        "text": "“Ubicación perfecta en el Centro Histórico de Cartagena y una habitación de lujo de 2 pisos espectacular.”",
-        "author": "Pulido",
-        "country": "Colombia"
+        "text": "\"カルタヘナ歴史地区の完璧な立地と2階建ての壮大なデラックスルーム\"",
+        "author": "研磨",
+        "country": "コロンビア"
       },
       {
-        "text": "“La mejor experiencia en un hotel boutique de Cartagena. Excelente ubicación cerca a la Plaza de Santo Domingo, instalaciones lindas, cómodas y sin ruido.”",
-        "author": "Manuela",
-        "country": "Colombia"
+        "text": "\"カルタヘナのブティックホテルで最高の経験。サント・ドミンゴ広場に近い素晴らしいロケーション、素敵な設備、快適で騒音もなかった。\"",
+        "author": "マヌエラ",
+        "country": "コロンビア"
       },
       {
-        "text": "“Perfecta ubicación para conocer Cartagena. El personal del hotel es muy atento. Desayuno exquisito servido en la habitación tipo loft.”",
-        "author": "Beatriz",
-        "country": "España"
+        "text": "\"カルタヘナを知るには完璧なロケーション。ホテルのスタッフはとても気配りができる。ロフトスタイルの部屋で食べる朝食は最高です。\"",
+        "author": "ベアトリス",
+        "country": "スペイン"
       },
       {
-        "text": "“El mejor hotel medieval y moderno en Cartagena. Ubicación 10/10 en el corazón histórico, habitación espaciosa, limpia y un diseño hermosísimo.”",
-        "author": "Katherine",
-        "country": "Colombia"
+        "text": "\"カルタヘナで最高の中世的でモダンなホテル。歴史的中心部という10/10のロケーション、広くて清潔な部屋、美しいデザイン。\"",
+        "author": "キャサリン",
+        "country": "コロンビア"
       },
       {
-        "text": "“Precioso hotel colonial en Cartagena de Indias. Instalaciones modernas, muy bien ubicado y trato del personal inmejorable.”",
-        "author": "Saúl",
-        "country": "España"
+        "text": "「カルタヘナ・デ・インディアスの美しいコロニアルホテル。近代的な設備で、立地がとてもよく、スタッフの待遇も最高です。\"",
+        "author": "ソール",
+        "country": "スペイン"
       },
       {
-        "text": "“Un viaje inolvidable en este hotel del centro histórico. Diseño rústico-lujoso único en Cartagena, las habitaciones dúplex son una maravilla.”",
-        "author": "Diego",
-        "country": "Colombia"
+        "text": "\"歴史的中心地にあるこのホテルでの忘れられない旅。カルタヘナ独特の素朴で豪華なデザイン、デュプレックスルームは驚嘆に値する。\"",
+        "author": "ディエゴ",
+        "country": "コロンビア"
       }
     ]
   },
   "rooms": {
-    "meta_rooms": "HABITACIONES",
-    "label": "Habitación",
-    "next": "Siguiente",
+    "meta_rooms": "ルーム",
+    "label": "部屋",
+    "next": "次のページ",
     "list": [
       {
         "id": "01",
-        "titleTop": "CAMA KING-SIZE",
-        "titleBottom": "VISTA AL LAGO",
-        "description": "Las habitaciones del hotel resort están equipadas con aire acondicionado, escritorio, hervidor de agua, minibar, caja fuerte, TV de pantalla plana, balcón y baño privado con ducha. También se proporcionan toallas y ropa de cama en cada habitación. Se sirve un desayuno buffet todas las mañanas.",
-        "price": "$200/DÍA",
+        "titleTop": "キングサイズ・ベッド",
+        "titleBottom": "レイク・ビュー",
+        "description": "リゾートホテルの客室には、エアコン、デスク、ポット、ミニバー、セーフティボックス、薄型テレビ、バルコニー、専用バスルーム（シャワー付）が備わっています。タオルとベッドリネンは各部屋に用意されています。ビュッフェ式朝食を毎朝提供している。",
+        "price": "200/日",
         "images": [
           "/hero-back.png",
           "/hero-back3.png",
           "/hero-back4.png"
         ],
         "services": [
-          "1 CAMA KING-SIZE",
-          "BALCÓN",
-          "VISTA AL LAGO",
-          "TV DE PANTALLA PLANA",
-          "AIRE ACONDICIONADO",
-          "MINI-BAR",
-          "WIFI GRATUITO",
-          "BAÑERA INDEPENDIENTE"
+          "キングサイズベッド1台",
+          "バルコニー",
+          "レイク・ビュー",
+          "フラットスクリーンテレビ",
+          "空調",
+          "ミニバー",
+          "無料WIFI",
+          "バスタブ"
         ]
       },
       {
         "id": "02",
-        "titleTop": "SUITE DELUXE",
-        "titleBottom": "VISTA AL MAR",
-        "description": "Nuestra Suite Deluxe ofrece un espacio amplio y sofisticado con techos altos y ventanales que capturan la brisa caribeña. Diseñada para aquellos que buscan una estancia inolvidable en el corazón de Cartagena.",
-        "price": "$350/DÍA",
+        "titleTop": "デラックス・スイート",
+        "titleBottom": "シー・ビュー",
+        "description": "当ホテルのデラックス・スイートは、カリブ海のそよ風を感じられる高い天井と大きな窓のある、広々とした洗練された空間です。カルタヘナの中心で忘れられない滞在をお求めの方のためにデザインされています。",
+        "price": "350/日",
         "images": [
           "/hero-back3.png",
           "/hero-back4.png",
           "/hero-back.png"
         ],
         "services": [
-          "1 CAMA KING-SIZE",
-          "TERRAZA PRIVADA",
-          "VISTA AL MAR",
-          "SISTEMA DE SONIDO PREMIUM",
-          "AIRE ACONDICIONADO",
-          "CAFETERA NESPRESSO",
-          "WIFI DE ALTA VELOCIDAD",
-          "JACUZZI PRIVADO"
+          "キングサイズベッド1台",
+          "プライベートテラス",
+          "シー・ビュー",
+          "プレミアム・サウンド・システム",
+          "空調",
+          "ネスプレッソコーヒーマシン",
+          "高速無線LAN",
+          "プライベート・ジャグジー"
         ]
       },
       {
         "id": "03",
-        "titleTop": "ESTUDIO LOFT",
-        "titleBottom": "CENTRO HISTÓRICO",
-        "description": "Un espacio vanguardista que combina muros de piedra original con diseño contemporáneo. Ideal para mentes creativas que desean sumergirse en la historia de la ciudad con todas las comodidades modernas.",
-        "price": "$280/DÍA",
+        "titleTop": "ロフト・スタジオ",
+        "titleBottom": "歴史地区",
+        "description": "オリジナルの石壁と現代的なデザインが融合した前衛的な空間。街の歴史に浸りながら、現代的な快適さを求めるクリエイティブな方に最適です。",
+        "price": "1日$280",
         "images": [
           "/hero-back4.png",
           "/hero-back.png",
           "/hero-back3.png"
         ],
         "services": [
-          "DISEÑO DE PLANTA ABIERTA",
-          "MUROS DE PIEDRA ORIGINAL",
-          "COCINA GOURMET",
-          "ZONA DE TRABAJO",
-          "AIRE ACONDICIONADO",
-          "SMART TV 65\"",
-          "WIFI DE ALTA VELOCIDAD",
-          "DUCHA TIPO LLUVIA"
+          "オープン・プラン・デザイン",
+          "オリジナル石壁",
+          "グルメ料理",
+          "作業エリア",
+          "空調",
+          "SMART TV 65",
+          "高速無線LAN",
+          "レインシャワー"
         ]
       }
     ]
   },
   "footer": {
-    "description": "Una joya arquitectónica en el corazón de Cartagena de Indias, donde el lujo medieval se encuentra con el confort moderno para brindarle una estancia inolvidable.",
-    "navigation": "Navegación",
-    "suites": "Suites",
-    "gastronomy": "Gastronomía",
-    "contact": "Contacto",
-    "location_label": "Ubicación",
-    "reservations_label": "Reservas",
-    "rights": "Todos los derechos reservados."
+    "description": "カルタヘナ・デ・インディアスの中心にある建築の宝石。中世の豪華さと現代の快適さが融合し、忘れられない滞在をお約束します。",
+    "navigation": "ナビゲーション",
+    "suites": "スイートルーム",
+    "gastronomy": "ガストロノミー",
+    "contact": "連絡先",
+    "location_label": "所在地",
+    "reservations_label": "ご予約",
+    "rights": "無断転載を禁じます。"
   }
 }

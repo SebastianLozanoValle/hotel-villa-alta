@@ -48,7 +48,7 @@ export function LanguageProvider({
   const [language, setLanguageState] = useState<Locale>(initialLocale || defaultLocale);
   const [isTranslating, setIsTranslating] = useState(false);
   const [rawDictionary, setRawDictionary] = useState<any>(initialDictionary || {});
-  const [isReady, setIsReady] = useState(!!initialDictionary || initialLocale === 'es');
+  const [isReady, setIsReady] = useState(initialLocale === 'es' || (!!initialDictionary && Object.keys(initialDictionary).length > 0));
 
   // Construir mapa de traducción Español -> Idioma Objetivo
   const translationMap = useMemo(() => {
@@ -71,27 +71,31 @@ export function LanguageProvider({
 
   // Cargar idioma y diccionario (solo si no se pasaron inicialmente)
   useEffect(() => {
-    if (initialLocale && initialDictionary) return;
-
-    const pathLocale = window.location.pathname.split('/')[1];
-    let currentLocale = initialLocale || defaultLocale;
-    
-    if (!initialLocale) {
-      if (pathLocale && pathLocale !== 'api' && pathLocale !== '_next' && locales.includes(pathLocale as Locale)) {
-        currentLocale = pathLocale as Locale;
-      } else {
-        const savedLang = localStorage.getItem('language') as Locale;
-        if (savedLang && locales.includes(savedLang)) {
-          currentLocale = savedLang;
-        }
-      }
-      setLanguageState(currentLocale);
+    // Si ya tenemos el diccionario (desde el servidor), marcar como listo
+    if (initialDictionary && Object.keys(initialDictionary).length > 0) {
+      setIsReady(true);
+      return;
     }
 
+    if (initialLocale === 'es') {
+      setIsReady(true);
+      return;
+    }
+
+    const pathLocale = window.location.pathname.split('/')[1];
+    let currentLocale = initialLocale || (locales.includes(pathLocale as Locale) ? pathLocale as Locale : null);
+    
+    if (!currentLocale) {
+      const savedLang = localStorage.getItem('language') as Locale;
+      currentLocale = (savedLang && locales.includes(savedLang)) ? savedLang : defaultLocale;
+    }
+
+    setLanguageState(currentLocale as Locale);
     localStorage.setItem('language', currentLocale);
 
-    // Cargar diccionario estático si no se pasó inicialmente
-    if (currentLocale !== 'es' && (!initialDictionary || Object.keys(initialDictionary).length === 0)) {
+    if (currentLocale === 'es') {
+      setIsReady(true);
+    } else {
       import(`@/content/${currentLocale}.json`)
         .then(dict => {
           setRawDictionary(dict.default);
@@ -101,8 +105,6 @@ export function LanguageProvider({
           console.error(`Error cargando diccionario ${currentLocale}:`, err);
           setIsReady(true);
         });
-    } else {
-      setIsReady(true);
     }
   }, [initialLocale, initialDictionary]);
 
