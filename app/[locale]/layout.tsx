@@ -32,10 +32,36 @@ const sfPro = localFont({
   variable: "--font-sf-pro",
 });
 
-export const metadata: Metadata = {
-  title: "Villa Alta Guest House | Cartagena",
-  description: "Hotel Boutique de Lujo en el corazón de Cartagena, Colombia. Experiencia exclusiva y confort inigualable.",
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  
+  const translations: Record<string, any> = {
+    es: {
+      title: "Villa Alta Guest House | Cartagena",
+      description: "Hotel Boutique de Lujo en el corazón de Cartagena, Colombia. Experiencia exclusiva y confort inigualable."
+    },
+    en: {
+      title: "Villa Alta Guest House | Cartagena",
+      description: "Boutique Luxury Guest House in the heart of Cartagena, Colombia. Exclusive experience and unparalleled comfort."
+    },
+    ru: {
+      title: "Гостевой дом Villa Alta | Картахена",
+      description: "Роскошный бутик-отель в самом сердце Картахены, Колумбия. Эксклюзивный опыт и непревзойденный комфорт."
+    }
+    // ... se podrían añadir más o leer de un archivo específico de SEO
+  };
+
+  const t = translations[locale] || translations.es;
+
+  return {
+    title: t.title,
+    description: t.description,
+  };
+}
 
 export const viewport: Viewport = {
   width: "device-width",

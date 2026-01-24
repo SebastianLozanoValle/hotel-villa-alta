@@ -59,8 +59,8 @@ const Navbar = ({ content }: NavbarProps) => {
             <Link href="/" className='text-lg font-source hover:opacity-70 transition-opacity font-bold text-accent-rose'>
               <TranslatedText>{content.reserva}</TranslatedText>
             </Link>
-            <LanguageSelector />
           </div>
+          <LanguageSelector />
         </div>
       </nav>
     </div>
