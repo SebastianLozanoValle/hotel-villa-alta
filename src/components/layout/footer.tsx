@@ -47,7 +47,7 @@ const Footer = ({ content }: FooterProps) => {
           </div>
           <p className="font-source text-sm opacity-60 leading-relaxed italic">
             {content.footer.description}
-          </p>
+          </p>setup
           <div className="flex gap-8 pt-4">
             <a href="#" className="text-xs font-source tracking-[0.2em] uppercase hover:opacity-50 transition-opacity">Instagram</a>
             <a href="#" className="text-xs font-source tracking-[0.2em] uppercase hover:opacity-50 transition-opacity">Facebook</a>
