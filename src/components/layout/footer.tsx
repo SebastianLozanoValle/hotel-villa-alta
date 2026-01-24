@@ -40,14 +40,14 @@ const Footer = ({ content }: FooterProps) => {
       <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 lg:px-20 py-20 flex flex-col md:flex-row justify-between gap-16 md:gap-8">
         
                {/* Columna 1: Branding y Descripción */}
-               <div className="flex flex-col gap-8 max-w-[400px]">
-                 <div className="flex flex-col">
-                   <h2 className="text-3xl font-prata tracking-wider leading-none">Villa Alta</h2>
-                   <span className="text-xs font-source tracking-[0.4em] uppercase opacity-60 mt-2">Guest House</span>
-                 </div>
-                 <p className="font-source text-sm opacity-60 leading-relaxed italic">
-                   {content.footer.description}
-                 </p>
+        <div className="flex flex-col gap-8 max-w-[400px]">
+          <div className="flex flex-col">
+            <h2 className="text-3xl font-prata tracking-wider leading-none">Villa Alta</h2>
+            <span className="text-xs font-source tracking-[0.4em] uppercase opacity-60 mt-2">Guest House</span>
+          </div>
+          <p className="font-source text-sm opacity-60 leading-relaxed italic">
+            {content.footer.description}
+          </p>
           <div className="flex gap-8 pt-4">
             <a href="#" className="text-xs font-source tracking-[0.2em] uppercase hover:opacity-50 transition-opacity">Instagram</a>
             <a href="#" className="text-xs font-source tracking-[0.2em] uppercase hover:opacity-50 transition-opacity">Facebook</a>
