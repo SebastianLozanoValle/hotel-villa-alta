@@ -31,14 +31,12 @@ interface ReviewsSectionProps {
 
 const ReviewsSection = ({ content }: ReviewsSectionProps) => {
   const sectionRef = useRef<HTMLDivElement>(null);
-  const stickyRef = useRef<HTMLDivElement>(null);
   const barsRef = useRef<HTMLDivElement[]>([]);
   const scoreRef = useRef<HTMLSpanElement>(null);
   const countRef = useRef<HTMLSpanElement>(null);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      // 1. Animación del Score Principal (Incremento de número)
       const scoreObj = { value: 0 };
       const targetScore = parseFloat(content.overall_score);
       
@@ -57,7 +55,6 @@ const ReviewsSection = ({ content }: ReviewsSectionProps) => {
         }
       });
 
-      // 2. Animación del Contador de Comentarios
       const countObj = { value: 0 };
       const targetCount = parseInt(content.comments_count.split(' ')[0]);
       
@@ -76,7 +73,6 @@ const ReviewsSection = ({ content }: ReviewsSectionProps) => {
         }
       });
 
-      // 3. Barras de Progreso
       barsRef.current.forEach((bar, index) => {
         const targetWidth = (content.categories[index].score / 10) * 100;
         gsap.fromTo(bar, 
@@ -94,14 +90,7 @@ const ReviewsSection = ({ content }: ReviewsSectionProps) => {
         );
       });
 
-      // 4. Se ha eliminado el efecto Sticky por solicitud del usuario
-      
-      // 5. Animación de Testimonios (Parallax por COLUMNAS)
-      // Se ha eliminado la animación de entrada (fade-in) por solicitud del usuario
-
-      // 6. Parallax por COLUMNAS (Solo en Desktop para evitar solapamiento en mobile)
       const mm = gsap.matchMedia();
-
       mm.add("(min-width: 1024px)", () => {
         gsap.to(".testimonial-col-1", {
           y: -100,
@@ -131,7 +120,6 @@ const ReviewsSection = ({ content }: ReviewsSectionProps) => {
     return () => ctx.revert();
   }, [content]);
 
-  // Dividir testimonios en dos columnas para el desorden
   const col1 = content.testimonials.filter((_, i) => i % 2 === 0);
   const col2 = content.testimonials.filter((_, i) => i % 2 !== 0);
 
@@ -151,12 +139,9 @@ const ReviewsSection = ({ content }: ReviewsSectionProps) => {
         </div>
 
         <div className="flex flex-col lg:flex-row gap-20 relative">
-          
-          {/* Lado Izquierdo: Score */}
           <div className="w-full lg:w-[40%]">
-            <div ref={stickyRef} className="pt-10">
+            <div className="pt-10">
               <div className="bg-white/5 backdrop-blur-sm p-10 md:p-16 shadow-2xl rounded-sm border border-white/10 relative overflow-hidden">
-                {/* Sutil gradiente de fondo */}
                 <div className="absolute top-0 left-0 w-full h-1 bg-white/20"></div>
                 
                 <div className="flex items-center gap-8 mb-16">
@@ -194,20 +179,13 @@ const ReviewsSection = ({ content }: ReviewsSectionProps) => {
             </div>
           </div>
 
-          {/* Lado Derecho: Testimonios en Desorden Ordenado */}
           <div className="w-full lg:w-[60%] flex flex-col md:flex-row gap-6 md:gap-12 lg:pt-20">
-            {/* Columna 1 */}
             <div className="testimonial-col-1 flex flex-col gap-8 flex-1">
               {col1.map((item, idx) => (
                 <div 
                   key={`col1-${idx}`} 
                   className="testimonial-card flex flex-col gap-3 p-5 bg-white/5 backdrop-blur-sm shadow-xl rounded-sm border border-white/5 group hover:border-white/20 h-fit"
                 >
-                  <div className="opacity-10 group-hover:opacity-40 transition-opacity duration-700">
-                    <svg width="24" height="18" viewBox="0 0 32 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M0 24V11.2C0 7.73333 0.866667 4.93333 2.6 2.8C4.33333 0.666667 7.13333 -0.266667 11 0L11.8 4.2C9.53333 4.2 7.8 4.8 6.6 6C5.4 7.2 4.8 8.8 4.8 10.8H11V24H0ZM18.2 24V11.2C18.2 7.73333 19.0667 4.93333 20.8 2.8C22.5333 0.666667 25.3333 -0.266667 29.2 0L30 4.2C27.7333 4.2 26 4.8 24.8 6C23.6 7.2 23 8.8 23 10.8H29.2V24H18.2Z" fill="white" />
-                    </svg>
-                  </div>
                   <p className="font-source text-xs md:text-sm leading-relaxed text-white/80 italic">
                     {item.text}
                   </p>
@@ -219,18 +197,12 @@ const ReviewsSection = ({ content }: ReviewsSectionProps) => {
               ))}
             </div>
 
-            {/* Columna 2 - Offset natural */}
             <div className="testimonial-col-2 flex flex-col gap-8 flex-1 md:mt-32">
               {col2.map((item, idx) => (
                 <div 
                   key={`col2-${idx}`} 
                   className="testimonial-card flex flex-col gap-3 p-5 bg-white/5 backdrop-blur-sm shadow-xl rounded-sm border border-white/5 group hover:border-white/20 h-fit"
                 >
-                  <div className="opacity-10 group-hover:opacity-40 transition-opacity duration-700">
-                    <svg width="24" height="18" viewBox="0 0 32 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M0 24V11.2C0 7.73333 0.866667 4.93333 2.6 2.8C4.33333 0.666667 7.13333 -0.266667 11 0L11.8 4.2C9.53333 4.2 7.8 4.8 6.6 6C5.4 7.2 4.8 8.8 4.8 10.8H11V24H0ZM18.2 24V11.2C18.2 7.73333 19.0667 4.93333 20.8 2.8C22.5333 0.666667 25.3333 -0.266667 29.2 0L30 4.2C27.7333 4.2 26 4.8 24.8 6C23.6 7.2 23 8.8 23 10.8H29.2V24H18.2Z" fill="white" />
-                    </svg>
-                  </div>
                   <p className="font-source text-xs md:text-sm leading-relaxed text-white/80 italic">
                     {item.text}
                   </p>
@@ -244,10 +216,6 @@ const ReviewsSection = ({ content }: ReviewsSectionProps) => {
           </div>
         </div>
       </div>
-
-      {/* Decoración */}
-      <div className="absolute top-0 right-0 w-1/3 h-full border-l border-white/2 pointer-events-none -z-10"></div>
-      <div className="absolute top-0 left-0 w-1/3 h-full border-r border-white/2 pointer-events-none -z-10"></div>
     </section>
   );
 };

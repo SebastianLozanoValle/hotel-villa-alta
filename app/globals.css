@@ -18,13 +18,6 @@
   --font-source: var(--font-sf-pro);
 }
 
-/* @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #50563f;
-    --secondary: #ededed;
-  }
-} */
-
 body {
   background: var(--background);
   color: var(--foreground);

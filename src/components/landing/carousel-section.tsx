@@ -49,7 +49,6 @@ const CarouselSection = ({ content }: CarouselSectionProps) => {
       ref={sectionRef} 
       className="relative min-h-screen w-full bg-background overflow-hidden py-24 md:py-32 flex flex-col items-center justify-center"
     >
-      {/* Metadatos superiores */}
       <div className="absolute top-8 md:top-12 left-4 md:left-12 font-source text-[8px] md:text-[10px] tracking-[0.2em] uppercase opacity-40">
         {content.meta}
       </div>
@@ -61,15 +60,6 @@ const CarouselSection = ({ content }: CarouselSectionProps) => {
         <span>Cartagena</span>
       </div>
 
-      {/* Capa de Texto Inferior (Negra) */}
-      {/* <div className="absolute inset-0 flex items-center justify-center select-none pointer-events-none px-4">
-        <h2 className="text-[18vw] md:text-[13vw] font-prata leading-[0.85] text-black flex flex-col items-center uppercase">
-          <span>Hotel</span>
-          <span className="ml-[5vw] md:ml-[10vw]">Villa Alta</span>
-        </h2>
-      </div> */}
-
-      {/* Contenedor de Imágenes (El Carrusel) */}
       <div 
         ref={imagesContainerRef}
         className="relative flex items-center gap-16 md:gap-32 z-10"
@@ -89,7 +79,6 @@ const CarouselSection = ({ content }: CarouselSectionProps) => {
         ))}
       </div>
 
-      {/* Capa de Texto Superior (Inversión de Color) */}
       <div className="absolute inset-0 flex items-center justify-center select-none pointer-events-none z-20 mix-blend-difference px-4">
         <h2 className="text-[18vw] md:text-[13vw] font-prata leading-[0.85] text-white flex flex-col items-center uppercase text-center">
           <span className='text-center'>Villa Alta</span>
@@ -97,13 +86,6 @@ const CarouselSection = ({ content }: CarouselSectionProps) => {
         </h2>
       </div>
 
-      {/* Decoración */}
-      <svg className="absolute inset-0 w-full h-full pointer-events-none opacity-20" viewBox="0 0 100 100" preserveAspectRatio="none">
-        <path d="M-10,50 Q25,20 50,50 T110,50" fill="none" stroke="black" strokeWidth="0.05" />
-        <path d="M-10,70 Q30,40 60,70 T110,70" fill="none" stroke="black" strokeWidth="0.05" />
-      </svg>
-
-      {/* Botón inferior */}
       <div className="mt-12 md:mt-20 z-30">
         <button className="px-8 md:px-10 py-3 md:py-4 border border-black/20 rounded-full font-source text-[10px] md:text-xs tracking-[0.2em] uppercase hover:bg-black hover:text-white transition-all">
           {content.discover}

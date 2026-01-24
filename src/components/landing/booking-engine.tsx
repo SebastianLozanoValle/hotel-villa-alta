@@ -87,16 +87,9 @@ const BookingEngine = ({ content }: BookingEngineProps) => {
   const [rooms, setRooms] = useState(content.rooms_options[0]);
   const [guests, setGuests] = useState(content.guests_options[0]);
 
-  // Actualizar si el contenido cambia (cambio de idioma)
-  useEffect(() => {
-    setRooms(content.rooms_options[0]);
-    setGuests(content.guests_options[0]);
-  }, [content]);
-
   return (
     <div className='flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12 mt-12 md:mt-16 w-full max-w-5xl px-4 mx-auto relative z-10'>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 w-full">
-          {/* Aquí podrías usar un DatePicker real si lo deseas, por ahora simplificado */}
           <div className="flex flex-col gap-1 w-full border-b border-white/30 pb-2 cursor-pointer">
             <label className="text-[10px] font-source tracking-[0.2em] uppercase opacity-50 text-white">{content.arrival}</label>
             <div className="flex justify-between items-center">

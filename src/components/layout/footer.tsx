@@ -26,7 +26,6 @@ interface FooterProps {
 const Footer = ({ content }: FooterProps) => {
   return (
     <footer className="relative w-full bg-secondary overflow-hidden text-white">
-      {/* Imagen de fondo con filtro muy oscuro */}
       <div className="absolute inset-0 z-0">
         <Image 
           src="/hero-back4.png" 
@@ -38,8 +37,6 @@ const Footer = ({ content }: FooterProps) => {
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 lg:px-20 py-20 flex flex-col md:flex-row justify-between gap-16 md:gap-8">
-        
-               {/* Columna 1: Branding y Descripción */}
         <div className="flex flex-col gap-8 max-w-[400px]">
           <div className="flex flex-col">
             <h2 className="text-3xl font-prata tracking-wider leading-none">Villa Alta</h2>
@@ -47,33 +44,31 @@ const Footer = ({ content }: FooterProps) => {
           </div>
           <p className="font-source text-sm opacity-60 leading-relaxed italic">
             {content.footer.description}
-          </p>setup
+          </p>
           <div className="flex gap-8 pt-4">
             <a href="#" className="text-xs font-source tracking-[0.2em] uppercase hover:opacity-50 transition-opacity">Instagram</a>
             <a href="#" className="text-xs font-source tracking-[0.2em] uppercase hover:opacity-50 transition-opacity">Facebook</a>
           </div>
         </div>
 
-        {/* Columna 2: Navegación Rápida */}
         <div className="flex flex-col gap-8 min-w-[150px]">
           <span className="font-source text-[10px] tracking-[0.3em] uppercase opacity-40">{content.footer.navigation}</span>
           <nav className="flex flex-col gap-4">
             <Link href="/" className="text-xl font-prata hover:opacity-50 transition-opacity">
               {content.navbar.inicio}
             </Link>
-            <Link href="/rooms" className="text-xl font-prata hover:opacity-50 transition-opacity">
+            <Link href="/" className="text-xl font-prata hover:opacity-50 transition-opacity">
               {content.footer.suites}
             </Link>
-            <Link href="/dining" className="text-xl font-prata hover:opacity-50 transition-opacity">
+            <Link href="/" className="text-xl font-prata hover:opacity-50 transition-opacity">
               {content.footer.gastronomy}
             </Link>
-            <Link href="/about" className="text-xl font-prata hover:opacity-50 transition-opacity">
+            <Link href="/" className="text-xl font-prata hover:opacity-50 transition-opacity">
               {content.navbar.reserva}
             </Link>
           </nav>
         </div>
 
-        {/* Columna 3: Contacto y Ubicación */}
         <div className="flex flex-col gap-8">
           <span className="font-source text-[10px] tracking-[0.3em] uppercase opacity-40">{content.footer.contact}</span>
           <div className="flex flex-col gap-6 font-source text-sm opacity-80">
@@ -89,13 +84,12 @@ const Footer = ({ content }: FooterProps) => {
         </div>
       </div>
 
-      {/* Footer Bottom */}
       <div className="relative z-10 border-t border-white/5 py-8 text-center px-6">
         <p className="font-source text-[9px] tracking-[0.3em] uppercase flex items-center justify-center gap-2">
           <span className="opacity-30">&copy; 2026 Villa Alta Guest House. {content.footer.rights}</span>
           <span className="opacity-30">|</span>
           <span className="opacity-30">Developed by</span>
-          <a href="https://sledevelopment.co" className="text-white font-bold hover:opacity-70 transition-opacity tracking-[0.4em]">SLE Development</a>
+          <a href="#" className="text-white font-bold hover:opacity-70 transition-opacity tracking-[0.4em]">SLE Development</a>
         </p>
       </div>
     </footer>

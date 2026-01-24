@@ -41,7 +41,6 @@ const GallerySection = ({ content }: GallerySectionProps) => {
     return () => ctx.revert();
   }, []);
 
-  // Definimos la galería por "bloques" para lograr el efecto Bento/Pinterest
   const galleryBlocks = [
     {
       type: 'single',
@@ -61,17 +60,6 @@ const GallerySection = ({ content }: GallerySectionProps) => {
         { src: '/hero-back.png', className: 'w-[290px] h-[300px]' },
         { src: '/hero-back2.png', className: 'w-[290px] h-[300px]' }
       ]
-    },
-    {
-      type: 'single',
-      images: [{ src: '/hero-back3.png', className: 'w-[400px] h-[550px] mt-20' }]
-    },
-    {
-      type: 'double-vertical',
-      images: [
-        { src: '/hero-back4.png', className: 'w-[300px] h-[350px]' },
-        { src: '/hero-back.png', className: 'w-[300px] h-[250px]' }
-      ]
     }
   ];
 
@@ -84,7 +72,6 @@ const GallerySection = ({ content }: GallerySectionProps) => {
         ref={horizontalRef}
         className="flex items-center h-full px-[10vw] gap-16"
       >
-        {/* Header de la Galería */}
         <div className="flex-shrink-0 w-[35vw] mr-10">
           <span className="font-source text-[10px] tracking-[0.4em] uppercase opacity-40 block mb-6">
             (02) Galería
@@ -102,7 +89,6 @@ const GallerySection = ({ content }: GallerySectionProps) => {
           </div>
         </div>
 
-        {/* Mapeo de Bloques Bento */}
         {galleryBlocks.map((block, bIdx) => (
           <div key={bIdx} className={`flex-shrink-0 flex flex-col gap-8 ${block.type === 'wide-over-double' ? 'grid grid-cols-2 max-w-[600px]' : ''}`}>
             {block.images.map((img, iIdx) => (
@@ -121,18 +107,7 @@ const GallerySection = ({ content }: GallerySectionProps) => {
             ))}
           </div>
         ))}
-
-        {/* Cierre Visual */}
-        <div className="flex-shrink-0 w-[20vw] flex items-center justify-center">
-           <div className="w-[1px] h-32 bg-secondary/20"></div>
-        </div>
       </div>
-
-      {/* Decoración: Líneas curvas de fondo */}
-      <svg className="absolute inset-0 w-full h-full pointer-events-none opacity-10" viewBox="0 0 100 100" preserveAspectRatio="none">
-        <path d="M-10,20 Q40,80 110,20" fill="none" stroke="black" strokeWidth="0.03" />
-        <path d="M-10,50 Q50,10 110,50" fill="none" stroke="black" strokeWidth="0.03" />
-      </svg>
     </section>
   );
 };

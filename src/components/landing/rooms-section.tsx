@@ -31,7 +31,7 @@ const RoomsSection = ({ content }: RoomsSectionProps) => {
   const metaRef = useRef<HTMLDivElement>(null);
 
   const roomsData = content?.list || [];
-  const room = roomsData[currentRoomIndex] || roomsData[0];
+  const room = roomsData[currentRoomIndex];
 
   const handleNext = () => {
     if (roomsData.length === 0) return;
@@ -48,7 +48,7 @@ const RoomsSection = ({ content }: RoomsSectionProps) => {
     })
     .add(() => {
       setCurrentRoomIndex(nextIndex);
-      setCurrentImageIndex(0); // Reset a la primera imagen de la nueva habitación
+      setCurrentImageIndex(0);
     })
     .set([imageRef.current, contentRef.current, titleRef.current, metaRef.current], { y: -15 })
     .to([imageRef.current, contentRef.current, titleRef.current, metaRef.current], { 
@@ -61,7 +61,6 @@ const RoomsSection = ({ content }: RoomsSectionProps) => {
   };
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-
   const images = room?.images || [];
 
   const nextImage = (e: React.MouseEvent) => {
@@ -80,7 +79,6 @@ const RoomsSection = ({ content }: RoomsSectionProps) => {
 
   return (
     <section className="relative min-h-screen w-full bg-secondary text-white py-20 px-6 md:px-12 lg:px-20 overflow-hidden flex flex-col justify-center">
-      {/* Metadatos superiores */}
       <div className="absolute top-8 md:top-12 left-6 md:left-12 flex flex-col md:flex-row gap-4 md:gap-20 font-source text-[8px] md:text-[10px] tracking-[0.2em] uppercase opacity-40 z-10">
         <span>Villa Alta Guest House, 2026</span>
         <span className="hidden sm:inline">({content.meta_rooms})</span>
@@ -111,21 +109,18 @@ const RoomsSection = ({ content }: RoomsSectionProps) => {
         <div ref={contentRef} className="lg:col-span-7 flex flex-col relative pt-10 md:pt-0">
           <div ref={titleRef} className="relative mb-8 md:mb-16">
                    <h2 
-                     style={{ color: '#FF5C66' }}
-                     className="text-xl sm:text-2xl lg:text-3xl font-prata leading-[0.8] absolute -top-[4vw] -left-[2vw] md:-top-[3vw] md:-left-[4vw] z-20 pointer-events-none whitespace-nowrap opacity-90 uppercase"
+                     className="text-xl sm:text-2xl lg:text-3xl font-prata leading-[0.8] absolute -top-[4vw] -left-[2vw] md:-top-[3vw] md:-left-[4vw] z-20 pointer-events-none whitespace-nowrap opacity-90 uppercase text-rose-400"
                    >
                      {room.titleTop}
                    </h2>
                    <div className="flex flex-col ml-[4vw] md:ml-[8vw]">
                      <h2 
-                       style={{ color: 'var(--background)' }}
-                       className="text-2xl sm:text-4xl lg:text-5xl font-prata leading-[0.9] uppercase"
+                       className="text-2xl sm:text-4xl lg:text-5xl font-prata leading-[0.9] uppercase text-background"
                      >
                        {room.titleBottom}
                      </h2>
                      <h2 
-                       style={{ color: 'var(--background)' }}
-                       className="text-2xl sm:text-4xl lg:text-5xl font-prata leading-[0.9] opacity-80 uppercase"
+                       className="text-2xl sm:text-4xl lg:text-5xl font-prata leading-[0.9] opacity-80 uppercase text-background"
                      >
                        {content.meta_rooms}
                      </h2>
@@ -168,11 +163,6 @@ const RoomsSection = ({ content }: RoomsSectionProps) => {
           </button>
         </div>
       </div>
-
-      <svg className="absolute inset-0 w-full h-full pointer-events-none opacity-[0.07]" viewBox="0 0 100 100" preserveAspectRatio="none">
-        <path d="M-10,80 Q30,20 70,80 T110,80" fill="none" stroke="white" strokeWidth="0.03" />
-        <path d="M-10,40 Q40,90 80,40 T110,40" fill="none" stroke="white" strokeWidth="0.03" />
-      </svg>
     </section>
   );
 };

@@ -7,7 +7,6 @@ const LuxuryLoader = () => {
   const loaderRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    // Animación simple de salida al cargar la página
     const timeout = setTimeout(() => {
       gsap.to(loaderRef.current, {
         opacity: 0,

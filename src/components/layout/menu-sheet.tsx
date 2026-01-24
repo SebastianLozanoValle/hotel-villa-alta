@@ -72,11 +72,11 @@ const MenuSheet = ({ isOpen, onClose, content }: MenuSheetProps) => {
 
   const menuItems = [
     { name: content.inicio, href: "/" },
-    { name: "Suites", href: "/rooms" },
-    { name: "Gastronomía", href: "/dining" },
-    { name: "Experiencias", href: "/experience" },
-    { name: "Galería", href: "/gallery" },
-    { name: "Contacto", href: "/contact" },
+    { name: "Suites", href: "/" },
+    { name: "Gastronomía", href: "/" },
+    { name: "Experiencias", href: "/" },
+    { name: "Galería", href: "/" },
+    { name: "Contacto", href: "/" },
   ];
 
   return (
@@ -129,10 +129,6 @@ const MenuSheet = ({ isOpen, onClose, content }: MenuSheetProps) => {
             <p className="font-source text-sm opacity-80 italic">
               Calle Callejon los Estribos 2-116 p2 AT1<br/>Barrio Centro, Centro, 130001<br/>Cartagena de Indias, Colombia
             </p>
-          </div>
-          <div className="flex gap-8">
-            <a href="#" className="text-[10px] font-source tracking-widest hover:opacity-50 transition-opacity uppercase">Instagram</a>
-            <a href="#" className="text-[10px] font-source tracking-widest hover:opacity-50 transition-opacity uppercase">Facebook</a>
           </div>
         </div>
       </div>

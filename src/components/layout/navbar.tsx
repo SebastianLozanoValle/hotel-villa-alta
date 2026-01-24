@@ -4,7 +4,6 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { useState } from 'react'
 import MenuSheet from './menu-sheet'
-import { LanguageSelector } from '../common/language-selector'
 
 interface NavbarProps {
   content: {
@@ -55,11 +54,10 @@ const Navbar = ({ content }: NavbarProps) => {
             <Link href="/" className='text-lg font-source hover:opacity-70 transition-opacity border-r border-slate-400 pr-10 py-8 font-light'>
               {content.inicio}
             </Link>
-            <Link href="/about" className='text-lg font-source hover:opacity-70 transition-opacity font-bold text-accent-rose'>
+            <Link href="/" className='text-lg font-source hover:opacity-70 transition-opacity font-bold text-accent-rose'>
               {content.reserva}
             </Link>
           </div>
-          <LanguageSelector />
         </div>
       </nav>
     </div>

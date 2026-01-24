@@ -1,5 +1,5 @@
 {
-  "name": "hotel-villa-alta",
+  "name": "tester-project",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -22,7 +22,6 @@
     "eslint": "^9",
     "eslint-config-next": "16.1.4",
     "tailwindcss": "^4",
-    "tsx": "^4.21.0",
     "typescript": "^5"
   }
 }
