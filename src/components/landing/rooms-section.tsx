@@ -156,7 +156,7 @@ const RoomsSection = ({ content }: RoomsSectionProps) => {
 
           <button 
             onClick={handleNext}
-            className="absolute -top-12 right-0 md:top-0 md:-right-4 lg:right-0 group w-20 h-20 md:w-24 md:h-24 flex-shrink-0 rounded-full border border-white/10 flex items-center justify-center bg-accent-rose text-white transition-all duration-700 z-30 overflow-hidden hover:text-white hover:bg-secondary"
+            className="absolute -top-12 right-0 md:top-0 md:-right-4 lg:right-0 group w-20 h-20 md:w-24 md:h-24 aspect-square flex-shrink-0 rounded-full border border-white/10 flex items-center justify-center bg-accent-rose text-white transition-all duration-700 z-30 overflow-hidden hover:text-white hover:bg-secondary"
           >
             <div className="relative z-10 flex flex-col items-center">
               <span className="font-source text-[8px] md:text-[10px] tracking-[0.3em] uppercase group-hover:scale-110 transition-transform">
