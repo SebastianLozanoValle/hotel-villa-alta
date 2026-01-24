@@ -145,7 +145,7 @@ const ReviewsSection = ({ content }: ReviewsSectionProps) => {
           <span className="font-source text-[10px] tracking-[0.4em] uppercase opacity-40 block mb-4">
             (03) Testimonios
           </span>
-          <h2 className="text-4xl md:text-5xl font-prata text-white uppercase leading-tight">
+          <h2 className="text-3xl md:text-4xl font-prata text-white uppercase leading-tight">
             {content.title}
           </h2>
         </div>
@@ -197,23 +197,23 @@ const ReviewsSection = ({ content }: ReviewsSectionProps) => {
           {/* Lado Derecho: Testimonios en Desorden Ordenado */}
           <div className="w-full lg:w-[60%] flex flex-col md:flex-row gap-8 lg:pt-20">
             {/* Columna 1 */}
-            <div className="testimonial-col-1 flex flex-col gap-12 flex-1">
+            <div className="testimonial-col-1 flex flex-col gap-8 flex-1">
               {col1.map((item, idx) => (
                 <div 
                   key={`col1-${idx}`} 
-                  className="testimonial-card flex flex-col gap-4 p-6 bg-white/5 backdrop-blur-sm shadow-xl rounded-sm border border-white/5 group hover:border-white/20 h-fit"
+                  className="testimonial-card flex flex-col gap-3 p-5 bg-white/5 backdrop-blur-sm shadow-xl rounded-sm border border-white/5 group hover:border-white/20 h-fit"
                 >
                   <div className="opacity-10 group-hover:opacity-40 transition-opacity duration-700">
-                    <svg width="32" height="24" viewBox="0 0 32 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg width="24" height="18" viewBox="0 0 32 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M0 24V11.2C0 7.73333 0.866667 4.93333 2.6 2.8C4.33333 0.666667 7.13333 -0.266667 11 0L11.8 4.2C9.53333 4.2 7.8 4.8 6.6 6C5.4 7.2 4.8 8.8 4.8 10.8H11V24H0ZM18.2 24V11.2C18.2 7.73333 19.0667 4.93333 20.8 2.8C22.5333 0.666667 25.3333 -0.266667 29.2 0L30 4.2C27.7333 4.2 26 4.8 24.8 6C23.6 7.2 23 8.8 23 10.8H29.2V24H18.2Z" fill="white" />
                     </svg>
                   </div>
-                  <p className="font-source text-sm leading-relaxed text-white/80 italic">
+                  <p className="font-source text-xs md:text-sm leading-relaxed text-white/80 italic">
                     {item.text}
                   </p>
-                  <div className="mt-2 pt-4 border-t border-white/5 flex flex-col gap-1">
-                    <span className="font-prata text-white text-lg">{item.author}</span>
-                    <span className="font-source text-[8px] tracking-[0.3em] uppercase opacity-30 text-white">{item.country}</span>
+                  <div className="mt-1 pt-3 border-t border-white/5 flex flex-col gap-0.5">
+                    <span className="font-prata text-white text-base">{item.author}</span>
+                    <span className="font-source text-[7px] tracking-[0.3em] uppercase opacity-30 text-white">{item.country}</span>
                   </div>
                 </div>
               ))}
@@ -224,19 +224,19 @@ const ReviewsSection = ({ content }: ReviewsSectionProps) => {
               {col2.map((item, idx) => (
                 <div 
                   key={`col2-${idx}`} 
-                  className="testimonial-card flex flex-col gap-4 p-6 bg-white/5 backdrop-blur-sm shadow-xl rounded-sm border border-white/5 group hover:border-white/20 h-fit"
+                  className="testimonial-card flex flex-col gap-3 p-5 bg-white/5 backdrop-blur-sm shadow-xl rounded-sm border border-white/5 group hover:border-white/20 h-fit"
                 >
                   <div className="opacity-10 group-hover:opacity-40 transition-opacity duration-700">
-                    <svg width="32" height="24" viewBox="0 0 32 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg width="24" height="18" viewBox="0 0 32 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M0 24V11.2C0 7.73333 0.866667 4.93333 2.6 2.8C4.33333 0.666667 7.13333 -0.266667 11 0L11.8 4.2C9.53333 4.2 7.8 4.8 6.6 6C5.4 7.2 4.8 8.8 4.8 10.8H11V24H0ZM18.2 24V11.2C18.2 7.73333 19.0667 4.93333 20.8 2.8C22.5333 0.666667 25.3333 -0.266667 29.2 0L30 4.2C27.7333 4.2 26 4.8 24.8 6C23.6 7.2 23 8.8 23 10.8H29.2V24H18.2Z" fill="white" />
                     </svg>
                   </div>
-                  <p className="font-source text-sm leading-relaxed text-white/80 italic">
+                  <p className="font-source text-xs md:text-sm leading-relaxed text-white/80 italic">
                     {item.text}
                   </p>
-                  <div className="mt-2 pt-4 border-t border-white/5 flex flex-col gap-1">
-                    <span className="font-prata text-white text-lg">{item.author}</span>
-                    <span className="font-source text-[8px] tracking-[0.3em] uppercase opacity-30 text-white">{item.country}</span>
+                  <div className="mt-1 pt-3 border-t border-white/5 flex flex-col gap-0.5">
+                    <span className="font-prata text-white text-base">{item.author}</span>
+                    <span className="font-source text-[7px] tracking-[0.3em] uppercase opacity-30 text-white">{item.country}</span>
                   </div>
                 </div>
               ))}

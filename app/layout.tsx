@@ -43,13 +43,14 @@ export default async function RootLayout({
   params,
 }: {
   children: React.ReactNode;
-  params: Promise<{ locale: string }>;
+  params: Promise<{ locale?: string }>;
 }) {
   const { locale } = await params;
-  const content = await getPageContent(locale || 'es');
+  const currentLocale = locale || 'es';
+  const content = await getPageContent(currentLocale);
   
   return (
-    <html lang={locale || 'es'}>
+    <html lang={currentLocale}>
       <body
         className={`${helveticaBdEx.variable} ${sfPro.variable} relative`}
       >

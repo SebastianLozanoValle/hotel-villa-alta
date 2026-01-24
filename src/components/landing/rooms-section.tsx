@@ -111,21 +111,21 @@ const RoomsSection = ({ content }: RoomsSectionProps) => {
         <div ref={contentRef} className="lg:col-span-7 flex flex-col relative pt-10 md:pt-0">
           <div ref={titleRef} className="relative mb-8 md:mb-16">
                    <h2 
-                     style={{ color: 'var(--background)' }}
-                     className="text-2xl sm:text-4xl lg:text-5xl font-prata leading-[0.8] absolute -top-[6vw] -left-[4vw] md:-top-[4vw] md:-left-[8vw] z-20 pointer-events-none whitespace-nowrap opacity-80 uppercase"
+                     style={{ color: '#FF5C66' }}
+                     className="text-xl sm:text-2xl lg:text-3xl font-prata leading-[0.8] absolute -top-[4vw] -left-[2vw] md:-top-[3vw] md:-left-[4vw] z-20 pointer-events-none whitespace-nowrap opacity-90 uppercase"
                    >
                      {room.titleTop}
                    </h2>
                    <div className="flex flex-col ml-[4vw] md:ml-[8vw]">
                      <h2 
                        style={{ color: 'var(--background)' }}
-                       className="text-3xl sm:text-5xl lg:text-6xl font-prata leading-[0.9] uppercase"
+                       className="text-2xl sm:text-4xl lg:text-5xl font-prata leading-[0.9] uppercase"
                      >
                        {room.titleBottom}
                      </h2>
                      <h2 
                        style={{ color: 'var(--background)' }}
-                       className="text-3xl sm:text-5xl lg:text-6xl font-prata leading-[0.9] opacity-90 uppercase"
+                       className="text-2xl sm:text-4xl lg:text-5xl font-prata leading-[0.9] opacity-80 uppercase"
                      >
                        {content.meta_rooms}
                      </h2>
@@ -156,7 +156,7 @@ const RoomsSection = ({ content }: RoomsSectionProps) => {
 
           <button 
             onClick={handleNext}
-            className="absolute -top-10 right-0 md:top-0 md:-right-4 lg:right-0 group w-24 h-24 rounded-full border border-white/10 flex items-center justify-center bg-accent-rose text-white transition-all duration-700 z-30 overflow-hidden hover:text-white hover:bg-secondary"
+            className="absolute -top-12 right-0 md:top-0 md:-right-4 lg:right-0 group w-20 h-20 md:w-24 md:h-24 flex-shrink-0 rounded-full border border-white/10 flex items-center justify-center bg-accent-rose text-white transition-all duration-700 z-30 overflow-hidden hover:text-white hover:bg-secondary"
           >
             <div className="relative z-10 flex flex-col items-center">
               <span className="font-source text-[8px] md:text-[10px] tracking-[0.3em] uppercase group-hover:scale-110 transition-transform">
