@@ -6,7 +6,7 @@
     "close": "Cerrar"
   },
   "hero": {
-    "title": "Hotel Villa Alta"
+    "title": "Villa Alta Guest House"
   },
   "booking": {
     "arrival": "Llegada / Salida",
@@ -17,7 +17,7 @@
     "cta": "RESERVAR AHORA"
   },
   "carousel": {
-    "meta": "Hotel Villa Alta, 2026",
+    "meta": "Villa Alta Guest House, 2026",
     "heritage": "Patrimonio Arquitectónico",
     "discover": "Descubrir más"
   },
@@ -85,6 +85,7 @@
         "titleBottom": "VISTA AL LAGO",
         "description": "Las habitaciones del hotel resort están equipadas con aire acondicionado, escritorio, hervidor de agua, minibar, caja fuerte, TV de pantalla plana, balcón y baño privado con ducha. También se proporcionan toallas y ropa de cama en cada habitación. Se sirve un desayuno buffet todas las mañanas.",
         "price": "$200/DÍA",
+        "images": ["/hero-back.png", "/hero-back3.png", "/hero-back4.png"],
         "services": [
           "1 CAMA KING-SIZE",
           "BALCÓN",
@@ -102,6 +103,7 @@
         "titleBottom": "VISTA AL MAR",
         "description": "Nuestra Suite Deluxe ofrece un espacio amplio y sofisticado con techos altos y ventanales que capturan la brisa caribeña. Diseñada para aquellos que buscan una estancia inolvidable en el corazón de Cartagena.",
         "price": "$350/DÍA",
+        "images": ["/hero-back3.png", "/hero-back4.png", "/hero-back.png"],
         "services": [
           "1 CAMA KING-SIZE",
           "TERRAZA PRIVADA",
@@ -119,6 +121,7 @@
         "titleBottom": "CENTRO HISTÓRICO",
         "description": "Un espacio vanguardista que combina muros de piedra original con diseño contemporáneo. Ideal para mentes creativas que desean sumergirse en la historia de la ciudad con todas las comodidades modernas.",
         "price": "$280/DÍA",
+        "images": ["/hero-back4.png", "/hero-back.png", "/hero-back3.png"],
         "services": [
           "DISEÑO DE PLANTA ABIERTA",
           "MUROS DE PIEDRA ORIGINAL",

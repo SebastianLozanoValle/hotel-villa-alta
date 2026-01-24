@@ -94,7 +94,7 @@ const BookingEngine = ({ content }: BookingEngineProps) => {
   }, [content]);
 
   return (
-    <div className='flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12 mt-12 md:mt-16 w-full max-w-5xl px-4 mx-auto'>
+    <div className='flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12 mt-12 md:mt-16 w-full max-w-5xl px-4 mx-auto relative z-10'>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 w-full">
           {/* Aquí podrías usar un DatePicker real si lo deseas, por ahora simplificado */}
           <div className="flex flex-col gap-1 w-full border-b border-white/30 pb-2 cursor-pointer">
@@ -125,7 +125,7 @@ const BookingEngine = ({ content }: BookingEngineProps) => {
           />
         </div>
         
-        <button className='w-full md:w-auto flex items-center justify-center gap-6 bg-secondary border border-secondary rounded-full px-10 py-4 hover:bg-white text-white hover:text-black transition-all duration-300 group shadow-xl'>
+        <button className='w-full md:w-auto flex items-center justify-center gap-6 bg-secondary border border-secondary rounded-full px-10 py-4 hover:bg-white text-white hover:text-secondary transition-all duration-300 group shadow-xl'>
             <span className='font-source tracking-[0.2em] text-sm font-medium'>
               {content.cta}
             </span>

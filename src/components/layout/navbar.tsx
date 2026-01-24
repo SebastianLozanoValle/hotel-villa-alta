@@ -1,6 +1,7 @@
 "use client";
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { useState } from 'react'
 import MenuSheet from './menu-sheet'
 import { LanguageSelector } from '../common/language-selector'
@@ -27,8 +28,8 @@ const Navbar = ({ content }: NavbarProps) => {
             className='group flex items-center gap-2 md:gap-4 cursor-pointer hover:opacity-70 transition-opacity py-6 md:py-8'
           >
             <div className='flex flex-col gap-1.5'>
-              <div className='w-6 md:w-8 h-[1px] bg-white transition-all group-hover:w-4 md:group-hover:w-6'></div>
-              <div className='w-4 md:w-5 h-[1px] bg-white transition-all group-hover:w-6 md:group-hover:w-8'></div>
+              <div className='w-6 md:w-8 h-px bg-white transition-all group-hover:w-4 md:group-hover:w-6'></div>
+              <div className='w-4 md:w-5 h-px bg-white transition-all group-hover:w-6 md:group-hover:w-8'></div>
             </div>
             <span className='font-source tracking-[0.3em] text-[10px] md:text-xs uppercase font-medium'>
               {content.menu}
@@ -36,14 +37,25 @@ const Navbar = ({ content }: NavbarProps) => {
           </button>
         </div>
         
-        <h1 className='text-lg md:text-2xl font-source flex-1 text-center whitespace-nowrap'>Hotel Villa Alta</h1>
+        <div className='flex-1 flex justify-center items-center'>
+          <Link href="/">
+            <Image 
+              src="/logo.png" 
+              alt="Villa Alta Guest House" 
+              width={180} 
+              height={40} 
+              className="h-8 md:h-12 w-auto object-contain" 
+              priority
+            />
+          </Link>
+        </div>
         
         <div className='flex gap-4 md:gap-10 items-center flex-1 justify-end'>
           <div className='hidden md:flex items-center gap-10'>
             <Link href="/" className='text-lg font-source hover:opacity-70 transition-opacity border-r border-slate-400 pr-10 py-8 font-light'>
               {content.inicio}
             </Link>
-            <Link href="/about" className='text-lg font-source hover:opacity-70 transition-opacity font-bold'>
+            <Link href="/about" className='text-lg font-source hover:opacity-70 transition-opacity font-bold text-accent-rose'>
               {content.reserva}
             </Link>
           </div>

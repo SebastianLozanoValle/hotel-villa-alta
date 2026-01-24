@@ -58,8 +58,13 @@ const Hero = ({ content, bookingContent }: HeroProps) => {
             <div className='absolute top-0 left-0 w-full h-full bg-black/40'></div>
             
             <div className='relative z-10 flex flex-col items-center justify-center w-full max-w-6xl'>
-                <h2 ref={titleRef} className='text-5xl md:text-8xl font-prata text-center tracking-widest text-white drop-shadow-2xl mb-8 md:mb-0 uppercase'>
-                  {content.title}
+                <h2 ref={titleRef} className='flex flex-col items-center text-center text-white drop-shadow-2xl mb-12 md:mb-8 uppercase'>
+                  <span className="text-5xl md:text-8xl font-prata tracking-widest">
+                    {content.title.replace(' Guest House', '')}
+                  </span>
+                  <span className="text-xl md:text-3xl font-source tracking-[0.6em] opacity-70 mt-2 md:mt-3">
+                    Guest House
+                  </span>
                 </h2>
                 <div ref={bookingRef} className='w-full flex justify-center'>
                   <BookingEngine content={bookingContent} />

@@ -49,19 +49,20 @@ export default async function Page({
   const { locale } = await params;
   const content = await getPageContent(locale);
 
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Hotel",
-    "name": "Hotel Villa Alta",
-    "description": "Boutique Luxury Hotel in Cartagena de Indias, Colombia",
-    "image": "https://hotelvillaalta.com/hero-back3.png",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Calle del Arsenal #10-23, Getsemaní",
-      "addressLocality": "Cartagena",
-      "addressRegion": "Bolívar",
-      "addressCountry": "CO"
-    },
+    const jsonLd = {
+      "@context": "https://schema.org",
+      "@type": "Hotel",
+      "name": "Villa Alta Guest House",
+      "description": "Boutique Luxury Guest House in Cartagena de Indias, Colombia",
+      "image": "https://hotelvillaalta.com/hero-back3.png",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Calle Callejon los Estribos 2-116 p2 AT1 Barrio Centro",
+        "addressLocality": "Cartagena",
+        "addressRegion": "Bolívar",
+        "postalCode": "130001",
+        "addressCountry": "CO"
+      },
     "priceRange": "$$$",
     "telephone": "+57 123 456 7890"
   };

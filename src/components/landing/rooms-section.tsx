@@ -10,6 +10,7 @@ interface Room {
   titleBottom: string;
   description: string;
   price: string;
+  images: string[];
   services: string[];
 }
 
@@ -29,10 +30,11 @@ const RoomsSection = ({ content }: RoomsSectionProps) => {
   const titleRef = useRef<HTMLDivElement>(null);
   const metaRef = useRef<HTMLDivElement>(null);
 
-  const roomsData = content.list;
-  const room = roomsData[currentRoomIndex];
+  const roomsData = content?.list || [];
+  const room = roomsData[currentRoomIndex] || roomsData[0];
 
   const handleNext = () => {
+    if (roomsData.length === 0) return;
     const nextIndex = (currentRoomIndex + 1) % roomsData.length;
     
     const tl = gsap.timeline();
@@ -46,6 +48,7 @@ const RoomsSection = ({ content }: RoomsSectionProps) => {
     })
     .add(() => {
       setCurrentRoomIndex(nextIndex);
+      setCurrentImageIndex(0); // Reset a la primera imagen de la nueva habitación
     })
     .set([imageRef.current, contentRef.current, titleRef.current, metaRef.current], { y: -15 })
     .to([imageRef.current, contentRef.current, titleRef.current, metaRef.current], { 
@@ -57,18 +60,29 @@ const RoomsSection = ({ content }: RoomsSectionProps) => {
     });
   };
 
-  // Imágenes fijas por ID (podrían estar en el JSON también)
-  const roomImages: Record<string, string> = {
-    "01": "/hero-back.png",
-    "02": "/hero-back3.png",
-    "03": "/hero-back4.png"
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  const images = room?.images || [];
+
+  const nextImage = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    if (images.length === 0) return;
+    setCurrentImageIndex((prev) => (prev + 1) % images.length);
   };
+
+  const prevImage = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    if (images.length === 0) return;
+    setCurrentImageIndex((prev) => (prev - 1 + images.length) % images.length);
+  };
+
+  if (!room) return null;
 
   return (
     <section className="relative min-h-screen w-full bg-secondary text-white py-20 px-6 md:px-12 lg:px-20 overflow-hidden flex flex-col justify-center">
       {/* Metadatos superiores */}
       <div className="absolute top-8 md:top-12 left-6 md:left-12 flex flex-col md:flex-row gap-4 md:gap-20 font-source text-[8px] md:text-[10px] tracking-[0.2em] uppercase opacity-40 z-10">
-        <span>Hotel Villa Alta, 2026</span>
+        <span>Villa Alta Guest House, 2026</span>
         <span className="hidden sm:inline">({content.meta_rooms})</span>
       </div>
       
@@ -78,33 +92,44 @@ const RoomsSection = ({ content }: RoomsSectionProps) => {
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center mt-12 md:mt-0">
-        <div ref={imageRef} className="lg:col-span-5 relative aspect-[4/5] w-full max-w-[500px] mx-auto lg:mx-0 shadow-2xl rounded-sm overflow-hidden group">
-          <Image 
-            src={roomImages[room.id] || "/hero-back.png"} 
-            alt={room.titleTop} 
-            fill 
-            className="object-cover transition-transform duration-700 group-hover:scale-105"
-          />
-          <div className="absolute bottom-6 left-0 w-full flex justify-between px-6 items-center text-[9px] font-source tracking-widest opacity-60 uppercase">
-            <span className="cursor-pointer hover:opacity-100 transition-opacity">←</span>
-            <span>{room.id}/0{roomsData.length}</span>
-            <span className="cursor-pointer hover:opacity-100 transition-opacity">→</span>
+        <div ref={imageRef} className="lg:col-span-5 relative aspect-4/5 w-full max-w-[500px] mx-auto lg:mx-0 shadow-2xl rounded-sm overflow-hidden group">
+          {images.length > 0 && (
+            <Image 
+              src={images[currentImageIndex] || images[0]} 
+              alt={room.titleTop} 
+              fill 
+              className="object-cover transition-transform duration-700 group-hover:scale-105"
+            />
+          )}
+          <div className="absolute bottom-6 left-0 w-full flex justify-between px-6 items-center text-[9px] font-source tracking-widest opacity-60 uppercase z-20">
+            <button onClick={prevImage} className="cursor-pointer hover:opacity-100 transition-opacity bg-black/20 hover:bg-black/40 w-8 h-8 rounded-full flex items-center justify-center">←</button>
+            <span className="bg-black/20 px-3 py-1 rounded-full">{currentImageIndex + 1}/0{images.length}</span>
+            <button onClick={nextImage} className="cursor-pointer hover:opacity-100 transition-opacity bg-black/20 hover:bg-black/40 w-8 h-8 rounded-full flex items-center justify-center">→</button>
           </div>
         </div>
 
         <div ref={contentRef} className="lg:col-span-7 flex flex-col relative pt-10 md:pt-0">
           <div ref={titleRef} className="relative mb-8 md:mb-16">
-            <h2 className="text-[12vw] sm:text-[8vw] lg:text-[5vw] font-prata leading-[0.8] mix-blend-difference absolute -top-[6vw] -left-[4vw] md:-top-[4vw] md:-left-[8vw] z-20 pointer-events-none whitespace-nowrap opacity-80 uppercase">
-              {room.titleTop}
-            </h2>
-            <div className="flex flex-col ml-[4vw] md:ml-[8vw]">
-              <h2 className="text-[14vw] sm:text-[10vw] lg:text-[7vw] font-prata leading-[0.9] uppercase">
-                {room.titleBottom}
-              </h2>
-              <h2 className="text-[14vw] sm:text-[10vw] lg:text-[7vw] font-prata leading-[0.9] opacity-90 uppercase">
-                {content.meta_rooms}
-              </h2>
-            </div>
+                   <h2 
+                     style={{ color: 'var(--background)' }}
+                     className="text-2xl sm:text-4xl lg:text-5xl font-prata leading-[0.8] absolute -top-[6vw] -left-[4vw] md:-top-[4vw] md:-left-[8vw] z-20 pointer-events-none whitespace-nowrap opacity-80 uppercase"
+                   >
+                     {room.titleTop}
+                   </h2>
+                   <div className="flex flex-col ml-[4vw] md:ml-[8vw]">
+                     <h2 
+                       style={{ color: 'var(--background)' }}
+                       className="text-3xl sm:text-5xl lg:text-6xl font-prata leading-[0.9] uppercase"
+                     >
+                       {room.titleBottom}
+                     </h2>
+                     <h2 
+                       style={{ color: 'var(--background)' }}
+                       className="text-3xl sm:text-5xl lg:text-6xl font-prata leading-[0.9] opacity-90 uppercase"
+                     >
+                       {content.meta_rooms}
+                     </h2>
+                   </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16">
@@ -112,11 +137,11 @@ const RoomsSection = ({ content }: RoomsSectionProps) => {
               <p className="font-source text-xs md:text-sm leading-relaxed opacity-70 max-w-[320px]">
                 {room.description}
               </p>
-              <div className="flex items-center">
-                <div className="px-6 py-3 bg-white text-secondary border border-white rounded-full font-source text-[9px] md:text-[10px] tracking-widest uppercase hover:bg-transparent hover:text-white transition-all duration-500 cursor-default">
-                  {room.price}
-                </div>
-              </div>
+                     <div className="flex items-center">
+                       <div className="px-6 py-3 bg-accent-rose text-white border border-accent-rose rounded-full font-source text-[9px] md:text-[10px] tracking-widest uppercase hover:bg-transparent hover:text-white transition-all duration-500 cursor-default">
+                         {room.price}
+                       </div>
+                     </div>
             </div>
 
             <div className="flex flex-col gap-3 md:gap-4 border-l border-white/10 pl-6 md:pl-8 order-1 md:order-2">
@@ -131,7 +156,7 @@ const RoomsSection = ({ content }: RoomsSectionProps) => {
 
           <button 
             onClick={handleNext}
-            className="absolute -top-10 right-0 md:top-0 md:-right-4 lg:right-0 group w-20 h-24 md:w-28 md:h-28 rounded-full border border-white/10 flex items-center justify-center bg-white text-secondary transition-all duration-700 z-30 overflow-hidden hover:text-white hover:bg-secondary"
+            className="absolute -top-10 right-0 md:top-0 md:-right-4 lg:right-0 group w-24 h-24 rounded-full border border-white/10 flex items-center justify-center bg-accent-rose text-white transition-all duration-700 z-30 overflow-hidden hover:text-white hover:bg-secondary"
           >
             <div className="relative z-10 flex flex-col items-center">
               <span className="font-source text-[8px] md:text-[10px] tracking-[0.3em] uppercase group-hover:scale-110 transition-transform">

@@ -127,7 +127,7 @@ const MenuSheet = ({ isOpen, onClose, content }: MenuSheetProps) => {
           <div className="flex flex-col gap-2">
             <span className="text-[10px] tracking-[0.2em] uppercase opacity-40 font-source">Ubicación</span>
             <p className="font-source text-sm opacity-80 italic">
-              Calle del Arsenal #10-23, Getsemaní<br/>Cartagena de Indias, Colombia
+              Calle Callejon los Estribos 2-116 p2 AT1<br/>Barrio Centro, Centro, 130001<br/>Cartagena de Indias, Colombia
             </p>
           </div>
           <div className="flex gap-8">

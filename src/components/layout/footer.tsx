@@ -39,12 +39,15 @@ const Footer = ({ content }: FooterProps) => {
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 lg:px-20 py-20 flex flex-col md:flex-row justify-between gap-16 md:gap-8">
         
-        {/* Columna 1: Branding y Descripción */}
-        <div className="flex flex-col gap-8 max-w-[400px]">
-          <h2 className="text-3xl font-prata tracking-wider">Hotel Villa Alta</h2>
-          <p className="font-source text-sm opacity-60 leading-relaxed italic">
-            {content.footer.description}
-          </p>
+               {/* Columna 1: Branding y Descripción */}
+               <div className="flex flex-col gap-8 max-w-[400px]">
+                 <div className="flex flex-col">
+                   <h2 className="text-3xl font-prata tracking-wider leading-none">Villa Alta</h2>
+                   <span className="text-xs font-source tracking-[0.4em] uppercase opacity-60 mt-2">Guest House</span>
+                 </div>
+                 <p className="font-source text-sm opacity-60 leading-relaxed italic">
+                   {content.footer.description}
+                 </p>
           <div className="flex gap-8 pt-4">
             <a href="#" className="text-xs font-source tracking-[0.2em] uppercase hover:opacity-50 transition-opacity">Instagram</a>
             <a href="#" className="text-xs font-source tracking-[0.2em] uppercase hover:opacity-50 transition-opacity">Facebook</a>
@@ -76,7 +79,7 @@ const Footer = ({ content }: FooterProps) => {
           <div className="flex flex-col gap-6 font-source text-sm opacity-80">
             <div>
               <p className="tracking-widest uppercase text-[10px] opacity-40 mb-2">{content.footer.location_label}</p>
-              <p>Calle del Arsenal #10-23, Getsemaní<br/>Cartagena de Indias, Colombia</p>
+              <p>Calle Callejon los Estribos 2-116 p2 AT1<br/>Barrio Centro, Centro, 130001<br/>Cartagena de Indias, Colombia</p>
             </div>
             <div>
               <p className="tracking-widest uppercase text-[10px] opacity-40 mb-2">{content.footer.reservations_label}</p>
@@ -89,7 +92,7 @@ const Footer = ({ content }: FooterProps) => {
       {/* Footer Bottom */}
       <div className="relative z-10 border-t border-white/5 py-8 text-center px-6">
         <p className="font-source text-[9px] tracking-[0.3em] uppercase flex items-center justify-center gap-2">
-          <span className="opacity-30">&copy; 2026 Hotel Villa Alta. {content.footer.rights}</span>
+          <span className="opacity-30">&copy; 2026 Villa Alta Guest House. {content.footer.rights}</span>
           <span className="opacity-30">|</span>
           <span className="opacity-30">Developed by</span>
           <a href="https://sledevelopment.co" className="text-white font-bold hover:opacity-70 transition-opacity tracking-[0.4em]">SLE Development</a>

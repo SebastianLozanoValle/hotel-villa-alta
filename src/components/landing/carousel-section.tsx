@@ -47,7 +47,7 @@ const CarouselSection = ({ content }: CarouselSectionProps) => {
   return (
     <section 
       ref={sectionRef} 
-      className="relative min-h-screen w-full bg-[#e5e1da] overflow-hidden py-24 md:py-32 flex flex-col items-center justify-center"
+      className="relative min-h-screen w-full bg-background overflow-hidden py-24 md:py-32 flex flex-col items-center justify-center"
     >
       {/* Metadatos superiores */}
       <div className="absolute top-8 md:top-12 left-4 md:left-12 font-source text-[8px] md:text-[10px] tracking-[0.2em] uppercase opacity-40">
@@ -91,9 +91,9 @@ const CarouselSection = ({ content }: CarouselSectionProps) => {
 
       {/* Capa de Texto Superior (Inversión de Color) */}
       <div className="absolute inset-0 flex items-center justify-center select-none pointer-events-none z-20 mix-blend-difference px-4">
-        <h2 className="text-[18vw] md:text-[13vw] font-prata leading-[0.85] text-white flex flex-col items-center uppercase">
-          <span>Hotel</span>
-          <span className="ml-[5vw] md:ml-[10vw]">Villa Alta</span>
+        <h2 className="text-[18vw] md:text-[13vw] font-prata leading-[0.85] text-white flex flex-col items-center uppercase text-center">
+          <span className='text-center'>Villa Alta</span>
+          <span className="text-[0.25em] tracking-[0.5em] opacity-70 mt-[1vw] font-source">Guest House</span>
         </h2>
       </div>
 
