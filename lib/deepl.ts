@@ -1,4 +1,4 @@
-import db from './db';
+import { getFromCache, setCache } from './translation-cache';
 
 const DEEPL_API_URL = 'https://api-free.deepl.com/v2/translate';
 
@@ -46,11 +46,10 @@ export async function translateObject<T>(obj: T, targetLang: LanguageCode): Prom
   const missingTexts: string[] = [];
 
   for (const text of textsToTranslate) {
-    const cached = db.prepare('SELECT translated_text FROM translations WHERE source_text = ? AND target_lang = ?')
-      .get(text, targetLang) as { translated_text: string } | undefined;
+    const cached = getFromCache(text, targetLang);
     
     if (cached) {
-      translatedMap[text] = cached.translated_text;
+      translatedMap[text] = cached;
     } else if (!missingTexts.includes(text)) {
       missingTexts.push(text);
     }
@@ -79,8 +78,7 @@ export async function translateObject<T>(obj: T, targetLang: LanguageCode): Prom
             const original = missingTexts[i];
             const translated = t.text;
             translatedMap[original] = translated;
-            db.prepare('INSERT OR REPLACE INTO translations (source_text, target_lang, translated_text) VALUES (?, ?, ?)')
-              .run(original, targetLang, translated);
+            setCache(original, targetLang, translated);
           });
         }
       } catch (error) {
@@ -114,13 +112,8 @@ export async function translateText(
 ): Promise<string> {
   if (targetLang === sourceLang) return text;
 
-  try {
-    const cached = db.prepare('SELECT translated_text FROM translations WHERE source_text = ? AND target_lang = ?')
-      .get(text, targetLang) as { translated_text: string } | undefined;
-    if (cached) return cached.translated_text;
-  } catch (e) {
-    console.error(e);
-  }
+  const cached = getFromCache(text, targetLang);
+  if (cached) return cached;
 
   const apiKey = process.env.DEEPL_API_KEY;
   if (!apiKey) return text;
@@ -140,8 +133,7 @@ export async function translateText(
     const data: DeepLResponse = await response.json();
     const translated = data.translations[0]?.text || text;
 
-    db.prepare('INSERT OR REPLACE INTO translations (source_text, target_lang, translated_text) VALUES (?, ?, ?)')
-      .run(text, targetLang, translated);
+    setCache(text, targetLang, translated);
 
     return translated;
   } catch (error) {
