@@ -4,6 +4,7 @@ import React, { useEffect, useRef } from 'react'
 import Image from 'next/image'
 import BookingEngine from './booking-engine'
 import gsap from 'gsap'
+import { TranslatedText } from '../translation/TranslatedText'
 
 interface HeroProps {
   content: {
@@ -60,10 +61,10 @@ const Hero = ({ content, bookingContent }: HeroProps) => {
             <div className='relative z-10 flex flex-col items-center justify-center w-full max-w-6xl'>
                 <h2 ref={titleRef} className='flex flex-col items-center text-center text-white drop-shadow-2xl mb-12 md:mb-8 uppercase'>
                   <span className="text-5xl md:text-8xl font-prata tracking-widest">
-                    {content.title.replace(' Guest House', '')}
+                    <TranslatedText>{content.title.replace(' Guest House', '')}</TranslatedText>
                   </span>
                   <span className="text-xl md:text-3xl font-source tracking-[0.6em] opacity-70 mt-2 md:mt-3">
-                    Guest House
+                    <TranslatedText>Guest House</TranslatedText>
                   </span>
                 </h2>
                 <div ref={bookingRef} className='w-full flex justify-center'>

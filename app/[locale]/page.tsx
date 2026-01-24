@@ -1,3 +1,5 @@
+'use client';
+
 import Hero from "@/src/components/landing/hero";
 import CarouselSection from "@/src/components/landing/carousel-section";
 import RoomsSection from "@/src/components/landing/rooms-section";

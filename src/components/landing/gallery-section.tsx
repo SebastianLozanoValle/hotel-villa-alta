@@ -4,6 +4,7 @@ import React, { useEffect, useRef } from 'react';
 import Image from 'next/image';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { TranslatedText } from '../translation/TranslatedText';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -74,17 +75,17 @@ const GallerySection = ({ content }: GallerySectionProps) => {
       >
         <div className="flex-shrink-0 w-[35vw] mr-10">
           <span className="font-source text-[10px] tracking-[0.4em] uppercase opacity-40 block mb-6">
-            (02) Galería
+            (02) <TranslatedText>Galería</TranslatedText>
           </span>
           <h2 className="text-[6vw] font-prata leading-[0.9] text-secondary mb-8 uppercase">
-            {content.title}
+            <TranslatedText>{content.title}</TranslatedText>
           </h2>
           <p className="font-source text-sm text-secondary/60 max-w-[320px] leading-relaxed italic">
-            {content.subtitle}
+            <TranslatedText>{content.subtitle}</TranslatedText>
           </p>
           <div className="mt-12">
             <button className="px-8 py-3 border border-secondary/20 rounded-full font-source text-[10px] tracking-widest uppercase text-secondary hover:bg-secondary hover:text-white transition-all">
-              {content.view_all}
+              <TranslatedText>{content.view_all}</TranslatedText>
             </button>
           </div>
         </div>

@@ -2,6 +2,7 @@
 
 import { useState, useRef, useEffect } from "react";
 import gsap from "gsap";
+import { TranslatedText } from "../translation/TranslatedText";
 
 interface LuxurySelectProps {
   label: string;
@@ -35,11 +36,11 @@ const LuxurySelect = ({ label, value, options, onChange }: LuxurySelectProps) =>
     <div className="flex flex-col gap-1 w-full md:min-w-[220px] relative group border-b border-white/30 pb-2 cursor-pointer" 
          onClick={() => setIsOpen(!isOpen)}>
       <label className="text-[10px] font-source tracking-[0.2em] uppercase opacity-50 text-white">
-        {label}
+        <TranslatedText>{label}</TranslatedText>
       </label>
       <div className="flex justify-between items-center">
         <span className="text-lg font-source text-white tracking-wide">
-          {value}
+          <TranslatedText>{value}</TranslatedText>
         </span>
         <svg 
           ref={iconRef}
@@ -64,7 +65,7 @@ const LuxurySelect = ({ label, value, options, onChange }: LuxurySelectProps) =>
             }}
             className="px-4 py-3 text-sm font-source text-white/80 hover:bg-white/10 hover:text-white transition-colors"
           >
-            {opt}
+            <TranslatedText>{opt}</TranslatedText>
           </div>
         ))}
       </div>
@@ -91,7 +92,9 @@ const BookingEngine = ({ content }: BookingEngineProps) => {
     <div className='flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12 mt-12 md:mt-16 w-full max-w-5xl px-4 mx-auto relative z-10'>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 w-full">
           <div className="flex flex-col gap-1 w-full border-b border-white/30 pb-2 cursor-pointer">
-            <label className="text-[10px] font-source tracking-[0.2em] uppercase opacity-50 text-white">{content.arrival}</label>
+            <label className="text-[10px] font-source tracking-[0.2em] uppercase opacity-50 text-white">
+              <TranslatedText>{content.arrival}</TranslatedText>
+            </label>
             <div className="flex justify-between items-center">
               <span className="text-lg font-source text-white tracking-wide">23 - 28 Ene</span>
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1.5" className="opacity-70">
@@ -120,7 +123,7 @@ const BookingEngine = ({ content }: BookingEngineProps) => {
         
         <button className='w-full md:w-auto flex items-center justify-center gap-6 bg-secondary border border-secondary rounded-full px-10 py-4 hover:bg-white text-white hover:text-secondary transition-all duration-300 group shadow-xl'>
             <span className='font-source tracking-[0.2em] text-sm font-medium'>
-              {content.cta}
+              <TranslatedText>{content.cta}</TranslatedText>
             </span>
             <svg width="24" height="12" viewBox="0 0 24 12" fill="none" xmlns="http://www.w3.org/2000/svg" className="transform group-hover:translate-x-1 transition-transform">
                 <path d="M0 6H22M22 6L17 1M22 6L17 11" stroke="currentColor" strokeWidth="1.5" />

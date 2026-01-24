@@ -3,6 +3,7 @@
 import React, { useState, useRef } from 'react';
 import Image from 'next/image';
 import gsap from 'gsap';
+import { TranslatedText } from '../translation/TranslatedText';
 
 interface Room {
   id: string;
@@ -81,12 +82,12 @@ const RoomsSection = ({ content }: RoomsSectionProps) => {
     <section className="relative min-h-screen w-full bg-secondary text-white py-20 px-6 md:px-12 lg:px-20 overflow-hidden flex flex-col justify-center">
       <div className="absolute top-8 md:top-12 left-6 md:left-12 flex flex-col md:flex-row gap-4 md:gap-20 font-source text-[8px] md:text-[10px] tracking-[0.2em] uppercase opacity-40 z-10">
         <span>Villa Alta Guest House, 2026</span>
-        <span className="hidden sm:inline">({content.meta_rooms})</span>
+        <span className="hidden sm:inline">(<TranslatedText>{content.meta_rooms}</TranslatedText>)</span>
       </div>
       
       <div ref={metaRef} className="absolute top-8 md:top-12 right-6 md:right-12 font-source text-[8px] md:text-[10px] tracking-[0.2em] uppercase opacity-40 z-10 flex gap-8">
         <span>({room.id})</span>
-        <span>{content.label}</span>
+        <span><TranslatedText>{content.label}</TranslatedText></span>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center mt-12 md:mt-0">
@@ -111,18 +112,18 @@ const RoomsSection = ({ content }: RoomsSectionProps) => {
                    <h2 
                      className="text-xl sm:text-2xl lg:text-3xl font-prata leading-[0.8] absolute -top-[4vw] -left-[2vw] md:-top-[3vw] md:-left-[4vw] z-20 pointer-events-none whitespace-nowrap opacity-90 uppercase text-rose-400"
                    >
-                     {room.titleTop}
+                     <TranslatedText>{room.titleTop}</TranslatedText>
                    </h2>
                    <div className="flex flex-col ml-[4vw] md:ml-[8vw]">
                      <h2 
                        className="text-2xl sm:text-4xl lg:text-5xl font-prata leading-[0.9] uppercase text-background"
                      >
-                       {room.titleBottom}
+                       <TranslatedText>{room.titleBottom}</TranslatedText>
                      </h2>
                      <h2 
                        className="text-2xl sm:text-4xl lg:text-5xl font-prata leading-[0.9] opacity-80 uppercase text-background"
                      >
-                       {content.meta_rooms}
+                       <TranslatedText>{content.meta_rooms}</TranslatedText>
                      </h2>
                    </div>
           </div>
@@ -130,11 +131,11 @@ const RoomsSection = ({ content }: RoomsSectionProps) => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16">
             <div className="flex flex-col gap-6 md:gap-8 order-2 md:order-1">
               <p className="font-source text-xs md:text-sm leading-relaxed opacity-70 max-w-[320px]">
-                {room.description}
+                <TranslatedText>{room.description}</TranslatedText>
               </p>
                      <div className="flex items-center">
                        <div className="px-6 py-3 bg-accent-rose text-white border border-accent-rose rounded-full font-source text-[9px] md:text-[10px] tracking-widest uppercase hover:bg-transparent hover:text-white transition-all duration-500 cursor-default">
-                         {room.price}
+                         <TranslatedText>{room.price}</TranslatedText>
                        </div>
                      </div>
             </div>
@@ -143,7 +144,7 @@ const RoomsSection = ({ content }: RoomsSectionProps) => {
               {room.services.map((service, idx) => (
                 <div key={idx} className="flex items-center gap-3 font-source text-[8px] md:text-[9px] tracking-[0.2em] uppercase opacity-50 hover:opacity-100 transition-opacity">
                   <span className="w-1 h-1 bg-white rounded-full"></span>
-                  {service}
+                  <TranslatedText>{service}</TranslatedText>
                 </div>
               ))}
             </div>
@@ -155,7 +156,7 @@ const RoomsSection = ({ content }: RoomsSectionProps) => {
           >
             <div className="relative z-10 flex flex-col items-center">
               <span className="font-source text-[8px] md:text-[10px] tracking-[0.3em] uppercase group-hover:scale-110 transition-transform">
-                {content.next}
+                <TranslatedText>{content.next}</TranslatedText>
               </span>
               <span className="text-[10px] md:text-[12px] mt-1 group-hover:translate-x-2 transition-transform">→</span>
             </div>

@@ -3,6 +3,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { TranslatedText } from '../translation/TranslatedText';
 
 interface FooterProps {
   content: {
@@ -43,7 +44,7 @@ const Footer = ({ content }: FooterProps) => {
             <span className="text-xs font-source tracking-[0.4em] uppercase opacity-60 mt-2">Guest House</span>
           </div>
           <p className="font-source text-sm opacity-60 leading-relaxed italic">
-            {content.footer.description}
+            <TranslatedText>{content.footer.description}</TranslatedText>
           </p>
           <div className="flex gap-8 pt-4">
             <a href="#" className="text-xs font-source tracking-[0.2em] uppercase hover:opacity-50 transition-opacity">Instagram</a>
@@ -52,32 +53,40 @@ const Footer = ({ content }: FooterProps) => {
         </div>
 
         <div className="flex flex-col gap-8 min-w-[150px]">
-          <span className="font-source text-[10px] tracking-[0.3em] uppercase opacity-40">{content.footer.navigation}</span>
+          <span className="font-source text-[10px] tracking-[0.3em] uppercase opacity-40">
+            <TranslatedText>{content.footer.navigation}</TranslatedText>
+          </span>
           <nav className="flex flex-col gap-4">
             <Link href="/" className="text-xl font-prata hover:opacity-50 transition-opacity">
-              {content.navbar.inicio}
+              <TranslatedText>{content.navbar.inicio}</TranslatedText>
             </Link>
             <Link href="/" className="text-xl font-prata hover:opacity-50 transition-opacity">
-              {content.footer.suites}
+              <TranslatedText>{content.footer.suites}</TranslatedText>
             </Link>
             <Link href="/" className="text-xl font-prata hover:opacity-50 transition-opacity">
-              {content.footer.gastronomy}
+              <TranslatedText>{content.footer.gastronomy}</TranslatedText>
             </Link>
             <Link href="/" className="text-xl font-prata hover:opacity-50 transition-opacity">
-              {content.navbar.reserva}
+              <TranslatedText>{content.navbar.reserva}</TranslatedText>
             </Link>
           </nav>
         </div>
 
         <div className="flex flex-col gap-8">
-          <span className="font-source text-[10px] tracking-[0.3em] uppercase opacity-40">{content.footer.contact}</span>
+          <span className="font-source text-[10px] tracking-[0.3em] uppercase opacity-40">
+            <TranslatedText>{content.footer.contact}</TranslatedText>
+          </span>
           <div className="flex flex-col gap-6 font-source text-sm opacity-80">
             <div>
-              <p className="tracking-widest uppercase text-[10px] opacity-40 mb-2">{content.footer.location_label}</p>
+              <p className="tracking-widest uppercase text-[10px] opacity-40 mb-2">
+                <TranslatedText>{content.footer.location_label}</TranslatedText>
+              </p>
               <p>Calle Callejon los Estribos 2-116 p2 AT1<br/>Barrio Centro, Centro, 130001<br/>Cartagena de Indias, Colombia</p>
             </div>
             <div>
-              <p className="tracking-widest uppercase text-[10px] opacity-40 mb-2">{content.footer.reservations_label}</p>
+              <p className="tracking-widest uppercase text-[10px] opacity-40 mb-2">
+                <TranslatedText>{content.footer.reservations_label}</TranslatedText>
+              </p>
               <p>+57 123 456 7890<br/>reservas@hotelvillaalta.com</p>
             </div>
           </div>
@@ -86,7 +95,7 @@ const Footer = ({ content }: FooterProps) => {
 
       <div className="relative z-10 border-t border-white/5 py-8 text-center px-6">
         <p className="font-source text-[9px] tracking-[0.3em] uppercase flex items-center justify-center gap-2">
-          <span className="opacity-30">&copy; 2026 Villa Alta Guest House. {content.footer.rights}</span>
+          <span className="opacity-30">&copy; 2026 Villa Alta Guest House. <TranslatedText>{content.footer.rights}</TranslatedText></span>
           <span className="opacity-30">|</span>
           <span className="opacity-30">Developed by</span>
           <a href="#" className="text-white font-bold hover:opacity-70 transition-opacity tracking-[0.4em]">SLE Development</a>

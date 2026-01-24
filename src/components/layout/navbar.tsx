@@ -4,6 +4,8 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { useState } from 'react'
 import MenuSheet from './menu-sheet'
+import { LanguageSelector } from './language-selector/LanguageSelector'
+import { TranslatedText } from '../translation/TranslatedText'
 
 interface NavbarProps {
   content: {
@@ -31,7 +33,7 @@ const Navbar = ({ content }: NavbarProps) => {
               <div className='w-4 md:w-5 h-px bg-white transition-all group-hover:w-6 md:group-hover:w-8'></div>
             </div>
             <span className='font-source tracking-[0.3em] text-[10px] md:text-xs uppercase font-medium'>
-              {content.menu}
+              <TranslatedText>{content.menu}</TranslatedText>
             </span>
           </button>
         </div>
@@ -50,12 +52,13 @@ const Navbar = ({ content }: NavbarProps) => {
         </div>
         
         <div className='flex gap-4 md:gap-10 items-center flex-1 justify-end'>
-          <div className='hidden md:flex items-center gap-10'>
+          <div className='hidden md:flex items-center gap-6 lg:gap-10'>
+            <LanguageSelector />
             <Link href="/" className='text-lg font-source hover:opacity-70 transition-opacity border-r border-slate-400 pr-10 py-8 font-light'>
-              {content.inicio}
+              <TranslatedText>{content.inicio}</TranslatedText>
             </Link>
             <Link href="/" className='text-lg font-source hover:opacity-70 transition-opacity font-bold text-accent-rose'>
-              {content.reserva}
+              <TranslatedText>{content.reserva}</TranslatedText>
             </Link>
           </div>
         </div>

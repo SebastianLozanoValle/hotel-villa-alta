@@ -3,6 +3,7 @@
 import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { TranslatedText } from '../translation/TranslatedText';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -131,10 +132,10 @@ const ReviewsSection = ({ content }: ReviewsSectionProps) => {
       <div className="max-w-7xl mx-auto">
         <div className="mb-16 text-center">
           <span className="font-source text-[10px] tracking-[0.4em] uppercase opacity-40 block mb-4">
-            (03) Testimonios
+            (03) <TranslatedText>Testimonios</TranslatedText>
           </span>
           <h2 className="text-3xl md:text-4xl font-prata text-white uppercase leading-tight">
-            {content.title}
+            <TranslatedText>{content.title}</TranslatedText>
           </h2>
         </div>
 
@@ -149,21 +150,23 @@ const ReviewsSection = ({ content }: ReviewsSectionProps) => {
                     <span ref={scoreRef} className="text-4xl font-prata font-bold text-white">0.0</span>
                   </div>
                   <div>
-                    <h3 className="text-3xl font-prata text-white leading-none mb-3">{content.overall_label}</h3>
+                    <h3 className="text-3xl font-prata text-white leading-none mb-3">
+                      <TranslatedText>{content.overall_label}</TranslatedText>
+                    </h3>
                     <p className="font-source text-xs opacity-50 uppercase tracking-[0.2em] text-white">
-                      <span ref={countRef} className="font-bold">0</span> {content.comments_count.split(' ')[1]}
+                      <span ref={countRef} className="font-bold">0</span> <TranslatedText>{content.comments_count.split(' ')[1]}</TranslatedText>
                     </p>
                   </div>
                 </div>
 
                 <div className="flex flex-col gap-10">
                   <h4 className="font-source text-[10px] uppercase tracking-[0.3em] font-bold text-white/30">
-                    {content.categories_title}
+                    <TranslatedText>{content.categories_title}</TranslatedText>
                   </h4>
                   {content.categories.map((cat, idx) => (
                     <div key={idx} className="flex flex-col gap-4">
                       <div className="flex justify-between items-center font-source text-[10px] tracking-widest uppercase">
-                        <span className="text-white/60">{cat.label}</span>
+                        <span className="text-white/60"><TranslatedText>{cat.label}</TranslatedText></span>
                         <span className="font-bold text-white">{cat.score}</span>
                       </div>
                       <div className="h-px w-full bg-white/10 relative">
@@ -187,11 +190,13 @@ const ReviewsSection = ({ content }: ReviewsSectionProps) => {
                   className="testimonial-card flex flex-col gap-3 p-5 bg-white/5 backdrop-blur-sm shadow-xl rounded-sm border border-white/5 group hover:border-white/20 h-fit"
                 >
                   <p className="font-source text-xs md:text-sm leading-relaxed text-white/80 italic">
-                    {item.text}
+                    <TranslatedText>{item.text}</TranslatedText>
                   </p>
                   <div className="mt-1 pt-3 border-t border-white/5 flex flex-col gap-0.5">
                     <span className="font-prata text-white text-base">{item.author}</span>
-                    <span className="font-source text-[7px] tracking-[0.3em] uppercase opacity-30 text-white">{item.country}</span>
+                    <span className="font-source text-[7px] tracking-[0.3em] uppercase opacity-30 text-white">
+                      <TranslatedText>{item.country}</TranslatedText>
+                    </span>
                   </div>
                 </div>
               ))}

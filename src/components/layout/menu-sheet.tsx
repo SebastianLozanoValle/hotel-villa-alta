@@ -3,6 +3,7 @@
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import Link from "next/link";
+import { TranslatedText } from "../translation/TranslatedText";
 
 interface MenuSheetProps {
   isOpen: boolean;
@@ -93,14 +94,14 @@ const MenuSheet = ({ isOpen, onClose, content }: MenuSheetProps) => {
       >
         <div className="flex justify-between items-center mb-12 md:mb-16">
           <span className="font-source tracking-[0.3em] text-[10px] md:text-xs uppercase opacity-50">
-            {content.menu}
+            <TranslatedText>{content.menu}</TranslatedText>
           </span>
           <button 
             onClick={onClose}
             className="group flex items-center gap-4 hover:opacity-70 transition-opacity"
           >
             <span className="text-[10px] tracking-[0.2em] uppercase font-source">
-              {content.close}
+              <TranslatedText>{content.close}</TranslatedText>
             </span>
             <div className="relative w-6 h-6">
               <span className="absolute top-1/2 left-0 w-full h-[1px] bg-white rotate-45"></span>
@@ -118,14 +119,16 @@ const MenuSheet = ({ isOpen, onClose, content }: MenuSheetProps) => {
               className="text-3xl md:text-4xl font-prata hover:pl-4 transition-all duration-300 group flex items-center gap-4 uppercase"
             >
               <span className="text-[10px] md:text-xs font-source opacity-0 group-hover:opacity-30 transition-opacity italic">0{idx + 1}</span>
-              {item.name}
+              <TranslatedText>{item.name}</TranslatedText>
             </Link>
           ))}
         </nav>
 
         <div className="mt-auto pt-12 border-t border-white/10 flex flex-col gap-6">
           <div className="flex flex-col gap-2">
-            <span className="text-[10px] tracking-[0.2em] uppercase opacity-40 font-source">Ubicación</span>
+            <span className="text-[10px] tracking-[0.2em] uppercase opacity-40 font-source">
+              <TranslatedText>Ubicación</TranslatedText>
+            </span>
             <p className="font-source text-sm opacity-80 italic">
               Calle Callejon los Estribos 2-116 p2 AT1<br/>Barrio Centro, Centro, 130001<br/>Cartagena de Indias, Colombia
             </p>
