@@ -102,7 +102,7 @@ const ReviewsSection = ({ content }: ReviewsSectionProps) => {
       // 6. Parallax por COLUMNAS (Solo en Desktop para evitar solapamiento en mobile)
       const mm = gsap.matchMedia();
 
-      mm.add("(min-width: 768px)", () => {
+      mm.add("(min-width: 1024px)", () => {
         gsap.to(".testimonial-col-1", {
           y: -100,
           ease: "none",
@@ -195,7 +195,7 @@ const ReviewsSection = ({ content }: ReviewsSectionProps) => {
           </div>
 
           {/* Lado Derecho: Testimonios en Desorden Ordenado */}
-          <div className="w-full lg:w-[60%] flex flex-col md:flex-row gap-8 lg:pt-20">
+          <div className="w-full lg:w-[60%] flex flex-col md:flex-row gap-6 md:gap-12 lg:pt-20">
             {/* Columna 1 */}
             <div className="testimonial-col-1 flex flex-col gap-8 flex-1">
               {col1.map((item, idx) => (
@@ -220,7 +220,7 @@ const ReviewsSection = ({ content }: ReviewsSectionProps) => {
             </div>
 
             {/* Columna 2 - Offset natural */}
-            <div className="testimonial-col-2 flex flex-col gap-12 flex-1 md:mt-32">
+            <div className="testimonial-col-2 flex flex-col gap-8 flex-1 md:mt-32">
               {col2.map((item, idx) => (
                 <div 
                   key={`col2-${idx}`} 
