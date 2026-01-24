@@ -3,6 +3,8 @@ import localFont from "next/font/local";
 import "../globals.css";
 import { LanguageProvider } from "@/src/contexts/LanguageContext";
 import { locales, type Locale } from "@/src/lib/locales";
+import fs from 'fs';
+import path from 'path';
 
 const helveticaBdEx = localFont({
   src: "../../public/fonts/HelveticaNeueLTStd-BdEx.otf",
@@ -54,10 +56,23 @@ export default async function LocaleLayout({
   const { locale: localeParam } = await params;
   const locale = localeParam as Locale;
 
+  // Cargar diccionario en el servidor para evitar flickering y mejorar SEO
+  let dictionary = {};
+  if (locale !== 'es') {
+    try {
+      const dictPath = path.join(process.cwd(), 'content', `${locale}.json`);
+      if (fs.existsSync(dictPath)) {
+        dictionary = JSON.parse(fs.readFileSync(dictPath, 'utf8'));
+      }
+    } catch (error) {
+      console.error(`Error loading dictionary for ${locale}:`, error);
+    }
+  }
+
   return (
     <html lang={locale}>
       <body className={`${helveticaBdEx.variable} ${sfPro.variable} relative antialiased`}>
-        <LanguageProvider>
+        <LanguageProvider initialLocale={locale} initialDictionary={dictionary}>
           {children}
         </LanguageProvider>
       </body>

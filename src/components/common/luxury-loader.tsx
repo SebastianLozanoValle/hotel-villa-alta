@@ -2,24 +2,28 @@
 
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
+import { useLanguage } from "@/src/contexts/LanguageContext";
 
 const LuxuryLoader = () => {
   const loaderRef = useRef<HTMLDivElement>(null);
+  const { isReady } = useLanguage();
 
   useEffect(() => {
-    const timeout = setTimeout(() => {
-      gsap.to(loaderRef.current, {
-        opacity: 0,
-        duration: 1,
-        ease: "power2.inOut",
-        onComplete: () => {
-          if (loaderRef.current) loaderRef.current.style.display = "none";
-        },
-      });
-    }, 1000);
+    if (isReady) {
+      const timeout = setTimeout(() => {
+        gsap.to(loaderRef.current, {
+          opacity: 0,
+          duration: 1,
+          ease: "power2.inOut",
+          onComplete: () => {
+            if (loaderRef.current) loaderRef.current.style.display = "none";
+          },
+        });
+      }, 1000);
 
-    return () => clearTimeout(timeout);
-  }, []);
+      return () => clearTimeout(timeout);
+    }
+  }, [isReady]);
 
   return (
     <div

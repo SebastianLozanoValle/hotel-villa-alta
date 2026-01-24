@@ -53,13 +53,13 @@ const Navbar = ({ content }: NavbarProps) => {
         
         <div className='flex gap-4 md:gap-10 items-center flex-1 justify-end'>
           <div className='hidden md:flex items-center gap-6 lg:gap-10'>
-            <LanguageSelector />
             <Link href="/" className='text-lg font-source hover:opacity-70 transition-opacity border-r border-slate-400 pr-10 py-8 font-light'>
               <TranslatedText>{content.inicio}</TranslatedText>
             </Link>
             <Link href="/" className='text-lg font-source hover:opacity-70 transition-opacity font-bold text-accent-rose'>
               <TranslatedText>{content.reserva}</TranslatedText>
             </Link>
+            <LanguageSelector />
           </div>
         </div>
       </nav>
