@@ -6,7 +6,7 @@ import type { NextRequest } from 'next/server';
 const locales = ['es', 'en', 'fr', 'de', 'it', 'pt'] as const;
 const defaultLocale = 'es';
 
-export default function proxy(request: NextRequest) {
+export function middleware(request: NextRequest) {
   const pathname = request.nextUrl.pathname;
   
   // 1. Si es la raíz, redirigir al idioma por defecto
