@@ -261,7 +261,7 @@ const LuxuryCalendar = ({ arrivalDate, departureDate, onArrivalChange, onDepartu
         className={`fixed left-4 right-4 bg-secondary shadow-2xl z-[9999] p-6 max-h-[85vh] overflow-y-auto md:!hidden transition-all duration-400 ${
           isOpen ? 'opacity-100 scale-100 pointer-events-auto' : 'opacity-0 scale-95 pointer-events-none'
         }`}
-        style={{ top: 'calc(50% - 20px)', transform: 'translateY(-50%)' }}
+        style={{ top: 'calc(50% - 30px)', transform: 'translateY(-50%)' }}
         onClick={(e) => e.stopPropagation()}
       >
         {calendarContent}
