@@ -146,42 +146,44 @@ const LuxuryCalendar = ({ arrivalDate, departureDate, onArrivalChange, onDepartu
   return (
     <div
       ref={calendarRef}
-      className="absolute bottom-full left-0 w-[340px] bg-secondary shadow-2xl z-[100] mb-4 border border-white/10 p-6 hidden"
+      className="absolute bottom-full left-1/2 -translate-x-1/2 md:left-0 md:translate-x-0 w-[calc(100vw-2rem)] max-w-[340px] md:w-[340px] bg-secondary shadow-2xl z-[100] mb-4 border border-white/10 p-4 md:p-6 hidden"
       onClick={(e) => e.stopPropagation()}
     >
-      <div className="flex items-center justify-between mb-6">
+      <div className="flex items-center justify-between mb-4 md:mb-6">
         <button
           onClick={prevMonth}
-          className="p-2 hover:bg-white/10 rounded transition-colors"
+          className="p-2 md:p-2 hover:bg-white/10 rounded transition-colors touch-manipulation"
+          aria-label="Mes anterior"
         >
-          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="white" strokeWidth="2">
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="white" strokeWidth="2" className="w-3 h-3 md:w-3 md:h-3">
             <path d="M7 2L3 6l4 4" />
           </svg>
         </button>
-        <h3 className="font-source text-sm text-white tracking-wider uppercase">
+        <h3 className="font-source text-xs md:text-sm text-white tracking-wider uppercase px-2 text-center">
           {monthNames[currentMonth.getMonth()]} {currentMonth.getFullYear()}
         </h3>
         <button
           onClick={nextMonth}
-          className="p-2 hover:bg-white/10 rounded transition-colors"
+          className="p-2 md:p-2 hover:bg-white/10 rounded transition-colors touch-manipulation"
+          aria-label="Mes siguiente"
         >
-          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="white" strokeWidth="2">
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="white" strokeWidth="2" className="w-3 h-3 md:w-3 md:h-3">
             <path d="M5 2l4 4-4 4" />
           </svg>
         </button>
       </div>
 
-      <div className="grid grid-cols-7 gap-1 mb-2">
+      <div className="grid grid-cols-7 gap-1 md:gap-1 mb-2">
         {dayNamesShort.map((day) => (
-          <div key={day} className="text-center py-2">
-            <span className="text-[9px] font-source text-white/50 uppercase tracking-wider">
+          <div key={day} className="text-center py-1 md:py-2">
+            <span className="text-[8px] md:text-[9px] font-source text-white/50 uppercase tracking-wider">
               {day}
             </span>
           </div>
         ))}
       </div>
 
-      <div className="grid grid-cols-7 gap-1">
+      <div className="grid grid-cols-7 gap-1.5 md:gap-1">
         {days.map((day, idx) => {
           const dateStr = day.fullDate.toISOString().split('T')[0];
           const isSelected = isDateSelected(day.fullDate);
@@ -196,9 +198,9 @@ const LuxuryCalendar = ({ arrivalDate, departureDate, onArrivalChange, onDepartu
               onClick={() => handleDateClick(day.fullDate)}
               disabled={isDisabled}
               className={`
-                aspect-square flex items-center justify-center text-sm font-source transition-all
+                aspect-square flex items-center justify-center text-xs md:text-sm font-source transition-all touch-manipulation min-h-[36px] md:min-h-0
                 ${!day.isCurrentMonth ? 'text-white/20' : 'text-white'}
-                ${isDisabled ? 'opacity-30 cursor-not-allowed' : 'hover:bg-white/10 cursor-pointer'}
+                ${isDisabled ? 'opacity-30 cursor-not-allowed' : 'hover:bg-white/10 active:bg-white/20 cursor-pointer'}
                 ${isSelected ? 'bg-accent-rose text-white font-medium' : ''}
                 ${isInRange && !isSelected ? 'bg-white/5' : ''}
                 ${isArrival ? 'rounded-l-full' : ''}
@@ -212,13 +214,13 @@ const LuxuryCalendar = ({ arrivalDate, departureDate, onArrivalChange, onDepartu
         })}
       </div>
 
-      <div className="mt-4 pt-4 border-t border-white/10 flex items-center justify-between text-xs font-source text-white/60">
-        <span className="uppercase tracking-wider">
+      <div className="mt-4 pt-4 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-2 sm:gap-0 text-[10px] md:text-xs font-source text-white/60">
+        <span className="uppercase tracking-wider text-center sm:text-left">
           {selectingArrival ? 'Selecciona llegada' : 'Selecciona salida'}
         </span>
         <button
           onClick={onClose}
-          className="uppercase tracking-wider hover:text-white transition-colors"
+          className="uppercase tracking-wider hover:text-white transition-colors touch-manipulation px-4 py-2"
         >
           Cerrar
         </button>
