@@ -125,37 +125,11 @@ const LuxuryCalendar = ({ arrivalDate, departureDate, onArrivalChange, onDepartu
   const days = getDaysInMonth(currentMonth);
 
   // Refs separados para móvil y desktop
-  const mobileModalRef = useRef<HTMLDivElement>(null);
-  const mobileBackdropRef = useRef<HTMLDivElement>(null);
   const desktopDropdownRef = useRef<HTMLDivElement>(null);
 
-  // Animaciones para modal móvil
+  // Animaciones solo para dropdown desktop (GSAP)
   useEffect(() => {
     if (isOpen) {
-      // Mostrar backdrop móvil (solo visible en móvil por CSS)
-      if (mobileBackdropRef.current) {
-        const isMobile = window.innerWidth < 768;
-        if (isMobile) {
-          mobileBackdropRef.current.style.display = 'block';
-          gsap.fromTo(mobileBackdropRef.current,
-            { opacity: 0 },
-            { opacity: 1, duration: 0.3 }
-          );
-        }
-      }
-      // Mostrar modal móvil (solo visible en móvil por CSS)
-      if (mobileModalRef.current) {
-        const isMobile = window.innerWidth < 768;
-        if (isMobile) {
-          mobileModalRef.current.style.display = 'block';
-          // Asegurar que siempre esté centrado
-          mobileModalRef.current.style.transform = 'translateY(-50%)';
-          gsap.fromTo(mobileModalRef.current,
-            { opacity: 0, scale: 0.9 },
-            { opacity: 1, scale: 1, duration: 0.4, ease: "power3.out" }
-          );
-        }
-      }
       // Mostrar dropdown desktop (solo visible en desktop por CSS)
       if (desktopDropdownRef.current) {
         const isMobile = window.innerWidth < 768;
@@ -167,39 +141,6 @@ const LuxuryCalendar = ({ arrivalDate, departureDate, onArrivalChange, onDepartu
         }
       }
     } else {
-      // Ocultar modal móvil
-      if (mobileModalRef.current) {
-        const isMobile = window.innerWidth < 768;
-        if (isMobile) {
-          // Mantener el centrado durante la animación
-          mobileModalRef.current.style.transform = 'translateY(-50%)';
-          gsap.to(mobileModalRef.current, {
-            opacity: 0,
-            scale: 0.9,
-            duration: 0.3,
-            ease: "power3.in",
-            onComplete: () => {
-              if (mobileModalRef.current) {
-                mobileModalRef.current.style.display = 'none';
-                mobileModalRef.current.style.transform = 'translateY(-50%)';
-              }
-            }
-          });
-        }
-      }
-      // Ocultar backdrop móvil
-      if (mobileBackdropRef.current) {
-        const isMobile = window.innerWidth < 768;
-        if (isMobile) {
-          gsap.to(mobileBackdropRef.current, {
-            opacity: 0,
-            duration: 0.2,
-            onComplete: () => {
-              if (mobileBackdropRef.current) mobileBackdropRef.current.style.display = 'none';
-            }
-          });
-        }
-      }
       // Ocultar dropdown desktop
       if (desktopDropdownRef.current) {
         const isMobile = window.innerWidth < 768;
@@ -309,15 +250,17 @@ const LuxuryCalendar = ({ arrivalDate, departureDate, onArrivalChange, onDepartu
 
   return (
     <>
-      {/* Modal móvil - Renderizado en el layout (fixed) - Visible solo en móvil */}
+      {/* Modal móvil - CSS puro, sin GSAP - Visible solo en móvil */}
       <div
-        ref={mobileBackdropRef}
-        className="fixed inset-0 bg-black/70 z-[9998] hidden md:!hidden"
+        className={`fixed inset-0 bg-black/70 z-[9998] md:!hidden transition-opacity duration-300 ${
+          isOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
+        }`}
         onClick={onClose}
       />
       <div
-        ref={mobileModalRef}
-        className="fixed top-1/2 left-4 right-4 bg-secondary shadow-2xl z-[9999] p-6 max-h-[85vh] overflow-y-auto hidden md:!hidden"
+        className={`fixed top-1/2 left-4 right-4 bg-secondary shadow-2xl z-[9999] p-6 max-h-[85vh] overflow-y-auto md:!hidden transition-all duration-400 ${
+          isOpen ? 'opacity-100 scale-100 pointer-events-auto' : 'opacity-0 scale-95 pointer-events-none'
+        }`}
         style={{ transform: 'translateY(-50%)' }}
         onClick={(e) => e.stopPropagation()}
       >
