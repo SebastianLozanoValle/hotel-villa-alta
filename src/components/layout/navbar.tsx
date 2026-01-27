@@ -32,7 +32,7 @@ const Navbar = ({ content }: NavbarProps) => {
 
   return (
     <>
-    <div className={`fixed top-0 left-0 right-0 z-50 ${textColor} ${bgColor}`}>
+    <div className={`fixed top-0 left-0 right-0 ${isLightPage ? 'z-50' : 'z-10'} ${textColor} ${bgColor}`}>
       <nav className={`flex items-center px-4 md:px-8 border-b ${borderColor}`}>
         <div className='flex flex-1 items-center'>
           <button 
