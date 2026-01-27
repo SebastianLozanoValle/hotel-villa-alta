@@ -128,85 +128,95 @@ const LuxuryCalendar = ({ arrivalDate, departureDate, onArrivalChange, onDepartu
   const mobileModalRef = useRef<HTMLDivElement>(null);
   const mobileBackdropRef = useRef<HTMLDivElement>(null);
   const desktopDropdownRef = useRef<HTMLDivElement>(null);
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
-    checkMobile();
-    window.addEventListener('resize', checkMobile);
-    return () => window.removeEventListener('resize', checkMobile);
-  }, []);
 
   // Animaciones para modal móvil
   useEffect(() => {
-    if (isMobile && isOpen) {
-      // Mostrar backdrop móvil
+    if (isOpen) {
+      // Mostrar backdrop móvil (solo visible en móvil por CSS)
       if (mobileBackdropRef.current) {
-        mobileBackdropRef.current.style.display = 'block';
-        gsap.fromTo(mobileBackdropRef.current,
-          { opacity: 0 },
-          { opacity: 1, duration: 0.3 }
-        );
+        const isMobile = window.innerWidth < 768;
+        if (isMobile) {
+          mobileBackdropRef.current.style.display = 'block';
+          gsap.fromTo(mobileBackdropRef.current,
+            { opacity: 0 },
+            { opacity: 1, duration: 0.3 }
+          );
+        }
       }
-      // Mostrar modal móvil
+      // Mostrar modal móvil (solo visible en móvil por CSS)
       if (mobileModalRef.current) {
-        mobileModalRef.current.style.display = 'block';
-        gsap.fromTo(mobileModalRef.current,
-          { opacity: 0, scale: 0.9, yPercent: -40 },
-          { opacity: 1, scale: 1, yPercent: -50, duration: 0.4, ease: "power3.out" }
-        );
+        const isMobile = window.innerWidth < 768;
+        if (isMobile) {
+          mobileModalRef.current.style.display = 'block';
+          // Asegurar que siempre esté centrado
+          mobileModalRef.current.style.transform = 'translateY(-50%)';
+          gsap.fromTo(mobileModalRef.current,
+            { opacity: 0, scale: 0.9 },
+            { opacity: 1, scale: 1, duration: 0.4, ease: "power3.out" }
+          );
+        }
       }
-    } else if (isMobile && !isOpen) {
+      // Mostrar dropdown desktop (solo visible en desktop por CSS)
+      if (desktopDropdownRef.current) {
+        const isMobile = window.innerWidth < 768;
+        if (!isMobile) {
+          gsap.fromTo(desktopDropdownRef.current,
+            { opacity: 0, y: 10, display: 'none' },
+            { opacity: 1, y: 0, display: 'block', duration: 0.3, ease: "power2.out" }
+          );
+        }
+      }
+    } else {
       // Ocultar modal móvil
       if (mobileModalRef.current) {
-        gsap.to(mobileModalRef.current, {
-          opacity: 0,
-          scale: 0.9,
-          yPercent: -40,
-          duration: 0.3,
-          ease: "power3.in",
-          onComplete: () => {
-            if (mobileModalRef.current) {
-              mobileModalRef.current.style.display = 'none';
-              mobileModalRef.current.style.transform = 'translateY(-50%)';
+        const isMobile = window.innerWidth < 768;
+        if (isMobile) {
+          // Mantener el centrado durante la animación
+          mobileModalRef.current.style.transform = 'translateY(-50%)';
+          gsap.to(mobileModalRef.current, {
+            opacity: 0,
+            scale: 0.9,
+            duration: 0.3,
+            ease: "power3.in",
+            onComplete: () => {
+              if (mobileModalRef.current) {
+                mobileModalRef.current.style.display = 'none';
+                mobileModalRef.current.style.transform = 'translateY(-50%)';
+              }
             }
-          }
-        });
+          });
+        }
       }
       // Ocultar backdrop móvil
       if (mobileBackdropRef.current) {
-        gsap.to(mobileBackdropRef.current, {
-          opacity: 0,
-          duration: 0.2,
-          onComplete: () => {
-            if (mobileBackdropRef.current) mobileBackdropRef.current.style.display = 'none';
-          }
-        });
+        const isMobile = window.innerWidth < 768;
+        if (isMobile) {
+          gsap.to(mobileBackdropRef.current, {
+            opacity: 0,
+            duration: 0.2,
+            onComplete: () => {
+              if (mobileBackdropRef.current) mobileBackdropRef.current.style.display = 'none';
+            }
+          });
+        }
+      }
+      // Ocultar dropdown desktop
+      if (desktopDropdownRef.current) {
+        const isMobile = window.innerWidth < 768;
+        if (!isMobile) {
+          gsap.to(desktopDropdownRef.current, {
+            opacity: 0,
+            y: 10,
+            duration: 0.2,
+            ease: "power2.in",
+            onComplete: () => {
+              if (desktopDropdownRef.current) desktopDropdownRef.current.style.display = 'none';
+            }
+          });
+        }
       }
     }
-  }, [isOpen, isMobile]);
-
-  // Animaciones para dropdown desktop
-  useEffect(() => {
-    if (!isMobile && isOpen && desktopDropdownRef.current) {
-      gsap.fromTo(desktopDropdownRef.current,
-        { opacity: 0, y: 10, display: 'none' },
-        { opacity: 1, y: 0, display: 'block', duration: 0.3, ease: "power2.out" }
-      );
-    } else if (!isMobile && !isOpen && desktopDropdownRef.current) {
-      gsap.to(desktopDropdownRef.current, {
-        opacity: 0,
-        y: 10,
-        duration: 0.2,
-        ease: "power2.in",
-        onComplete: () => {
-          if (desktopDropdownRef.current) desktopDropdownRef.current.style.display = 'none';
-        }
-      });
-    }
-  }, [isOpen, isMobile]);
+  }, [isOpen]);
 
   // Renderizar contenido del calendario
   const calendarContent = (
@@ -299,35 +309,29 @@ const LuxuryCalendar = ({ arrivalDate, departureDate, onArrivalChange, onDepartu
 
   return (
     <>
-      {/* Modal móvil - Renderizado en el layout (fixed) */}
-      {isMobile && (
-        <>
-          <div
-            ref={mobileBackdropRef}
-            className="fixed inset-0 bg-black/70 z-[9998] hidden"
-            onClick={onClose}
-          />
-          <div
-            ref={mobileModalRef}
-            className="fixed top-1/2 left-4 right-4 bg-secondary shadow-2xl z-[9999] p-6 max-h-[85vh] overflow-y-auto hidden"
-            style={{ transform: 'translateY(-50%)' }}
-            onClick={(e) => e.stopPropagation()}
-          >
-            {calendarContent}
-          </div>
-        </>
-      )}
+      {/* Modal móvil - Renderizado en el layout (fixed) - Visible solo en móvil */}
+      <div
+        ref={mobileBackdropRef}
+        className="fixed inset-0 bg-black/70 z-[9998] hidden md:!hidden"
+        onClick={onClose}
+      />
+      <div
+        ref={mobileModalRef}
+        className="fixed top-1/2 left-4 right-4 bg-secondary shadow-2xl z-[9999] p-6 max-h-[85vh] overflow-y-auto hidden md:!hidden"
+        style={{ transform: 'translateY(-50%)' }}
+        onClick={(e) => e.stopPropagation()}
+      >
+        {calendarContent}
+      </div>
 
-      {/* Dropdown desktop - Renderizado relativo */}
-      {!isMobile && (
-        <div
-          ref={desktopDropdownRef}
-          className="absolute bottom-full left-0 w-[340px] bg-secondary shadow-2xl z-[100] mb-4 border border-white/10 p-6 hidden"
-          onClick={(e) => e.stopPropagation()}
-        >
-          {calendarContent}
-        </div>
-      )}
+      {/* Dropdown desktop - Renderizado relativo - Visible solo en desktop */}
+      <div
+        ref={desktopDropdownRef}
+        className="absolute bottom-full left-0 w-[340px] bg-secondary shadow-2xl z-[100] mb-4 border border-white/10 p-6 hidden max-md:!hidden"
+        onClick={(e) => e.stopPropagation()}
+      >
+        {calendarContent}
+      </div>
     </>
   );
 };
