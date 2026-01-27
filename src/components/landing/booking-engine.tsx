@@ -124,66 +124,133 @@ const LuxuryCalendar = ({ arrivalDate, departureDate, onArrivalChange, onDepartu
 
   const days = getDaysInMonth(currentMonth);
 
+  // Refs separados para móvil y desktop
+  const mobileModalRef = useRef<HTMLDivElement>(null);
+  const mobileBackdropRef = useRef<HTMLDivElement>(null);
+  const desktopDropdownRef = useRef<HTMLDivElement>(null);
+  const [isMobile, setIsMobile] = useState(false);
+
   useEffect(() => {
-    if (isOpen && calendarRef.current) {
-      gsap.fromTo(calendarRef.current,
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
+  // Animaciones para modal móvil
+  useEffect(() => {
+    if (isMobile && isOpen) {
+      // Mostrar backdrop móvil
+      if (mobileBackdropRef.current) {
+        mobileBackdropRef.current.style.display = 'block';
+        gsap.fromTo(mobileBackdropRef.current,
+          { opacity: 0 },
+          { opacity: 1, duration: 0.3 }
+        );
+      }
+      // Mostrar modal móvil
+      if (mobileModalRef.current) {
+        mobileModalRef.current.style.display = 'block';
+        gsap.fromTo(mobileModalRef.current,
+          { opacity: 0, scale: 0.9, yPercent: -40 },
+          { opacity: 1, scale: 1, yPercent: -50, duration: 0.4, ease: "power3.out" }
+        );
+      }
+    } else if (isMobile && !isOpen) {
+      // Ocultar modal móvil
+      if (mobileModalRef.current) {
+        gsap.to(mobileModalRef.current, {
+          opacity: 0,
+          scale: 0.9,
+          yPercent: -40,
+          duration: 0.3,
+          ease: "power3.in",
+          onComplete: () => {
+            if (mobileModalRef.current) {
+              mobileModalRef.current.style.display = 'none';
+              mobileModalRef.current.style.transform = 'translateY(-50%)';
+            }
+          }
+        });
+      }
+      // Ocultar backdrop móvil
+      if (mobileBackdropRef.current) {
+        gsap.to(mobileBackdropRef.current, {
+          opacity: 0,
+          duration: 0.2,
+          onComplete: () => {
+            if (mobileBackdropRef.current) mobileBackdropRef.current.style.display = 'none';
+          }
+        });
+      }
+    }
+  }, [isOpen, isMobile]);
+
+  // Animaciones para dropdown desktop
+  useEffect(() => {
+    if (!isMobile && isOpen && desktopDropdownRef.current) {
+      gsap.fromTo(desktopDropdownRef.current,
         { opacity: 0, y: 10, display: 'none' },
         { opacity: 1, y: 0, display: 'block', duration: 0.3, ease: "power2.out" }
       );
-    } else if (!isOpen && calendarRef.current) {
-      gsap.to(calendarRef.current, {
+    } else if (!isMobile && !isOpen && desktopDropdownRef.current) {
+      gsap.to(desktopDropdownRef.current, {
         opacity: 0,
         y: 10,
         duration: 0.2,
         ease: "power2.in",
         onComplete: () => {
-          if (calendarRef.current) calendarRef.current.style.display = 'none';
+          if (desktopDropdownRef.current) desktopDropdownRef.current.style.display = 'none';
         }
       });
     }
-  }, [isOpen]);
+  }, [isOpen, isMobile]);
 
-  return (
-    <div
-      ref={calendarRef}
-      className="absolute bottom-full left-1/2 -translate-x-1/2 md:left-0 md:translate-x-0 w-[calc(100vw-2rem)] max-w-[340px] md:w-[340px] bg-secondary shadow-2xl z-[100] mb-4 border border-white/10 p-4 md:p-6 hidden"
-      onClick={(e) => e.stopPropagation()}
-    >
-      <div className="flex items-center justify-between mb-4 md:mb-6">
+  // Renderizar contenido del calendario
+  const calendarContent = (
+    <>
+      {/* Header con indicador de arrastre en móvil */}
+      <div className="flex items-center justify-center mb-4 md:hidden">
+        <div className="w-12 h-1 bg-white/30 rounded-full"></div>
+      </div>
+
+      <div className="flex items-center justify-between mb-6">
         <button
           onClick={prevMonth}
-          className="p-2 md:p-2 hover:bg-white/10 rounded transition-colors touch-manipulation"
+          className="p-3 md:p-2 hover:bg-white/10 active:bg-white/20 rounded transition-colors touch-manipulation"
           aria-label="Mes anterior"
         >
-          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="white" strokeWidth="2" className="w-3 h-3 md:w-3 md:h-3">
+          <svg width="16" height="16" viewBox="0 0 12 12" fill="none" stroke="white" strokeWidth="2" className="w-4 h-4 md:w-3 md:h-3">
             <path d="M7 2L3 6l4 4" />
           </svg>
         </button>
-        <h3 className="font-source text-xs md:text-sm text-white tracking-wider uppercase px-2 text-center">
+        <h3 className="font-source text-base md:text-sm text-white tracking-wider uppercase px-4 text-center font-medium">
           {monthNames[currentMonth.getMonth()]} {currentMonth.getFullYear()}
         </h3>
         <button
           onClick={nextMonth}
-          className="p-2 md:p-2 hover:bg-white/10 rounded transition-colors touch-manipulation"
+          className="p-3 md:p-2 hover:bg-white/10 active:bg-white/20 rounded transition-colors touch-manipulation"
           aria-label="Mes siguiente"
         >
-          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="white" strokeWidth="2" className="w-3 h-3 md:w-3 md:h-3">
+          <svg width="16" height="16" viewBox="0 0 12 12" fill="none" stroke="white" strokeWidth="2" className="w-4 h-4 md:w-3 md:h-3">
             <path d="M5 2l4 4-4 4" />
           </svg>
         </button>
       </div>
 
-      <div className="grid grid-cols-7 gap-1 md:gap-1 mb-2">
+      <div className="grid grid-cols-7 gap-2 md:gap-1 mb-3 md:mb-2">
         {dayNamesShort.map((day) => (
-          <div key={day} className="text-center py-1 md:py-2">
-            <span className="text-[8px] md:text-[9px] font-source text-white/50 uppercase tracking-wider">
+          <div key={day} className="text-center py-2 md:py-2">
+            <span className="text-[10px] md:text-[9px] font-source text-white/50 uppercase tracking-wider font-medium">
               {day}
             </span>
           </div>
         ))}
       </div>
 
-      <div className="grid grid-cols-7 gap-1.5 md:gap-1">
+      <div className="grid grid-cols-7 gap-2 md:gap-1">
         {days.map((day, idx) => {
           const dateStr = day.fullDate.toISOString().split('T')[0];
           const isSelected = isDateSelected(day.fullDate);
@@ -198,14 +265,16 @@ const LuxuryCalendar = ({ arrivalDate, departureDate, onArrivalChange, onDepartu
               onClick={() => handleDateClick(day.fullDate)}
               disabled={isDisabled}
               className={`
-                aspect-square flex items-center justify-center text-xs md:text-sm font-source transition-all touch-manipulation min-h-[36px] md:min-h-0
+                aspect-square flex items-center justify-center text-base md:text-sm font-source transition-all touch-manipulation
+                min-h-[44px] md:min-h-0
                 ${!day.isCurrentMonth ? 'text-white/20' : 'text-white'}
                 ${isDisabled ? 'opacity-30 cursor-not-allowed' : 'hover:bg-white/10 active:bg-white/20 cursor-pointer'}
-                ${isSelected ? 'bg-accent-rose text-white font-medium' : ''}
+                ${isSelected ? 'bg-accent-rose text-white font-semibold scale-105' : ''}
                 ${isInRange && !isSelected ? 'bg-white/5' : ''}
                 ${isArrival ? 'rounded-l-full' : ''}
                 ${isDeparture ? 'rounded-r-full' : ''}
                 ${isInRange && !isArrival && !isDeparture ? 'rounded-none' : ''}
+                ${!isSelected && !isInRange ? 'rounded-full' : ''}
               `}
             >
               {day.date}
@@ -214,18 +283,52 @@ const LuxuryCalendar = ({ arrivalDate, departureDate, onArrivalChange, onDepartu
         })}
       </div>
 
-      <div className="mt-4 pt-4 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-2 sm:gap-0 text-[10px] md:text-xs font-source text-white/60">
-        <span className="uppercase tracking-wider text-center sm:text-left">
+      <div className="mt-6 pt-4 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4 md:gap-0 text-sm md:text-xs font-source text-white/60">
+        <span className="uppercase tracking-wider text-center md:text-left font-medium">
           {selectingArrival ? 'Selecciona llegada' : 'Selecciona salida'}
         </span>
         <button
           onClick={onClose}
-          className="uppercase tracking-wider hover:text-white transition-colors touch-manipulation px-4 py-2"
+          className="uppercase tracking-wider hover:text-white active:text-white transition-colors touch-manipulation px-6 py-3 md:px-4 md:py-2 bg-white/10 hover:bg-white/20 rounded-full md:rounded-sm font-medium"
         >
           Cerrar
         </button>
       </div>
-    </div>
+    </>
+  );
+
+  return (
+    <>
+      {/* Modal móvil - Renderizado en el layout (fixed) */}
+      {isMobile && (
+        <>
+          <div
+            ref={mobileBackdropRef}
+            className="fixed inset-0 bg-black/70 z-[9998] hidden"
+            onClick={onClose}
+          />
+          <div
+            ref={mobileModalRef}
+            className="fixed top-1/2 left-4 right-4 bg-secondary shadow-2xl z-[9999] p-6 max-h-[85vh] overflow-y-auto hidden"
+            style={{ transform: 'translateY(-50%)' }}
+            onClick={(e) => e.stopPropagation()}
+          >
+            {calendarContent}
+          </div>
+        </>
+      )}
+
+      {/* Dropdown desktop - Renderizado relativo */}
+      {!isMobile && (
+        <div
+          ref={desktopDropdownRef}
+          className="absolute bottom-full left-0 w-[340px] bg-secondary shadow-2xl z-[100] mb-4 border border-white/10 p-6 hidden"
+          onClick={(e) => e.stopPropagation()}
+        >
+          {calendarContent}
+        </div>
+      )}
+    </>
   );
 };
 
