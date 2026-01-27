@@ -3,7 +3,9 @@
     "menu": "菜单",
     "inicio": "首页",
     "reserva": "立即预订",
-    "close": "关闭"
+    "close": "关闭",
+    "reseñas": "评论",
+    "nosotros": "关于我们"
   },
   "hero": {
     "title": "阿尔塔别墅宾馆"
@@ -109,6 +111,7 @@
     "meta_rooms": "房间",
     "label": "房间",
     "next": "下一页",
+    "reserveNow": "预订",
     "list": [
       {
         "id": "01",
@@ -186,6 +189,8 @@
     "contact": "联系方式",
     "location_label": "地点",
     "reservations_label": "预订",
-    "rights": "保留所有权利。"
+    "rights": "保留所有权利。",
+    "terms": "条款和条件",
+    "rnt": "RNT"
   }
 }

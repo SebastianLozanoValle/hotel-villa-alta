@@ -3,6 +3,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useParams } from 'next/navigation';
 import { TranslatedText } from '../translation/TranslatedText';
 
 interface FooterProps {
@@ -20,11 +21,40 @@ interface FooterProps {
       location_label: string;
       reservations_label: string;
       rights: string;
+      terms: string;
+      rnt: string;
     };
   };
 }
 
 const Footer = ({ content }: FooterProps) => {
+  const params = useParams();
+  const locale = params?.locale as string || 'es';
+
+  const handleScrollTo = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
+    e.preventDefault();
+    const element = document.querySelector(targetId);
+    if (element) {
+      let offset = 200;
+      if (targetId === '#hero') {
+        offset = 0;
+      } else if (targetId === '#rooms') {
+        offset = 250;
+      } else if (targetId === '#gallery') {
+        offset = 200;
+      } else if (targetId === '#reviews') {
+        offset = 250;
+      } else if (targetId === '#contact') {
+        offset = 200;
+      }
+      const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+      window.scrollTo({
+        top: elementPosition - offset,
+        behavior: 'smooth'
+      });
+    }
+  };
+
   return (
     <footer className="relative w-full bg-secondary overflow-hidden text-white">
       <div className="absolute inset-0 z-0">
@@ -47,8 +77,7 @@ const Footer = ({ content }: FooterProps) => {
             <TranslatedText>{content.footer.description}</TranslatedText>
           </p>
           <div className="flex gap-8 pt-4">
-            <a href="#" className="text-xs font-source tracking-[0.2em] uppercase hover:opacity-50 transition-opacity">Instagram</a>
-            <a href="#" className="text-xs font-source tracking-[0.2em] uppercase hover:opacity-50 transition-opacity">Facebook</a>
+            <a href="https://www.instagram.com/villaalta.ctg/" target="_blank" rel="noopener noreferrer" className="text-xs font-source tracking-[0.2em] uppercase hover:opacity-50 transition-opacity">Instagram</a>
           </div>
         </div>
 
@@ -57,18 +86,18 @@ const Footer = ({ content }: FooterProps) => {
             <TranslatedText>{content.footer.navigation}</TranslatedText>
           </span>
           <nav className="flex flex-col gap-4">
-            <Link href="/" className="text-xl font-prata hover:opacity-50 transition-opacity">
+            <a href={`/${locale}#hero`} onClick={(e) => handleScrollTo(e, '#hero')} className="text-xl font-prata hover:opacity-50 transition-opacity cursor-pointer">
               <TranslatedText>{content.navbar.inicio}</TranslatedText>
-            </Link>
-            <Link href="/" className="text-xl font-prata hover:opacity-50 transition-opacity">
+            </a>
+            <a href={`/${locale}#rooms`} onClick={(e) => handleScrollTo(e, '#rooms')} className="text-xl font-prata hover:opacity-50 transition-opacity cursor-pointer">
               <TranslatedText>{content.footer.suites}</TranslatedText>
-            </Link>
-            <Link href="/" className="text-xl font-prata hover:opacity-50 transition-opacity">
+            </a>
+            <a href={`/${locale}#gallery`} onClick={(e) => handleScrollTo(e, '#gallery')} className="text-xl font-prata hover:opacity-50 transition-opacity cursor-pointer">
               <TranslatedText>{content.footer.gastronomy}</TranslatedText>
-            </Link>
-            <Link href="/" className="text-xl font-prata hover:opacity-50 transition-opacity">
+            </a>
+            <a href={`/${locale}#hero`} onClick={(e) => handleScrollTo(e, '#hero')} className="text-xl font-prata hover:opacity-50 transition-opacity cursor-pointer">
               <TranslatedText>{content.navbar.reserva}</TranslatedText>
-            </Link>
+            </a>
           </nav>
         </div>
 
@@ -87,15 +116,26 @@ const Footer = ({ content }: FooterProps) => {
               <p className="tracking-widest uppercase text-[10px] opacity-40 mb-2">
                 <TranslatedText>{content.footer.reservations_label}</TranslatedText>
               </p>
-              <p>+57 123 456 7890<br/>reservas@hotelvillaalta.com</p>
+              <p>
+                <a href="tel:+573215062187" className="hover:opacity-70 transition-opacity">+57 321 5062187</a><br/>
+                <a href="mailto:hotelvillaaltac@gmail.com" className="hover:opacity-70 transition-opacity">hotelvillaaltac@gmail.com</a>
+              </p>
             </div>
           </div>
         </div>
       </div>
 
       <div className="relative z-10 border-t border-white/5 py-8 text-center px-6">
-        <p className="font-source text-[9px] tracking-[0.3em] uppercase flex items-center justify-center gap-2">
+        <p className="font-source text-[9px] tracking-[0.3em] uppercase flex flex-wrap items-center justify-center gap-2">
           <span className="opacity-30">&copy; 2026 Villa Alta Guest House. <TranslatedText>{content.footer.rights}</TranslatedText></span>
+          <span className="opacity-30">|</span>
+          <Link href={`/${locale}/terms`} className="opacity-30 hover:opacity-70 transition-opacity">
+            <TranslatedText>{content.footer.terms}</TranslatedText>
+          </Link>
+          <span className="opacity-30">|</span>
+          <Link href={`/${locale}/rnt`} className="opacity-30 hover:opacity-70 transition-opacity">
+            <TranslatedText>{content.footer.rnt}</TranslatedText>
+          </Link>
           <span className="opacity-30">|</span>
           <span className="opacity-30">Developed by</span>
           <a href="#" className="text-white font-bold hover:opacity-70 transition-opacity tracking-[0.4em]">SLE Development</a>

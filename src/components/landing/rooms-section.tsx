@@ -10,7 +10,6 @@ interface Room {
   titleTop: string;
   titleBottom: string;
   description: string;
-  price: string;
   images: string[];
   services: string[];
 }
@@ -20,6 +19,7 @@ interface RoomsSectionProps {
     meta_rooms: string;
     label: string;
     next: string;
+    reserveNow: string;
     list: Room[];
   };
 }
@@ -79,7 +79,7 @@ const RoomsSection = ({ content }: RoomsSectionProps) => {
   if (!room) return null;
 
   return (
-    <section className="relative min-h-screen w-full bg-secondary text-white py-20 px-6 md:px-12 lg:px-20 overflow-hidden flex flex-col justify-center">
+    <section className="relative min-h-screen w-full bg-secondary text-white pt-8 pb-20 px-6 md:px-12 lg:px-20 overflow-hidden flex flex-col justify-center">
       <div className="absolute top-8 md:top-12 left-6 md:left-12 flex flex-col md:flex-row gap-4 md:gap-20 font-source text-[8px] md:text-[10px] tracking-[0.2em] uppercase opacity-40 z-10">
         <span>Villa Alta Guest House, 2026</span>
         <span className="hidden sm:inline">(<TranslatedText>{content.meta_rooms}</TranslatedText>)</span>
@@ -134,16 +134,21 @@ const RoomsSection = ({ content }: RoomsSectionProps) => {
                 <TranslatedText>{room.description}</TranslatedText>
               </p>
                      <div className="flex items-center">
-                       <div className="px-6 py-3 bg-accent-rose text-white border border-accent-rose rounded-full font-source text-[9px] md:text-[10px] tracking-widest uppercase hover:bg-transparent hover:text-white transition-all duration-500 cursor-default">
-                         <TranslatedText>{room.price}</TranslatedText>
-                       </div>
+                       <a 
+                         href="https://example.com/reservations" 
+                         target="_blank" 
+                         rel="noopener noreferrer"
+                         className="px-6 py-3 bg-accent-rose text-white border border-accent-rose rounded-full font-source text-[9px] md:text-[10px] tracking-widest uppercase hover:bg-transparent hover:text-white transition-all duration-500 cursor-pointer inline-block"
+                       >
+                         <TranslatedText>{content.reserveNow}</TranslatedText>
+                       </a>
                      </div>
             </div>
 
-            <div className="flex flex-col gap-3 md:gap-4 border-l border-white/10 pl-6 md:pl-8 order-1 md:order-2">
+            <div className={`border-l border-white/10 pl-6 md:pl-8 order-1 md:order-2 ${room.services.length > 10 ? 'grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4' : 'flex flex-col gap-3 md:gap-4'}`}>
               {room.services.map((service, idx) => (
                 <div key={idx} className="flex items-center gap-3 font-source text-[8px] md:text-[9px] tracking-[0.2em] uppercase opacity-50 hover:opacity-100 transition-opacity">
-                  <span className="w-1 h-1 bg-white rounded-full"></span>
+                  <span className="w-1 h-1 bg-white rounded-full flex-shrink-0"></span>
                   <TranslatedText>{service}</TranslatedText>
                 </div>
               ))}

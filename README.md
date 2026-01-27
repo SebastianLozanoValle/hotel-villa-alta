@@ -1,36 +1,73 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Villa Alta Guest House
 
-## Getting Started
+Sitio web del Hotel Boutique Villa Alta Guest House en Cartagena de Indias, Colombia.
 
-First, run the development server:
+## 🚀 Tecnologías
+
+- **Next.js 16.1.4** - Framework React
+- **TypeScript** - Tipado estático
+- **Tailwind CSS 4** - Estilos
+- **GSAP** - Animaciones
+- **Multi-idioma** - Soporte para 11 idiomas
+
+## 📦 Instalación
+
+```bash
+npm install
+```
+
+## 🛠️ Desarrollo
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abre [http://localhost:3000](http://localhost:3000) en tu navegador.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🏗️ Build para Producción
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm start
+```
 
-## Learn More
+## 🌍 Variables de Entorno
 
-To learn more about Next.js, take a look at the following resources:
+Crea un archivo `.env.local` con:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```env
+NEXT_PUBLIC_APP_URL=https://hotelvillaalta.com
+DEEPL_API_KEY=your-api-key (opcional, para traducciones)
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📋 Características
 
-## Deploy on Vercel
+- ✅ Diseño responsive
+- ✅ Multi-idioma (11 idiomas)
+- ✅ SEO optimizado
+- ✅ Sitemap y robots.txt
+- ✅ Imágenes optimizadas (Cloudbeds)
+- ✅ Animaciones con GSAP
+- ✅ Términos y Condiciones
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🚢 Despliegue
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Vercel (Recomendado)
+
+1. Conecta tu repositorio a Vercel
+2. Configura la variable de entorno `NEXT_PUBLIC_APP_URL`
+3. Deploy automático en cada push
+
+### Otros proveedores
+
+El proyecto está listo para desplegarse en cualquier plataforma que soporte Next.js:
+- Netlify
+- Railway
+- AWS Amplify
+- DigitalOcean App Platform
+
+## 📝 Notas
+
+- Las imágenes de Cloudbeds están configuradas en `next.config.ts`
+- El sitemap incluye todas las rutas multi-idioma
+- El build genera páginas estáticas para mejor rendimiento

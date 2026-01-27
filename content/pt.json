@@ -3,7 +3,9 @@
     "menu": "Menu",
     "inicio": "Início",
     "reserva": "Reservar agora",
-    "close": "Fechar"
+    "close": "Fechar",
+    "reseñas": "Avaliações",
+    "nosotros": "Sobre nós"
   },
   "hero": {
     "title": "Casa de Hóspedes Villa Alta"
@@ -109,6 +111,7 @@
     "meta_rooms": "QUARTOS",
     "label": "Quarto",
     "next": "Seguinte",
+    "reserveNow": "Reservar",
     "list": [
       {
         "id": "01",
@@ -186,6 +189,8 @@
     "contact": "Contacto",
     "location_label": "Localização",
     "reservations_label": "Reservas",
-    "rights": "Todos os direitos reservados."
+    "rights": "Todos os direitos reservados.",
+    "terms": "Termos e Condições",
+    "rnt": "RNT"
   }
 }

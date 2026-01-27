@@ -1,8 +1,8 @@
 "use client";
 
 import React, { useEffect, useRef } from "react";
+import { usePathname } from "next/navigation";
 import gsap from "gsap";
-import Link from "next/link";
 import { TranslatedText } from "../translation/TranslatedText";
 
 interface MenuSheetProps {
@@ -13,6 +13,8 @@ interface MenuSheetProps {
     inicio: string;
     reserva: string;
     close: string;
+    reseñas: string;
+    nosotros: string;
   };
 }
 
@@ -20,6 +22,11 @@ const MenuSheet = ({ isOpen, onClose, content }: MenuSheetProps) => {
   const overlayRef = useRef<HTMLDivElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
   const linksRef = useRef<HTMLDivElement>(null);
+  const pathname = usePathname();
+  
+  // Extraer locale del pathname
+  const locale = pathname?.split('/')[1] || 'es';
+  const isTermsPage = pathname?.includes('/terms') || pathname?.includes('/rnt');
 
   useEffect(() => {
     if (isOpen) {
@@ -72,12 +79,12 @@ const MenuSheet = ({ isOpen, onClose, content }: MenuSheetProps) => {
   }, [isOpen]);
 
   const menuItems = [
-    { name: content.inicio, href: "/" },
-    { name: "Suites", href: "/" },
-    { name: "Gastronomía", href: "/" },
-    { name: "Experiencias", href: "/" },
-    { name: "Galería", href: "/" },
-    { name: "Contacto", href: "/" },
+    { name: content.inicio, href: "#hero", scrollTo: true },
+    { name: "Suites", href: "#rooms", scrollTo: true },
+    { name: "Galería", href: "#gallery", scrollTo: true },
+    { name: content.reseñas, href: "#reviews", scrollTo: true },
+    { name: content.nosotros, href: "#contact", scrollTo: true },
+    { name: "Contacto", href: "#contact", scrollTo: true },
   ];
 
   return (
@@ -111,17 +118,71 @@ const MenuSheet = ({ isOpen, onClose, content }: MenuSheetProps) => {
         </div>
 
         <nav ref={linksRef} className="flex flex-col gap-6 md:gap-8">
-          {menuItems.map((item, idx) => (
-            <Link
-              key={idx}
-              href={item.href}
-              onClick={onClose}
-              className="text-3xl md:text-4xl font-prata hover:pl-4 transition-all duration-300 group flex items-center gap-4 uppercase"
-            >
-              <span className="text-[10px] md:text-xs font-source opacity-0 group-hover:opacity-30 transition-opacity italic">0{idx + 1}</span>
-              <TranslatedText>{item.name}</TranslatedText>
-            </Link>
-          ))}
+          {menuItems.map((item, idx) => {
+            const handleClick = (e: React.MouseEvent) => {
+              e.preventDefault();
+              onClose();
+              if (item.scrollTo) {
+                // Si estamos en términos, redirigir primero
+                if (isTermsPage) {
+                  window.location.href = `/${locale}${item.href}`;
+                  return;
+                }
+                
+                // Función para hacer scroll
+                const performScroll = () => {
+                  const element = document.querySelector(item.href);
+                  
+                  if (element) {
+                    const rect = element.getBoundingClientRect();
+                    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                    const elementTop = rect.top + scrollTop;
+                    
+                    let offset = 200;
+                    
+                    if (item.href === '#hero') {
+                      offset = 0;
+                    } else if (item.href === '#rooms') {
+                      offset = 0; // Mucho más abajo para Suites
+                    } else if (item.href === '#gallery') {
+                      offset = 0;
+                    } else if (item.href === '#reviews') {
+                      offset = 0;
+                    } else if (item.href === '#contact') {
+                      offset = 0;
+                    }
+                    
+                    window.scrollTo({
+                      top: Math.max(0, elementTop - offset),
+                      behavior: 'smooth'
+                    });
+                  }
+                };
+                
+                // Esperar a que el menú se cierre antes de hacer scroll
+                setTimeout(() => {
+                  performScroll();
+                  // Intentar de nuevo después de un breve delay por si acaso
+                  setTimeout(performScroll, 200);
+                  setTimeout(performScroll, 400);
+                }, 500);
+              } else {
+                window.location.href = item.href;
+              }
+            };
+
+            return (
+              <a
+                key={idx}
+                href={item.href}
+                onClick={handleClick}
+                className="text-3xl md:text-4xl font-prata hover:pl-4 transition-all duration-300 group flex items-center gap-4 uppercase cursor-pointer"
+              >
+                <span className="text-[10px] md:text-xs font-source opacity-0 group-hover:opacity-30 transition-opacity italic">0{idx + 1}</span>
+                <TranslatedText>{item.name}</TranslatedText>
+              </a>
+            );
+          })}
         </nav>
 
         <div className="mt-auto pt-12 border-t border-white/10 flex flex-col gap-6">

@@ -3,7 +3,9 @@
     "menu": "Menu",
     "inicio": "Home",
     "reserva": "Boek nu",
-    "close": "Sluit"
+    "close": "Sluit",
+    "reseñas": "Beoordelingen",
+    "nosotros": "Over ons"
   },
   "hero": {
     "title": "Villa Alta Pension"
@@ -109,6 +111,7 @@
     "meta_rooms": "KAMERS",
     "label": "Kamer",
     "next": "Volgende",
+    "reserveNow": "Boeken",
     "list": [
       {
         "id": "01",
@@ -186,6 +189,8 @@
     "contact": "Neem contact op met",
     "location_label": "Locatie",
     "reservations_label": "Reserveringen",
-    "rights": "Alle rechten voorbehouden."
+    "rights": "Alle rechten voorbehouden.",
+    "terms": "Algemene Voorwaarden",
+    "rnt": "RNT"
   }
 }

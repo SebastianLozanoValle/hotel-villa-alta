@@ -127,7 +127,7 @@ const ReviewsSection = ({ content }: ReviewsSectionProps) => {
   return (
     <section 
       ref={sectionRef} 
-      className="relative w-full bg-secondary pt-32 pb-12 px-6 md:px-12 lg:px-20 overflow-hidden text-white"
+      className="relative w-full bg-secondary pt-8 pb-12 px-6 md:px-12 lg:px-20 overflow-hidden text-white"
     >
       <div className="max-w-7xl mx-auto">
         <div className="mb-16 text-center">

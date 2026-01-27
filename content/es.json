@@ -3,7 +3,9 @@
     "menu": "Menú",
     "inicio": "Inicio",
     "reserva": "Reserva ahora",
-    "close": "Cerrar"
+    "close": "Cerrar",
+    "reseñas": "Reseñas",
+    "nosotros": "Nosotros"
   },
   "hero": {
     "title": "Villa Alta Guest House"
@@ -78,59 +80,110 @@
     "meta_rooms": "HABITACIONES",
     "label": "Habitación",
     "next": "Siguiente",
+    "reserveNow": "Reservar",
     "list": [
       {
         "id": "01",
-        "titleTop": "CAMA KING-SIZE",
-        "titleBottom": "VISTA AL LAGO",
-        "description": "Las habitaciones del hotel resort están equipadas con aire acondicionado, escritorio, hervidor de agua, minibar, caja fuerte, TV de pantalla plana, balcón y baño privado con ducha. También se proporcionan toallas y ropa de cama en cada habitación. Se sirve un desayuno buffet todas las mañanas.",
-        "price": "$200/DÍA",
-        "images": ["/hero-back.png", "/hero-back3.png", "/hero-back4.png"],
+        "titleTop": "HABITACIÓN DUPLEX",
+        "titleBottom": "CON BALCÓN",
+        "description": "Exclusiva habitación dúplex con diseño que combina comodidad y sofisticación. En el primer piso encontrarás un balcón con vistas a la emblemática calle de los Estribos e iglesia de Santo Domingo. Una elegante escalera conduce al segundo nivel con la habitación principal. Cada rincón ha sido diseñado para ofrecer una experiencia única que combina modernidad, historia y lujo.",
+        "price": "$735.900/DÍA",
+        "images": [
+          "https://h-img1.cloudbeds.com/uploads/316944/suite_alcoba_1_featured~~67fe873b3ea83.jpg",
+          "https://h-img1.cloudbeds.com/uploads/316944/experiencias_villa_alta_gallery~~67fe874eb76ac.jpeg",
+          "https://h-img3.cloudbeds.com/uploads/316944/suite_duplex_2-cama_hab_gallery~~67fe87683d88f.jpg",
+          "https://h-img1.cloudbeds.com/uploads/316944/suite_duplex_-hab_3_gallery~~67fe8770acae4.jpg",
+          "https://h-img2.cloudbeds.com/uploads/316944/lobby_huespedes_gallery~~67fe8752d57b3.jpg",
+          "https://h-img2.cloudbeds.com/uploads/316944/suite_duplex_-5cama_gallery~~67fe878e078e0.jpg",
+          "https://h-img1.cloudbeds.com/uploads/316944/fachada_gallery~~67fe875787488.jpg",
+          "https://h-img2.cloudbeds.com/uploads/316944/suite_duplex_hab-3_cama_gallery~~67fe8773c7efd.jpg",
+          "https://h-img1.cloudbeds.com/uploads/316944/suite_duplex_-5_gallery~~67fe878d3ab2e.jpg",
+          "https://h-img1.cloudbeds.com/uploads/316944/ubicacion_gallery~~67fe87602d541.jpg",
+          "https://h-img3.cloudbeds.com/uploads/316944/suite_duplex_-2_gallery~~67fe8768c4f92.jpg",
+          "https://h-img2.cloudbeds.com/uploads/316944/suite_duplex_2-cama_gallery~~67fe876a81bd0.jpg",
+          "https://h-img2.cloudbeds.com/uploads/316944/suite_duplex_-3_gallery~~67fe876eb66b9.jpg",
+          "https://h-img3.cloudbeds.com/uploads/316944/suite_duplex_hab-4_cama_gallery~~67fe8778250b5.jpg"
+        ],
         "services": [
-          "1 CAMA KING-SIZE",
-          "BALCÓN",
-          "VISTA AL LAGO",
-          "TV DE PANTALLA PLANA",
-          "AIRE ACONDICIONADO",
-          "MINI-BAR",
-          "WIFI GRATUITO",
-          "BAÑERA INDEPENDIENTE"
+          "Clóset con ganchos",
+          "Caja de seguridad",
+          "Zona de minibar con nevera",
+          "Estación para preparar cócteles",
+          "Espejo LED en baño",
+          "Ducha con agua caliente",
+          "Balcón con vista a calle de los Estribos",
+          "Vista a iglesia de Santo Domingo",
+          "Escalera al segundo nivel",
+          "Cama queen",
+          "Mesas de noche",
+          "Smart TV",
+          "Minibar en segundo nivel",
+          "Aire Condicionado",
+          "Internet inalámbrico (WiFi)",
+          "Desayuno incluido",
+          "Check-in anticipado",
+          "Check-out tardío"
         ]
       },
       {
         "id": "02",
-        "titleTop": "SUITE DELUXE",
-        "titleBottom": "VISTA AL MAR",
-        "description": "Nuestra Suite Deluxe ofrece un espacio amplio y sofisticado con techos altos y ventanales que capturan la brisa caribeña. Diseñada para aquellos que buscan una estancia inolvidable en el corazón de Cartagena.",
-        "price": "$350/DÍA",
-        "images": ["/hero-back3.png", "/hero-back4.png", "/hero-back.png"],
+        "titleTop": "HABITACIÓN DUPLEX",
+        "titleBottom": "ESCALERA",
+        "description": "Elegante habitación dúplex con diseño colonial e imponente techo alto que evoca el encanto de épocas pasadas. En el primer nivel encontrarás una acogedora sala con sofá y zona de minibar. El segundo piso cuenta con la habitación principal. Aunque es interna y no tiene vista al exterior, su diseño único y ambiente colonial la convierten en un refugio íntimo y sofisticado.",
+        "price": "$620.900/DÍA",
+        "images": [
+          "https://h-img3.cloudbeds.com/uploads/316944/suite_duplex_hab-6_cama_featured~~67feba8f5660e.jpg",
+          "https://h-img3.cloudbeds.com/uploads/316944/suite_duplex_hab-6_cama_gallery~~67febaa26ef60.jpg",
+          "https://h-img1.cloudbeds.com/uploads/316944/suite_duplex_-hab_6_sin_balcon_gallery~~67febaa011281.jpg",
+          "https://h-img3.cloudbeds.com/uploads/316944/bano_-_hab_6_y_7_gallery~~67feba9b1ae82.jpg",
+          "https://h-img1.cloudbeds.com/uploads/316944/suite_duplex_-6_sin_balcon_gallery~~67feba9eab729.jpg",
+          "https://h-img1.cloudbeds.com/uploads/316944/bano_hab_6_y_7_gallery~~67feba9b8e56a.jpg"
+        ],
         "services": [
-          "1 CAMA KING-SIZE",
-          "TERRAZA PRIVADA",
-          "VISTA AL MAR",
-          "SISTEMA DE SONIDO PREMIUM",
-          "AIRE ACONDICIONADO",
-          "CAFETERA NESPRESSO",
-          "WIFI DE ALTA VELOCIDAD",
-          "JACUZZI PRIVADO"
+          "Sala con sofá",
+          "Zona de minibar",
+          "Clóset con ganchos",
+          "Caja de seguridad",
+          "Espejo LED en baño",
+          "Ducha con agua caliente",
+          "Techo alto",
+          "Cama queen",
+          "Mesa de noche",
+          "Smart TV",
+          "Aire acondicionado en segundo piso",
+          "Internet inalámbrico (WiFi)",
+          "Desayuno incluido",
+          "Check-in anticipado",
+          "Check-out tardío"
         ]
       },
       {
         "id": "03",
-        "titleTop": "ESTUDIO LOFT",
-        "titleBottom": "CENTRO HISTÓRICO",
-        "description": "Un espacio vanguardista que combina muros de piedra original con diseño contemporáneo. Ideal para mentes creativas que desean sumergirse en la historia de la ciudad con todas las comodidades modernas.",
-        "price": "$280/DÍA",
-        "images": ["/hero-back4.png", "/hero-back.png", "/hero-back3.png"],
+        "titleTop": "SUITE PREMIUM",
+        "titleBottom": "HABITACIÓN 7",
+        "description": "Suite Premium de un nivel con diseño elegante y amenidades de lujo L'Occitane. Equipada con todas las comodidades necesarias para una estancia confortable en el corazón histórico de Cartagena.",
+        "price": "$620.900/DÍA",
+        "images": [
+          "https://h-img2.cloudbeds.com/uploads/316944/habitacion_premium_-_sencilla_7_featured~~67febace3f801.jpg",
+          "https://h-img2.cloudbeds.com/uploads/316944/hab_premium_-_sencilla_7_gallery~~67febae059987.jpg",
+          "https://h-img1.cloudbeds.com/uploads/316944/habitacion_premium_sencilla_7_gallery~~67febae29b0ca.jpg",
+          "https://h-img2.cloudbeds.com/uploads/316944/bano_-_hab_6_y_7_gallery~~67febadd9e0c9.jpg",
+          "https://h-img3.cloudbeds.com/uploads/316944/habitacion_premium_-_sencilla_7_gallery~~67febae0543ca.jpg",
+          "https://h-img3.cloudbeds.com/uploads/316944/bano_hab_6_y_7_gallery~~67febadd6aae6.jpg"
+        ],
         "services": [
-          "DISEÑO DE PLANTA ABIERTA",
-          "MUROS DE PIEDRA ORIGINAL",
-          "COCINA GOURMET",
-          "ZONA DE TRABAJO",
-          "AIRE ACONDICIONADO",
-          "SMART TV 65\"",
-          "WIFI DE ALTA VELOCIDAD",
-          "DUCHA TIPO LLUVIA"
+          "Clóset",
+          "Caja de seguridad",
+          "Televisión Smart",
+          "Wi-Fi",
+          "Minibar",
+          "Aire Condicionado",
+          "Ducha con agua caliente",
+          "Amenidades L'Occitane",
+          "Juego de toallas completo",
+          "Desayuno incluido",
+          "Check-in anticipado",
+          "Check-out tardío"
         ]
       }
     ]
@@ -143,6 +196,8 @@
     "contact": "Contacto",
     "location_label": "Ubicación",
     "reservations_label": "Reservas",
-    "rights": "Todos los derechos reservados."
+    "rights": "Todos los derechos reservados.",
+    "terms": "Términos y Condiciones",
+    "rnt": "RNT"
   }
 }

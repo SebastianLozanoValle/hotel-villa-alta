@@ -48,7 +48,7 @@ const CarouselSection = ({ content }: CarouselSectionProps) => {
   return (
     <section 
       ref={sectionRef} 
-      className="relative min-h-screen w-full bg-background overflow-hidden py-24 md:py-32 flex flex-col items-center justify-center"
+      className="relative min-h-screen w-full bg-background overflow-hidden pt-8 pb-24 md:pb-32 flex flex-col items-center justify-center"
     >
       <div className="absolute top-8 md:top-12 left-4 md:left-12 font-source text-[8px] md:text-[10px] tracking-[0.2em] uppercase opacity-40">
         <TranslatedText>{content.meta}</TranslatedText>

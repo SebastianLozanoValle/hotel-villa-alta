@@ -3,7 +3,9 @@
     "menu": "Menu",
     "inicio": "Strona główna",
     "reserva": "Zarezerwuj teraz",
-    "close": "Zamknij"
+    "close": "Zamknij",
+    "reseñas": "Recenzje",
+    "nosotros": "O nas"
   },
   "hero": {
     "title": "Villa Alta Guest House"
@@ -109,6 +111,7 @@
     "meta_rooms": "POKOJE",
     "label": "Pokój",
     "next": "Następny",
+    "reserveNow": "Zarezerwuj",
     "list": [
       {
         "id": "01",
@@ -186,6 +189,8 @@
     "contact": "Kontakt",
     "location_label": "Lokalizacja",
     "reservations_label": "Rezerwacje",
-    "rights": "Wszelkie prawa zastrzeżone."
+    "rights": "Wszelkie prawa zastrzeżone.",
+    "terms": "Warunki i Zastrzeżenia",
+    "rnt": "RNT"
   }
 }

@@ -3,7 +3,9 @@
     "menu": "メニュー",
     "inicio": "ホーム",
     "reserva": "予約する",
-    "close": "閉じる"
+    "close": "閉じる",
+    "reseñas": "レビュー",
+    "nosotros": "私たちについて"
   },
   "hero": {
     "title": "ヴィラ・アルタ・ゲストハウス"
@@ -109,6 +111,7 @@
     "meta_rooms": "ルーム",
     "label": "部屋",
     "next": "次のページ",
+    "reserveNow": "予約",
     "list": [
       {
         "id": "01",
@@ -186,6 +189,8 @@
     "contact": "連絡先",
     "location_label": "所在地",
     "reservations_label": "ご予約",
-    "rights": "無断転載を禁じます。"
+    "rights": "無断転載を禁じます。",
+    "terms": "利用規約",
+    "rnt": "RNT"
   }
 }
