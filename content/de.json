@@ -5,7 +5,7 @@
     "reserva": "Jetzt buchen",
     "close": "Schließen Sie",
     "reseñas": "Bewertungen",
-    "nosotros": "Über uns"
+    "nosotros": "Wir"
   },
   "hero": {
     "title": "Villa Alta Gästehaus"
@@ -111,72 +111,98 @@
     "meta_rooms": "ZIMMER",
     "label": "Zimmer",
     "next": "Weiter",
-    "reserveNow": "Buchen",
+    "reserveNow": "Buchen Sie",
     "list": [
       {
         "id": "01",
-        "titleTop": "KING-SIZE-BETT",
-        "titleBottom": "SEEANSICHT",
-        "description": "Die Zimmer des Resorthotels sind mit einer Klimaanlage, einem Schreibtisch, einem Wasserkocher, einer Minibar, einem Safe, einem Flachbildfernseher, einem Balkon und einem eigenen Bad mit einer Dusche ausgestattet. Handtücher und Bettwäsche sind in jedem Zimmer vorhanden. Jeden Morgen wird ein Frühstücksbuffet serviert.",
-        "price": "200/TAG",
+        "titleTop": "DUPLEX-ZIMMER",
+        "titleBottom": "MIT BALKON",
+        "description": "Unsere Maisonette-Zimmer kombinieren die ursprüngliche Architektur des Hauses mit einer Aufteilung auf zwei Ebenen, die Charakter und Privatsphäre bietet. Auf der oberen Ebene befindet sich das Schlafzimmer mit einem Bett, einem Fernseher und einer Minibar, das einen intimen und abgeschiedenen Raum schafft. Auf der unteren Ebene befinden sich ein Gemeinschaftsraum, ein privates Bad und eine voll ausgestattete Bar, die zum Entspannen im Zimmer einlädt. Der private Balkon öffnet sich zur Gasse hin und ermöglicht es Ihnen, die Atmosphäre des Centro Historico von einem erhöhten und ruhigen Aussichtspunkt aus zu genießen. Es ist eine ideale Option für diejenigen, die ein authentisches Erlebnis mit natürlichem Licht, kolonialen Details und einer direkten Verbindung zur Stadt suchen.",
+        "price": "735.900 $/TAG",
         "images": [
-          "/hero-back.png",
-          "/hero-back3.png",
-          "/hero-back4.png"
+          "/FOTOS HOTEL VILLA ALTA/HABITACION SUITE BALCON 1/SUITE ALCOBA 1.jpg",
+          "/FOTOS HOTEL VILLA ALTA/HABITACION SUITE BALCON 1/EXPERIENCIAS VILLA ALTA.jpeg",
+          "/FOTOS HOTEL VILLA ALTA/HABITACION SUITE BALCON 1/FACHADA.jpg",
+          "/FOTOS HOTEL VILLA ALTA/HABITACION SUITE BALCON 1/LOBBY HUESPEDES.jpg",
+          "/FOTOS HOTEL VILLA ALTA/HABITACION SUITE BALCON 1/LOBBY HOTEL.jpg",
+          "/FOTOS HOTEL VILLA ALTA/HABITACION SUITE BALCON 1/SUITE DUPLEX 1 ANTESALA.jpg",
+          "/FOTOS HOTEL VILLA ALTA/HABITACION SUITE BALCON 1/SUITE SALA.jpg",
+          "/FOTOS HOTEL VILLA ALTA/HABITACION SUITE BALCON 1/VISTA.jpg",
+          "/FOTOS HOTEL VILLA ALTA/HABITACION SUITE BALCON 1/BAÑO SUITE 1.jpg",
+          "/FOTOS HOTEL VILLA ALTA/HABITACION SUITE BALCON 1/HAB SUITE DUPLEX 1.jpg",
+          "/FOTOS HOTEL VILLA ALTA/HABITACION SUITE BALCON 1/LOBBY 2PISO.jpg",
+          "/FOTOS HOTEL VILLA ALTA/HABITACION SUITE BALCON 1/ENTRADA HOTEL.jpg",
+          "/FOTOS HOTEL VILLA ALTA/HABITACION SUITE BALCON 1/LOOBY.jpg"
         ],
         "services": [
-          "1 KINGSIZE-BETT",
-          "BALKON",
-          "SEEANSICHT",
-          "FLACHBILDSCHIRM-TV",
-          "KLIMATISIERUNG",
-          "MINI-BAR",
-          "KOSTENLOSES WIFI",
-          "FREISTEHENDE BADEWANNE"
+          "Duplexzimmer auf zwei Ebenen",
+          "Schlafzimmer im Obergeschoss mit Bett, TV und Minibar",
+          "Sozialer Aufenthaltsbereich in der unteren Etage",
+          "Privates Badezimmer",
+          "Vollständig ausgestatteter Barbereich",
+          "Privater Balkon mit Blick auf die Gasse",
+          "Natürliches Licht",
+          "Koloniale Architektur und Details",
+          "Ruhige Atmosphäre im Historischen Zentrum",
+          "Inklusive Frühstück",
+          "Frühes Einchecken",
+          "Später Check-out"
         ]
       },
       {
         "id": "02",
-        "titleTop": "DELUXE-SUITE",
-        "titleBottom": "MEERESBLICK",
-        "description": "Unsere Deluxe Suite bietet einen geräumigen und anspruchsvollen Raum mit hohen Decken und großen Fenstern, die die karibische Brise einfangen. Sie ist für diejenigen gedacht, die einen unvergesslichen Aufenthalt im Herzen von Cartagena verbringen möchten.",
-        "price": "350/TAG",
+        "titleTop": "DUPLEX-ZIMMER",
+        "titleBottom": "OHNE AUSSICHT MIT GROSSEM WOHNZIMMER",
+        "description": "Dieses Duplex-Zimmer bietet eine geräumige und ruhige Aufteilung, ideal für längere Aufenthalte oder für diejenigen, die einen ruhigen Raum zum Arbeiten und Ausruhen suchen. Das Zimmer ist auf zwei Ebenen angeordnet: Auf der oberen Ebene befindet sich das Schlafzimmer mit Bett, TV und Minibar, während die untere Ebene ein großzügiges Wohnzimmer, ideal zum Lesen, Arbeiten oder Entspannen, sowie ein eigenes Bad und einen voll ausgestatteten Barbereich bietet. Obwohl es keinen Blick nach draußen bietet, schaffen die Geräumigkeit, die hohen Decken und die warmen Oberflächen eine gemütliche und heitere Atmosphäre. Es ist eine ausgezeichnete Alternative für alle, die Wert auf Komfort, Ruhe und Platz im Inneren legen.",
+        "price": "620.900/TAG",
         "images": [
-          "/hero-back3.png",
-          "/hero-back4.png",
-          "/hero-back.png"
+          "/FOTOS HOTEL VILLA ALTA/HABITACION SUITE 6/SUITE DUPLEX HAB-6 CAMA.jpg",
+          "/FOTOS HOTEL VILLA ALTA/HABITACION SUITE 6/SUITE DUPLEX -6 SIN BALCON.jpg",
+          "/FOTOS HOTEL VILLA ALTA/HABITACION SUITE 6/SUITE DUPLEX -HAB 6 SIN BALCON.jpg",
+          "/FOTOS HOTEL VILLA ALTA/HABITACION SUITE 6/BAÑO - HAB 6 Y 7.jpg",
+          "/FOTOS HOTEL VILLA ALTA/HABITACION SUITE 6/BAÑO HAB 6 Y 7.jpg"
         ],
         "services": [
-          "1 KINGSIZE-BETT",
-          "PRIVATE TERRASSE",
-          "MEERESBLICK",
-          "PREMIUM-SOUNDSYSTEM",
-          "KLIMATISIERUNG",
-          "NESPRESSO KAFFEEMASCHINE",
-          "HIGHSPEED-WLAN",
-          "PRIVATER JACUZZI"
+          "Geräumiges und ruhiges Duplexzimmer",
+          "Ideal für längere Aufenthalte oder für die Arbeit",
+          "Schlafzimmer im Obergeschoss mit Bett, TV und Minibar",
+          "Geräumiges Wohnzimmer in der unteren Etage",
+          "Privates Badezimmer",
+          "Vollständig ausgestatteter Barbereich",
+          "Hohe Decken und warme Oberflächen",
+          "Ruhige Umgebung, kein Blick nach draußen",
+          "Inklusive Frühstück",
+          "Frühes Einchecken",
+          "Später Check-out"
         ]
       },
       {
         "id": "03",
-        "titleTop": "LOFT STUDIO",
-        "titleBottom": "HISTORISCHES ZENTRUM",
-        "description": "Ein avantgardistischer Raum, der originale Steinmauern mit zeitgenössischem Design verbindet. Ideal für kreative Köpfe, die in die Geschichte der Stadt eintauchen wollen, ohne auf modernen Komfort verzichten zu müssen.",
-        "price": "$280/TAG",
+        "titleTop": "SUITE",
+        "titleBottom": "AUF EINER EINZIGEN EBENE",
+        "description": "Unsere Suite ist so konzipiert, dass sie maximalen Komfort auf einer einzigen Ebene ohne Treppen bietet, was eine bequeme und fließende Erfahrung ermöglicht. Sowohl der Schlafbereich als auch der Gesellschaftsraum befinden sich auf derselben Etage, was sie zur zugänglichsten und praktischsten Option im Hotel macht. Sie verfügt über ein Kingsize-Bett und eine großzügige Raumaufteilung, die Ruhe und Entspannung fördert. Ohne Blick nach draußen bietet die Suite eine ruhigere und privatere Umgebung. Sie verfügt über ein eigenes Bad und einen voll ausgestatteten Barbereich, ideal zum Entspannen nach einem Tag der Erkundung der Stadt.",
+        "price": "620.900/TAG",
         "images": [
-          "/hero-back4.png",
-          "/hero-back.png",
-          "/hero-back3.png"
+          "/FOTOS HOTEL VILLA ALTA/HABITACION SUITE BALCON 2/SUITE DUPLEX 2.jpg",
+          "/FOTOS HOTEL VILLA ALTA/HABITACION SUITE BALCON 2/SUITE DUPLEX -2.jpg",
+          "/FOTOS HOTEL VILLA ALTA/HABITACION SUITE BALCON 2/SUITE DUPLEX 2-CAMA HAB.jpg",
+          "/FOTOS HOTEL VILLA ALTA/HABITACION SUITE BALCON 2/SUITE DUPLEX 2-CAMA.jpg",
+          "/FOTOS HOTEL VILLA ALTA/HABITACION SUITE BALCON 2/HAB SUITE DUPLEX -2.jpg",
+          "/FOTOS HOTEL VILLA ALTA/HABITACION SUITE BALCON 2/BAÑO SUITE 2.jpg",
+          "/FOTOS HOTEL VILLA ALTA/HABITACION SUITE BALCON 2/UBICACION.jpg"
         ],
         "services": [
-          "OFFENE BAUWEISE",
-          "ORIGINAL STEINMAUERN",
-          "GOURMETKÜCHE",
-          "ARBEITSBEREICH",
-          "KLIMATISIERUNG",
-          "SMART TV 65",
-          "HIGHSPEED-WLAN",
-          "REGENDUSCHE"
+          "Suite auf einer Ebene, keine Treppe",
+          "Schlafzimmer und Sozialbereich auf der gleichen Etage",
+          "Extra großes Bett",
+          "Privates Badezimmer",
+          "Vollständig ausgestatteter Barbereich",
+          "Geräumige und komfortable Ausstattung",
+          "Ruhige und private Umgebung",
+          "Keine Sicht nach draußen",
+          "Inklusive Frühstück",
+          "Frühes Einchecken",
+          "Später Check-out"
         ]
       }
     ]
@@ -185,12 +211,12 @@
     "description": "Ein architektonisches Juwel im Herzen von Cartagena de Indias, wo mittelalterlicher Luxus auf modernen Komfort trifft und einen unvergesslichen Aufenthalt garantiert.",
     "navigation": "Navigation",
     "suites": "Suiten",
-    "gastronomy": "Gastronomie",
+    "reviews": "Bewertungen",
     "contact": "Kontakt",
     "location_label": "Standort",
     "reservations_label": "Reservierungen",
     "rights": "Alle Rechte vorbehalten.",
-    "terms": "Allgemeine Geschäftsbedingungen",
+    "terms": "Bedingungen und Konditionen",
     "rnt": "RNT"
   }
 }

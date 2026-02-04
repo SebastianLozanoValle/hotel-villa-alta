@@ -23,7 +23,7 @@ const CarouselSection = ({ content }: CarouselSectionProps) => {
   useEffect(() => {
     const ctx = gsap.context(() => {
       gsap.fromTo(imagesContainerRef.current, 
-        { x: '120vw' },
+        { x: '140vw' },
         {
           x: '-45vw',
           scrollTrigger: {
@@ -48,15 +48,15 @@ const CarouselSection = ({ content }: CarouselSectionProps) => {
   return (
     <section 
       ref={sectionRef} 
-      className="relative min-h-screen w-full bg-background overflow-hidden pt-8 pb-24 md:pb-32 flex flex-col items-center justify-center"
+      className="relative min-h-screen w-full bg-background overflow-hidden pt-24 md:pt-32 pb-24 md:pb-32 flex flex-col items-center justify-center"
     >
-      <div className="absolute top-8 md:top-12 left-4 md:left-12 font-source text-[8px] md:text-[10px] tracking-[0.2em] uppercase opacity-40">
+      <div className="absolute top-8 md:top-12 left-4 md:left-12 font-source text-[8px] md:text-[10px] tracking-[0.2em] uppercase opacity-40 z-30">
         <TranslatedText>{content.meta}</TranslatedText>
       </div>
-      <div className="hidden md:block absolute top-12 left-1/2 -translate-x-1/2 font-source text-[10px] tracking-[0.2em] uppercase opacity-40">
+      <div className="hidden md:block absolute top-12 left-1/2 -translate-x-1/2 font-source text-[10px] tracking-[0.2em] uppercase opacity-40 z-30">
         (<TranslatedText>{content.heritage}</TranslatedText>)
       </div>
-      <div className="absolute top-8 md:top-12 right-4 md:right-12 flex gap-6 md:gap-12 font-source text-[8px] md:text-[10px] tracking-[0.2em] uppercase opacity-40 text-right">
+      <div className="absolute top-8 md:top-12 right-4 md:right-12 flex gap-6 md:gap-12 font-source text-[8px] md:text-[10px] tracking-[0.2em] uppercase opacity-40 text-right z-30">
         <span>(01)</span>
         <span>Cartagena</span>
       </div>
@@ -80,14 +80,14 @@ const CarouselSection = ({ content }: CarouselSectionProps) => {
         ))}
       </div>
 
-      <div className="absolute inset-0 flex items-center justify-center select-none pointer-events-none z-20 mix-blend-difference px-4">
+      <div className="absolute top-32 md:top-40 bottom-0 flex items-center justify-center select-none pointer-events-none z-20 mix-blend-difference px-4">
         <h2 className="text-[18vw] md:text-[13vw] font-prata leading-[0.85] text-white flex flex-col items-center uppercase text-center">
           <span className='text-center'><TranslatedText>Villa Alta</TranslatedText></span>
           <span className="text-[0.25em] tracking-[0.5em] opacity-70 mt-[1vw] font-source"><TranslatedText>Guest House</TranslatedText></span>
         </h2>
       </div>
 
-      <div className="mt-12 md:mt-20 z-30">
+      <div className="absolute bottom-8 md:bottom-16 z-30">
         <button className="px-8 md:px-10 py-3 md:py-4 border border-black/20 rounded-full font-source text-[10px] md:text-xs tracking-[0.2em] uppercase hover:bg-black hover:text-white transition-all">
           <TranslatedText>{content.discover}</TranslatedText>
         </button>

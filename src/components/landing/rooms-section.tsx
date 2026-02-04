@@ -100,10 +100,10 @@ const RoomsSection = ({ content }: RoomsSectionProps) => {
               className="object-cover transition-transform duration-700 group-hover:scale-105"
             />
           )}
-          <div className="absolute bottom-6 left-0 w-full flex justify-between px-6 items-center text-[9px] font-source tracking-widest opacity-60 uppercase z-20">
-            <button onClick={prevImage} className="cursor-pointer hover:opacity-100 transition-opacity bg-black/20 hover:bg-black/40 w-8 h-8 rounded-full flex items-center justify-center">←</button>
-            <span className="bg-black/20 px-3 py-1 rounded-full">{currentImageIndex + 1}/0{images.length}</span>
-            <button onClick={nextImage} className="cursor-pointer hover:opacity-100 transition-opacity bg-black/20 hover:bg-black/40 w-8 h-8 rounded-full flex items-center justify-center">→</button>
+          <div className="absolute bottom-6 left-0 w-full flex justify-between px-6 items-center text-[9px] font-source tracking-widest uppercase z-20">
+            <button onClick={prevImage} className="cursor-pointer transition-all bg-black/60 hover:bg-black/80 backdrop-blur-sm border border-white/20 hover:border-white/40 w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center text-white text-lg md:text-xl font-bold shadow-lg hover:scale-110 active:scale-95">←</button>
+            <span className="bg-black/60 backdrop-blur-sm border border-white/20 px-3 py-1 rounded-full text-white">{currentImageIndex + 1}/0{images.length}</span>
+            <button onClick={nextImage} className="cursor-pointer transition-all bg-black/60 hover:bg-black/80 backdrop-blur-sm border border-white/20 hover:border-white/40 w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center text-white text-lg md:text-xl font-bold shadow-lg hover:scale-110 active:scale-95">→</button>
           </div>
         </div>
 
@@ -145,13 +145,34 @@ const RoomsSection = ({ content }: RoomsSectionProps) => {
                      </div>
             </div>
 
-            <div className={`border-l border-white/10 pl-6 md:pl-8 order-1 md:order-2 ${room.services.length > 10 ? 'grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4' : 'flex flex-col gap-3 md:gap-4'}`}>
-              {room.services.map((service, idx) => (
-                <div key={idx} className="flex items-center gap-3 font-source text-[8px] md:text-[9px] tracking-[0.2em] uppercase opacity-50 hover:opacity-100 transition-opacity">
-                  <span className="w-1 h-1 bg-white rounded-full flex-shrink-0"></span>
-                  <TranslatedText>{service}</TranslatedText>
-                </div>
-              ))}
+            <div className={`border-l border-white/10 pl-6 md:pl-8 order-1 md:order-2 ${room.services.length > 8 ? 'grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4' : 'flex flex-col gap-3 md:gap-4'}`}>
+              {room.services.length > 8 ? (
+                <>
+                  <div className="flex flex-col gap-3 md:gap-4">
+                    {room.services.slice(0, Math.ceil(room.services.length / 2)).map((service, idx) => (
+                      <div key={idx} className="flex items-center gap-3 font-source text-[8px] md:text-[9px] tracking-[0.2em] uppercase opacity-50 hover:opacity-100 transition-opacity">
+                        <span className="w-1 h-1 bg-white rounded-full flex-shrink-0"></span>
+                        <TranslatedText>{service}</TranslatedText>
+                      </div>
+                    ))}
+                  </div>
+                  <div className="flex flex-col gap-3 md:gap-4">
+                    {room.services.slice(Math.ceil(room.services.length / 2)).map((service, idx) => (
+                      <div key={idx} className="flex items-center gap-3 font-source text-[8px] md:text-[9px] tracking-[0.2em] uppercase opacity-50 hover:opacity-100 transition-opacity">
+                        <span className="w-1 h-1 bg-white rounded-full flex-shrink-0"></span>
+                        <TranslatedText>{service}</TranslatedText>
+                      </div>
+                    ))}
+                  </div>
+                </>
+              ) : (
+                room.services.map((service, idx) => (
+                  <div key={idx} className="flex items-center gap-3 font-source text-[8px] md:text-[9px] tracking-[0.2em] uppercase opacity-50 hover:opacity-100 transition-opacity">
+                    <span className="w-1 h-1 bg-white rounded-full flex-shrink-0"></span>
+                    <TranslatedText>{service}</TranslatedText>
+                  </div>
+                ))
+              )}
             </div>
           </div>
 

@@ -31,7 +31,7 @@ const GallerySection = ({ content }: GallerySectionProps) => {
     const textElement = textContainerRef.current;
     
     const horizontalWidth = element.scrollWidth;
-    const windowWidth = window.innerWidth;
+      const windowWidth = window.innerWidth;
     const textWidth = textElement.offsetWidth;
     const paddingLeft = windowWidth * 0.1; // px-[10vw] = 10% del ancho
     
@@ -130,7 +130,7 @@ const GallerySection = ({ content }: GallerySectionProps) => {
         gsap.set(textElement, {
           x: 0,
           opacity: 1
-        });
+      });
       }
     };
 
@@ -177,57 +177,142 @@ const GallerySection = ({ content }: GallerySectionProps) => {
     setIsDraggableActive(true);
   };
 
-  const galleryBlocks = [
-    {
-      type: 'single',
-      images: [{ src: '/hero-back.png', className: 'w-[450px] h-[600px]' }]
-    },
-    {
-      type: 'double-vertical',
-      images: [
-        { src: '/hero-back2.png', className: 'w-[350px] h-[280px]' },
-        { src: '/hero-back3.png', className: 'w-[350px] h-[350px]' }
-      ]
-    },
-    {
-      type: 'wide-over-double',
-      images: [
-        { src: '/hero-back4.png', className: 'w-[600px] h-[350px] col-span-2' },
-        { src: '/hero-back.png', className: 'w-[290px] h-[300px]' },
-        { src: '/hero-back2.png', className: 'w-[290px] h-[300px]' }
-      ]
-    },
-    {
-      type: 'single',
-      images: [{ src: '/hero-back3.png', className: 'w-[400px] h-[550px]' }]
-    },
-    {
-      type: 'double-vertical',
-      images: [
-        { src: '/hero-back4.png', className: 'w-[320px] h-[250px]' },
-        { src: '/hero-back.png', className: 'w-[320px] h-[380px]' }
-      ]
-    },
-    {
-      type: 'single',
-      images: [{ src: '/hero-back2.png', className: 'w-[480px] h-[620px]' }]
-    },
-    {
-      type: 'wide-over-double',
-      images: [
-        { src: '/hero-back3.png', className: 'w-[550px] h-[320px] col-span-2' },
-        { src: '/hero-back4.png', className: 'w-[270px] h-[280px]' },
-        { src: '/hero-back.png', className: 'w-[270px] h-[280px]' }
-      ]
-    },
-    {
-      type: 'double-vertical',
-      images: [
-        { src: '/hero-back2.png', className: 'w-[360px] h-[300px]' },
-        { src: '/hero-back3.png', className: 'w-[360px] h-[360px]' }
-      ]
-    }
+  // Mapear todas las imágenes de las carpetas del hotel
+  const allImages = [
+    // HABITACION SUITE BALCON 1
+    '/FOTOS HOTEL VILLA ALTA/HABITACION SUITE BALCON 1/SUITE ALCOBA 1.jpg',
+    '/FOTOS HOTEL VILLA ALTA/HABITACION SUITE BALCON 1/EXPERIENCIAS VILLA ALTA.jpeg',
+    '/FOTOS HOTEL VILLA ALTA/HABITACION SUITE BALCON 1/FACHADA.jpg',
+    '/FOTOS HOTEL VILLA ALTA/HABITACION SUITE BALCON 1/LOBBY HUESPEDES.jpg',
+    '/FOTOS HOTEL VILLA ALTA/HABITACION SUITE BALCON 1/LOBBY HOTEL.jpg',
+    '/FOTOS HOTEL VILLA ALTA/HABITACION SUITE BALCON 1/SUITE DUPLEX 1 ANTESALA.jpg',
+    '/FOTOS HOTEL VILLA ALTA/HABITACION SUITE BALCON 1/SUITE SALA.jpg',
+    '/FOTOS HOTEL VILLA ALTA/HABITACION SUITE BALCON 1/VISTA.jpg',
+    '/FOTOS HOTEL VILLA ALTA/HABITACION SUITE BALCON 1/BAÑO SUITE 1.jpg',
+    '/FOTOS HOTEL VILLA ALTA/HABITACION SUITE BALCON 1/HAB SUITE DUPLEX 1.jpg',
+    '/FOTOS HOTEL VILLA ALTA/HABITACION SUITE BALCON 1/LOBBY 2PISO.jpg',
+    '/FOTOS HOTEL VILLA ALTA/HABITACION SUITE BALCON 1/ENTRADA HOTEL.jpg',
+    '/FOTOS HOTEL VILLA ALTA/HABITACION SUITE BALCON 1/LOOBY.jpg',
+    
+    // HABITACION SUITE BALCON 2
+    '/FOTOS HOTEL VILLA ALTA/HABITACION SUITE BALCON 2/SUITE DUPLEX 2.jpg',
+    '/FOTOS HOTEL VILLA ALTA/HABITACION SUITE BALCON 2/SUITE DUPLEX -2.jpg',
+    '/FOTOS HOTEL VILLA ALTA/HABITACION SUITE BALCON 2/SUITE DUPLEX 2-CAMA HAB.jpg',
+    '/FOTOS HOTEL VILLA ALTA/HABITACION SUITE BALCON 2/SUITE DUPLEX 2-CAMA.jpg',
+    '/FOTOS HOTEL VILLA ALTA/HABITACION SUITE BALCON 2/HAB SUITE DUPLEX -2.jpg',
+    '/FOTOS HOTEL VILLA ALTA/HABITACION SUITE BALCON 2/BAÑO SUITE 2.jpg',
+    '/FOTOS HOTEL VILLA ALTA/HABITACION SUITE BALCON 2/UBICACION.jpg',
+    
+    // HABITACION SUITE BALCON 3
+    '/FOTOS HOTEL VILLA ALTA/HABITACION SUITE BALCON 3/SUITE DUPLEX -3.jpg',
+    '/FOTOS HOTEL VILLA ALTA/HABITACION SUITE BALCON 3/SUITE DUPLEX -hab 3.jpg',
+    '/FOTOS HOTEL VILLA ALTA/HABITACION SUITE BALCON 3/SUITE DUPLEX HAB-3 CAMA.jpg',
+    
+    // HABITACION SUITE BALCON 4
+    '/FOTOS HOTEL VILLA ALTA/HABITACION SUITE BALCON 4/SUITE DUPLEX -4.jpg',
+    '/FOTOS HOTEL VILLA ALTA/HABITACION SUITE BALCON 4/SUITE DUPLEX HAB-4 CAMA.jpg',
+    '/FOTOS HOTEL VILLA ALTA/HABITACION SUITE BALCON 4/SUITE DUPLEX HAB-4.jpg',
+    '/FOTOS HOTEL VILLA ALTA/HABITACION SUITE BALCON 4/BAÑO SUITE 4.jpg',
+    
+    // HABITACION SUITE BALCON 5
+    '/FOTOS HOTEL VILLA ALTA/HABITACION SUITE BALCON 5/SUITE DUPLEX -5.jpg',
+    '/FOTOS HOTEL VILLA ALTA/HABITACION SUITE BALCON 5/SUITE DUPLEX -5CAMA.jpg',
+    '/FOTOS HOTEL VILLA ALTA/HABITACION SUITE BALCON 5/SUITE DUPLEX HAB 5.jpg',
+    '/FOTOS HOTEL VILLA ALTA/HABITACION SUITE BALCON 5/BAÑO SUITE 5.jpg',
+    
+    // HABITACION SUITE 6
+    '/FOTOS HOTEL VILLA ALTA/HABITACION SUITE 6/SUITE DUPLEX HAB-6 CAMA.jpg',
+    '/FOTOS HOTEL VILLA ALTA/HABITACION SUITE 6/SUITE DUPLEX -6 SIN BALCON.jpg',
+    '/FOTOS HOTEL VILLA ALTA/HABITACION SUITE 6/SUITE DUPLEX -HAB 6 SIN BALCON.jpg',
+    '/FOTOS HOTEL VILLA ALTA/HABITACION SUITE 6/BAÑO - HAB 6 Y 7.jpg',
+    '/FOTOS HOTEL VILLA ALTA/HABITACION SUITE 6/BAÑO HAB 6 Y 7.jpg',
+    
+    // HABITACION PREMIUM SENCILLA 7
+    '/FOTOS HOTEL VILLA ALTA/HABITACION PREMIUM SENCILLA 7/HABITACION PREMIUM SENCILLA 7.jpg',
+    '/FOTOS HOTEL VILLA ALTA/HABITACION PREMIUM SENCILLA 7/HABITACION PREMIUM - SENCILLA 7.jpg',
+    '/FOTOS HOTEL VILLA ALTA/HABITACION PREMIUM SENCILLA 7/HAB PREMIUM - SENCILLA 7.jpg',
+    '/FOTOS HOTEL VILLA ALTA/HABITACION PREMIUM SENCILLA 7/BAÑO - HAB 6 Y 7.jpg',
+    '/FOTOS HOTEL VILLA ALTA/HABITACION PREMIUM SENCILLA 7/BAÑO HAB 6 Y 7.jpg',
   ];
+
+  // Función para organizar las imágenes en bloques variados
+  const organizeImagesIntoBlocks = (images: string[]) => {
+    const blocks: Array<{ type: string; images: Array<{ src: string; className: string }> }> = [];
+    let index = 0;
+    
+    const blockTypes = [
+      { type: 'single', sizes: ['w-[450px] h-[600px]', 'w-[400px] h-[550px]', 'w-[480px] h-[620px]'] },
+      { type: 'double-vertical', sizes: [
+        ['w-[350px] h-[280px]', 'w-[350px] h-[350px]'],
+        ['w-[320px] h-[250px]', 'w-[320px] h-[380px]'],
+        ['w-[360px] h-[300px]', 'w-[360px] h-[360px]']
+      ]},
+      { type: 'wide-over-double', sizes: [
+        ['w-[600px] h-[350px] col-span-2', 'w-[290px] h-[300px]', 'w-[290px] h-[300px]'],
+        ['w-[550px] h-[320px] col-span-2', 'w-[270px] h-[280px]', 'w-[270px] h-[280px]']
+      ]}
+    ];
+    
+    while (index < images.length) {
+      const blockTypeIndex = blocks.length % 3;
+      const blockType = blockTypes[blockTypeIndex];
+      
+      if (blockType.type === 'single') {
+        const sizes = blockType.sizes as string[];
+        const sizeIndex = Math.floor(blocks.length / 3) % sizes.length;
+        if (index < images.length) {
+          blocks.push({
+      type: 'single',
+            images: [{ src: images[index], className: sizes[sizeIndex] }]
+          });
+          index++;
+        }
+      } else if (blockType.type === 'double-vertical') {
+        const sizes = blockType.sizes as string[][];
+        const sizeIndex = Math.floor(blocks.length / 3) % sizes.length;
+        if (index + 1 < images.length) {
+          blocks.push({
+      type: 'double-vertical',
+      images: [
+              { src: images[index], className: sizes[sizeIndex][0] },
+              { src: images[index + 1], className: sizes[sizeIndex][1] }
+            ]
+          });
+          index += 2;
+        } else if (index < images.length) {
+          blocks.push({
+            type: 'single',
+            images: [{ src: images[index], className: 'w-[400px] h-[550px]' }]
+          });
+          index++;
+        }
+      } else if (blockType.type === 'wide-over-double') {
+        const sizes = blockType.sizes as string[][];
+        const sizeIndex = Math.floor(blocks.length / 3) % sizes.length;
+        if (index + 2 < images.length) {
+          blocks.push({
+      type: 'wide-over-double',
+      images: [
+              { src: images[index], className: sizes[sizeIndex][0] },
+              { src: images[index + 1], className: sizes[sizeIndex][1] },
+              { src: images[index + 2], className: sizes[sizeIndex][2] }
+            ]
+          });
+          index += 3;
+        } else if (index < images.length) {
+          blocks.push({
+            type: 'single',
+            images: [{ src: images[index], className: 'w-[400px] h-[550px]' }]
+          });
+          index++;
+        }
+      }
+    }
+    
+    return blocks;
+  };
+
+  const galleryBlocks = organizeImagesIntoBlocks(allImages);
 
   return (
     <section 

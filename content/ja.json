@@ -5,7 +5,7 @@
     "reserva": "予約する",
     "close": "閉じる",
     "reseñas": "レビュー",
-    "nosotros": "私たちについて"
+    "nosotros": "我々は"
   },
   "hero": {
     "title": "ヴィラ・アルタ・ゲストハウス"
@@ -96,7 +96,7 @@
         "country": "コロンビア"
       },
       {
-        "text": "「カルタヘナ・デ・インディアスの美しいコロニアルホテル。近代的な設備で、立地がとてもよく、スタッフの待遇も最高です。\"",
+        "text": "「カルタヘナ・デ・インディアスの美しいコロニアルホテル。近代的な設備で、立地もよく、スタッフの接客も最高です。\"",
         "author": "ソール",
         "country": "スペイン"
       },
@@ -111,72 +111,98 @@
     "meta_rooms": "ルーム",
     "label": "部屋",
     "next": "次のページ",
-    "reserveNow": "予約",
+    "reserveNow": "書籍",
     "list": [
       {
         "id": "01",
-        "titleTop": "キングサイズ・ベッド",
-        "titleBottom": "レイク・ビュー",
-        "description": "リゾートホテルの客室には、エアコン、デスク、ポット、ミニバー、セーフティボックス、薄型テレビ、バルコニー、専用バスルーム（シャワー付）が備わっています。タオルとベッドリネンは各部屋に用意されています。ビュッフェ式朝食を毎朝提供している。",
-        "price": "200/日",
+        "titleTop": "デュプレックスルーム",
+        "titleBottom": "バルコニー付き",
+        "description": "当ホテルのデュプレックス・ルームは、オリジナルの建築様式と、個性的でプライバシーが保たれたスプリット・レベルのレイアウトが組み合わされています。上層階にはベッドルームがあり、ベッド、テレビ、ミニバーを備え、親密で隠れ家的な空間を作り出しています。下層階には社交ラウンジエリア、プライベートバスルーム、設備の整ったバーエリアがあり、室内でくつろぐのに最適です。プライベート・バルコニーは路地に面しており、高台の穏やかな場所から歴史地区の雰囲気をお楽しみいただけます。自然光、コロニアル調のディテール、街との直結など、本格的な体験をお求めの方に理想的なオプションです。",
+        "price": "735,900円/日",
         "images": [
-          "/hero-back.png",
-          "/hero-back3.png",
-          "/hero-back4.png"
+          "/FOTOS HOTEL VILLA ALTA/HABITACION SUITE BALCON 1/SUITE ALCOBA 1.jpg",
+          "/FOTOS HOTEL VILLA ALTA/HABITACION SUITE BALCON 1/EXPERIENCIAS VILLA ALTA.jpeg",
+          "/FOTOS HOTEL VILLA ALTA/HABITACION SUITE BALCON 1/FACHADA.jpg",
+          "/FOTOS HOTEL VILLA ALTA/HABITACION SUITE BALCON 1/LOBBY HUESPEDES.jpg",
+          "/FOTOS HOTEL VILLA ALTA/HABITACION SUITE BALCON 1/LOBBY HOTEL.jpg",
+          "/FOTOS HOTEL VILLA ALTA/HABITACION SUITE BALCON 1/SUITE DUPLEX 1 ANTESALA.jpg",
+          "/FOTOS HOTEL VILLA ALTA/HABITACION SUITE BALCON 1/SUITE SALA.jpg",
+          "/FOTOS HOTEL VILLA ALTA/HABITACION SUITE BALCON 1/VISTA.jpg",
+          "/FOTOS HOTEL VILLA ALTA/HABITACION SUITE BALCON 1/BAÑO SUITE 1.jpg",
+          "/FOTOS HOTEL VILLA ALTA/HABITACION SUITE BALCON 1/HAB SUITE DUPLEX 1.jpg",
+          "/FOTOS HOTEL VILLA ALTA/HABITACION SUITE BALCON 1/LOBBY 2PISO.jpg",
+          "/FOTOS HOTEL VILLA ALTA/HABITACION SUITE BALCON 1/ENTRADA HOTEL.jpg",
+          "/FOTOS HOTEL VILLA ALTA/HABITACION SUITE BALCON 1/LOOBY.jpg"
         ],
         "services": [
-          "キングサイズベッド1台",
-          "バルコニー",
-          "レイク・ビュー",
-          "フラットスクリーンテレビ",
-          "空調",
-          "ミニバー",
-          "無料WIFI",
-          "バスタブ"
+          "2階建てのデュプレックスルーム",
+          "ベッド、テレビ、ミニバーを備えた上階のベッドルーム",
+          "下層階のソーシャル・ラウンジ・エリア",
+          "専用バスルーム",
+          "設備の整ったバーエリア",
+          "路地を見下ろすプライベートバルコニー",
+          "自然光",
+          "コロニアル建築とディテール",
+          "歴史地区の静かな雰囲気",
+          "朝食付き",
+          "アーリーチェックイン",
+          "レイトチェックアウト"
         ]
       },
       {
         "id": "02",
-        "titleTop": "デラックス・スイート",
-        "titleBottom": "シー・ビュー",
-        "description": "当ホテルのデラックス・スイートは、カリブ海のそよ風を感じられる高い天井と大きな窓のある、広々とした洗練された空間です。カルタヘナの中心で忘れられない滞在をお求めの方のためにデザインされています。",
-        "price": "350/日",
+        "titleTop": "デュプレックスルーム",
+        "titleBottom": "眺望なし、広いリビングルーム付き",
+        "description": "このデュプレックスルームは、広々とした静かなレイアウトで、長期滞在や静かなスペースで仕事や休息をしたい方に最適です。上層階にはベッド、テレビ、ミニバーを備えたベッドルームがあり、下層階には読書、仕事、リラックスに最適な広々としたリビングルーム、専用バスルーム、設備の整ったバーエリアがあります。眺望は望めませんが、広々とした空間、高い天井、温かみのある仕上げが、居心地の良い落ち着いた雰囲気を醸し出しています。快適さ、静けさ、室内の広さを優先される方に最適なお部屋です。",
+        "price": "620,900円/日",
         "images": [
-          "/hero-back3.png",
-          "/hero-back4.png",
-          "/hero-back.png"
+          "/FOTOS HOTEL VILLA ALTA/HABITACION SUITE 6/SUITE DUPLEX HAB-6 CAMA.jpg",
+          "/FOTOS HOTEL VILLA ALTA/HABITACION SUITE 6/SUITE DUPLEX -6 SIN BALCON.jpg",
+          "/FOTOS HOTEL VILLA ALTA/HABITACION SUITE 6/SUITE DUPLEX -HAB 6 SIN BALCON.jpg",
+          "/FOTOS HOTEL VILLA ALTA/HABITACION SUITE 6/BAÑO - HAB 6 Y 7.jpg",
+          "/FOTOS HOTEL VILLA ALTA/HABITACION SUITE 6/BAÑO HAB 6 Y 7.jpg"
         ],
         "services": [
-          "キングサイズベッド1台",
-          "プライベートテラス",
-          "シー・ビュー",
-          "プレミアム・サウンド・システム",
-          "空調",
-          "ネスプレッソコーヒーマシン",
-          "高速無線LAN",
-          "プライベート・ジャグジー"
+          "広くて静かな二人部屋",
+          "長期滞在や仕事に最適",
+          "ベッド、テレビ、ミニバーを備えた上階のベッドルーム",
+          "下層階の広々としたリビングルーム",
+          "専用バスルーム",
+          "設備の整ったバーエリア",
+          "高い天井と温かみのある仕上げ",
+          "静かな環境、外からの眺めなし",
+          "朝食付き",
+          "アーリーチェックイン",
+          "レイトチェックアウト"
         ]
       },
       {
         "id": "03",
-        "titleTop": "ロフト・スタジオ",
-        "titleBottom": "歴史地区",
-        "description": "オリジナルの石壁と現代的なデザインが融合した前衛的な空間。街の歴史に浸りながら、現代的な快適さを求めるクリエイティブな方に最適です。",
-        "price": "1日$280",
+        "titleTop": "スイート",
+        "titleBottom": "シングルレベル",
+        "description": "当スイートは、階段のないワンフロアで最高の快適さを提供するよう設計されており、快適で流動的な体験を容易にします。スリーピングエリアとソーシャルスペースが同じフロアにあり、当ホテルで最もアクセスしやすく実用的なオプションとなっています。キングサイズベッドを備え、ゆったりとしたレイアウトで、静かでリラックスできる空間です。外の景色が見えないため、より静かでプライベートな環境を提供します。専用バスルームと設備の整ったバーエリアがあり、市内観光の後にリラックスするのに理想的です。",
+        "price": "620,900円/日",
         "images": [
-          "/hero-back4.png",
-          "/hero-back.png",
-          "/hero-back3.png"
+          "/FOTOS HOTEL VILLA ALTA/HABITACION SUITE BALCON 2/SUITE DUPLEX 2.jpg",
+          "/FOTOS HOTEL VILLA ALTA/HABITACION SUITE BALCON 2/SUITE DUPLEX -2.jpg",
+          "/FOTOS HOTEL VILLA ALTA/HABITACION SUITE BALCON 2/SUITE DUPLEX 2-CAMA HAB.jpg",
+          "/FOTOS HOTEL VILLA ALTA/HABITACION SUITE BALCON 2/SUITE DUPLEX 2-CAMA.jpg",
+          "/FOTOS HOTEL VILLA ALTA/HABITACION SUITE BALCON 2/HAB SUITE DUPLEX -2.jpg",
+          "/FOTOS HOTEL VILLA ALTA/HABITACION SUITE BALCON 2/BAÑO SUITE 2.jpg",
+          "/FOTOS HOTEL VILLA ALTA/HABITACION SUITE BALCON 2/UBICACION.jpg"
         ],
         "services": [
-          "オープン・プラン・デザイン",
-          "オリジナル石壁",
-          "グルメ料理",
-          "作業エリア",
-          "空調",
-          "SMART TV 65",
-          "高速無線LAN",
-          "レインシャワー"
+          "ワンフロアのスイート、階段なし",
+          "ベッドルームとソーシャルエリアが同じフロアにある",
+          "特大ベッド",
+          "専用バスルーム",
+          "設備の整ったバーエリア",
+          "広々とした快適なレイアウト",
+          "静かでプライベートな環境",
+          "外の景色が見えない",
+          "朝食付き",
+          "アーリーチェックイン",
+          "レイトチェックアウト"
         ]
       }
     ]
@@ -185,12 +211,12 @@
     "description": "カルタヘナ・デ・インディアスの中心にある建築の宝石。中世の豪華さと現代の快適さが融合し、忘れられない滞在をお約束します。",
     "navigation": "ナビゲーション",
     "suites": "スイートルーム",
-    "gastronomy": "ガストロノミー",
+    "reviews": "レビュー",
     "contact": "連絡先",
     "location_label": "所在地",
     "reservations_label": "ご予約",
     "rights": "無断転載を禁じます。",
-    "terms": "利用規約",
-    "rnt": "RNT"
+    "terms": "ご利用条件",
+    "rnt": "戦域制限"
   }
 }

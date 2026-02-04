@@ -16,7 +16,7 @@ interface FooterProps {
       description: string;
       navigation: string;
       suites: string;
-      gastronomy: string;
+      reviews: string;
       contact: string;
       location_label: string;
       reservations_label: string;
@@ -92,8 +92,8 @@ const Footer = ({ content }: FooterProps) => {
             <a href={`/${locale}#rooms`} onClick={(e) => handleScrollTo(e, '#rooms')} className="text-xl font-prata hover:opacity-50 transition-opacity cursor-pointer">
               <TranslatedText>{content.footer.suites}</TranslatedText>
             </a>
-            <a href={`/${locale}#gallery`} onClick={(e) => handleScrollTo(e, '#gallery')} className="text-xl font-prata hover:opacity-50 transition-opacity cursor-pointer">
-              <TranslatedText>{content.footer.gastronomy}</TranslatedText>
+            <a href={`/${locale}#reviews`} onClick={(e) => handleScrollTo(e, '#reviews')} className="text-xl font-prata hover:opacity-50 transition-opacity cursor-pointer">
+              <TranslatedText>{content.footer.reviews}</TranslatedText>
             </a>
             <a href={`/${locale}#hero`} onClick={(e) => handleScrollTo(e, '#hero')} className="text-xl font-prata hover:opacity-50 transition-opacity cursor-pointer">
               <TranslatedText>{content.navbar.reserva}</TranslatedText>
@@ -110,7 +110,7 @@ const Footer = ({ content }: FooterProps) => {
               <p className="tracking-widest uppercase text-[10px] opacity-40 mb-2">
                 <TranslatedText>{content.footer.location_label}</TranslatedText>
               </p>
-              <p>Calle Callejon los Estribos 2-116 p2 AT1<br/>Barrio Centro, Centro, 130001<br/>Cartagena de Indias, Colombia</p>
+              <p>Centro Histórico, CL Callejon De Los Estribos<br/>Cartagena, Colombia 130001</p>
             </div>
             <div>
               <p className="tracking-widest uppercase text-[10px] opacity-40 mb-2">
@@ -138,7 +138,7 @@ const Footer = ({ content }: FooterProps) => {
           </Link>
           <span className="opacity-30">|</span>
           <span className="opacity-30">Developed by</span>
-          <a href="#" className="text-white font-bold hover:opacity-70 transition-opacity tracking-[0.4em]">SLE Development</a>
+          <a href="https://sledevelopment.com" target="_blank" className="text-white font-bold hover:opacity-70 transition-opacity tracking-[0.4em]">SLE Development</a>
         </p>
       </div>
     </footer>

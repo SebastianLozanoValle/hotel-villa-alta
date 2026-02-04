@@ -191,7 +191,7 @@ const MenuSheet = ({ isOpen, onClose, content }: MenuSheetProps) => {
               <TranslatedText>Ubicación</TranslatedText>
             </span>
             <p className="font-source text-sm opacity-80 italic">
-              Calle Callejon los Estribos 2-116 p2 AT1<br/>Barrio Centro, Centro, 130001<br/>Cartagena de Indias, Colombia
+              Centro Histórico, CL Callejon De Los Estribos<br/>Cartagena, Colombia 130001
             </p>
           </div>
         </div>

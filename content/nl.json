@@ -5,7 +5,7 @@
     "reserva": "Boek nu",
     "close": "Sluit",
     "reseñas": "Beoordelingen",
-    "nosotros": "Over ons"
+    "nosotros": "We"
   },
   "hero": {
     "title": "Villa Alta Pension"
@@ -111,72 +111,98 @@
     "meta_rooms": "KAMERS",
     "label": "Kamer",
     "next": "Volgende",
-    "reserveNow": "Boeken",
+    "reserveNow": "Boek",
     "list": [
       {
         "id": "01",
-        "titleTop": "KONINGSBED",
-        "titleBottom": "MEERZICHT",
-        "description": "De kamers in het resorthotel zijn voorzien van airconditioning, een bureau, een waterkoker, een minibar, een kluisje, een flatscreentelevisie, een balkon en een eigen badkamer met een douche. Handdoeken en beddengoed zijn aanwezig in elke kamer. Er wordt elke ochtend een ontbijtbuffet geserveerd.",
-        "price": "200/DAG",
+        "titleTop": "DUPLEX KAMER",
+        "titleBottom": "MET BALKON",
+        "description": "Onze duplexkamers combineren de originele architectuur van het huis met een split-level indeling die karakter en privacy toevoegt. Op de bovenste verdieping bevindt zich de slaapkamer, uitgerust met bed, tv en minibar, waardoor een intieme en afgezonderde ruimte ontstaat. Het lagere niveau heeft een sociale zithoek, een eigen badkamer en een volledig uitgeruste barruimte, ideaal om te ontspannen in de kamer. Het privébalkon geeft uit op het steegje, zodat je kunt genieten van de sfeer van het Centro Historico vanaf een verhoogd en vredig uitkijkpunt. Het is een ideale optie voor wie op zoek is naar een authentieke ervaring, met natuurlijk licht, koloniale details en een directe verbinding met de stad.",
+        "price": "$735.900/DAG",
         "images": [
-          "/hero-back.png",
-          "/hero-back3.png",
-          "/hero-back4.png"
+          "/FOTOS HOTEL VILLA ALTA/HABITACION SUITE BALCON 1/SUITE ALCOBA 1.jpg",
+          "/FOTOS HOTEL VILLA ALTA/HABITACION SUITE BALCON 1/EXPERIENCIAS VILLA ALTA.jpeg",
+          "/FOTOS HOTEL VILLA ALTA/HABITACION SUITE BALCON 1/FACHADA.jpg",
+          "/FOTOS HOTEL VILLA ALTA/HABITACION SUITE BALCON 1/LOBBY HUESPEDES.jpg",
+          "/FOTOS HOTEL VILLA ALTA/HABITACION SUITE BALCON 1/LOBBY HOTEL.jpg",
+          "/FOTOS HOTEL VILLA ALTA/HABITACION SUITE BALCON 1/SUITE DUPLEX 1 ANTESALA.jpg",
+          "/FOTOS HOTEL VILLA ALTA/HABITACION SUITE BALCON 1/SUITE SALA.jpg",
+          "/FOTOS HOTEL VILLA ALTA/HABITACION SUITE BALCON 1/VISTA.jpg",
+          "/FOTOS HOTEL VILLA ALTA/HABITACION SUITE BALCON 1/BAÑO SUITE 1.jpg",
+          "/FOTOS HOTEL VILLA ALTA/HABITACION SUITE BALCON 1/HAB SUITE DUPLEX 1.jpg",
+          "/FOTOS HOTEL VILLA ALTA/HABITACION SUITE BALCON 1/LOBBY 2PISO.jpg",
+          "/FOTOS HOTEL VILLA ALTA/HABITACION SUITE BALCON 1/ENTRADA HOTEL.jpg",
+          "/FOTOS HOTEL VILLA ALTA/HABITACION SUITE BALCON 1/LOOBY.jpg"
         ],
         "services": [
-          "1 KINGSIZE BED",
-          "BALCON",
-          "MEERZICHT",
-          "TV MET PLAT SCHERM",
-          "AIRCONDITIONING",
-          "MINI-BAR",
-          "GRATIS WIFI",
-          "VRIJSTAAND BAD"
+          "Duplexkamer op twee niveaus",
+          "Slaapkamer op de bovenverdieping met bed, tv en minibar",
+          "Sociale loungeruimte op de benedenverdieping",
+          "Privé badkamer",
+          "Volledig uitgeruste bar",
+          "Privébalkon met uitzicht op de steeg",
+          "Natuurlijk licht",
+          "Koloniale architectuur en details",
+          "Rustige sfeer in het historische centrum",
+          "Ontbijt inbegrepen",
+          "Vroeg inchecken",
+          "Laat uitchecken"
         ]
       },
       {
         "id": "02",
-        "titleTop": "LUXE SUITE",
-        "titleBottom": "ZEEZICHT",
-        "description": "Onze Deluxe Suite biedt een ruime en verfijnde ruimte met hoge plafonds en grote ramen die de Caribische bries opvangen. Ontworpen voor wie op zoek is naar een onvergetelijk verblijf in het hart van Cartagena.",
-        "price": "350/DAG",
+        "titleTop": "DUPLEX KAMER",
+        "titleBottom": "ZONDER UITZICHT MET GROTE WOONKAMER",
+        "description": "Deze duplexkamer biedt een ruime en rustige indeling, perfect voor een lang verblijf of voor wie op zoek is naar een rustige ruimte om te werken en te rusten. De kamer is verdeeld over twee verdiepingen: op de bovenste verdieping is de slaapkamer met bed, tv en minibar, terwijl de onderste verdieping een royale woonkamer heeft, ideaal om te lezen, werken of ontspannen, evenals een eigen badkamer en een volledig uitgeruste barruimte. Hoewel het geen uitzicht van buitenaf heeft, zorgen de ruimte, hoge plafonds en warme afwerking voor een gezellige en serene sfeer. Het is een uitstekend alternatief voor wie comfort, stilte en binnenruimte belangrijk vindt.",
+        "price": "620.900/DAG",
         "images": [
-          "/hero-back3.png",
-          "/hero-back4.png",
-          "/hero-back.png"
+          "/FOTOS HOTEL VILLA ALTA/HABITACION SUITE 6/SUITE DUPLEX HAB-6 CAMA.jpg",
+          "/FOTOS HOTEL VILLA ALTA/HABITACION SUITE 6/SUITE DUPLEX -6 SIN BALCON.jpg",
+          "/FOTOS HOTEL VILLA ALTA/HABITACION SUITE 6/SUITE DUPLEX -HAB 6 SIN BALCON.jpg",
+          "/FOTOS HOTEL VILLA ALTA/HABITACION SUITE 6/BAÑO - HAB 6 Y 7.jpg",
+          "/FOTOS HOTEL VILLA ALTA/HABITACION SUITE 6/BAÑO HAB 6 Y 7.jpg"
         ],
         "services": [
-          "1 KINGSIZE BED",
-          "PRIVÉ TERRAS",
-          "ZEEZICHT",
-          "PREMIUM GELUIDSSYSTEEM",
-          "AIRCONDITIONING",
-          "NESPRESSO KOFFIEMACHINE",
-          "SNELLE WIFI",
-          "PRIVÉ JACUZZI"
+          "Ruime en rustige duplexkamer",
+          "Ideaal voor lang verblijf of voor werk",
+          "Slaapkamer op de bovenverdieping met bed, tv en minibar",
+          "Ruime woonkamer op de benedenverdieping",
+          "Privé badkamer",
+          "Volledig uitgeruste bar",
+          "Hoge plafonds en warme afwerking",
+          "Serene omgeving, geen inkijk van buitenaf",
+          "Ontbijt inbegrepen",
+          "Vroeg inchecken",
+          "Laat uitchecken"
         ]
       },
       {
         "id": "03",
-        "titleTop": "LOFT STUDIO",
-        "titleBottom": "HISTORISCH CENTRUM",
-        "description": "Een avant-gardistische ruimte die originele stenen muren combineert met hedendaags design. Ideaal voor creatieve geesten die zich willen onderdompelen in de geschiedenis van de stad met alle moderne gemakken.",
-        "price": "$280/DAG",
+        "titleTop": "SUITE",
+        "titleBottom": "OP ÉÉN NIVEAU",
+        "description": "Onze suite is ontworpen om maximaal comfort te bieden op één niveau, zonder trappen, wat een comfortabele en vloeiende ervaring mogelijk maakt. Zowel het slaapgedeelte als de sociale ruimte bevinden zich op dezelfde verdieping, waardoor het de meest toegankelijke en praktische optie in het hotel is. De suite heeft een kingsize bed en een ruime indeling die rust en ontspanning bevordert. De suite heeft geen uitzicht van buitenaf en biedt een rustigere en meer privé-omgeving. Het heeft een eigen badkamer en een volledig uitgeruste barruimte, ideaal om te ontspannen na een dag de stad verkennen.",
+        "price": "620.900/DAG",
         "images": [
-          "/hero-back4.png",
-          "/hero-back.png",
-          "/hero-back3.png"
+          "/FOTOS HOTEL VILLA ALTA/HABITACION SUITE BALCON 2/SUITE DUPLEX 2.jpg",
+          "/FOTOS HOTEL VILLA ALTA/HABITACION SUITE BALCON 2/SUITE DUPLEX -2.jpg",
+          "/FOTOS HOTEL VILLA ALTA/HABITACION SUITE BALCON 2/SUITE DUPLEX 2-CAMA HAB.jpg",
+          "/FOTOS HOTEL VILLA ALTA/HABITACION SUITE BALCON 2/SUITE DUPLEX 2-CAMA.jpg",
+          "/FOTOS HOTEL VILLA ALTA/HABITACION SUITE BALCON 2/HAB SUITE DUPLEX -2.jpg",
+          "/FOTOS HOTEL VILLA ALTA/HABITACION SUITE BALCON 2/BAÑO SUITE 2.jpg",
+          "/FOTOS HOTEL VILLA ALTA/HABITACION SUITE BALCON 2/UBICACION.jpg"
         ],
         "services": [
-          "OPEN ONTWERP",
-          "ORIGINELE STENEN MUREN",
-          "GASTRONOMISCHE KEUKEN",
-          "WERKGEBIED",
-          "AIRCONDITIONING",
-          "SMART TV 65",
-          "SNELLE WIFI",
-          "REGEN DOUCHE"
+          "Suite op één niveau, geen trappen",
+          "Slaapkamer en sociale ruimte op dezelfde verdieping",
+          "Extra groot bed",
+          "Privé badkamer",
+          "Volledig uitgeruste bar",
+          "Ruime en comfortabele indeling",
+          "Rustige en privé-omgeving",
+          "Geen zicht naar buiten",
+          "Ontbijt inbegrepen",
+          "Vroeg inchecken",
+          "Laat uitchecken"
         ]
       }
     ]
@@ -185,12 +211,12 @@
     "description": "Een architectonisch juweel in het hart van Cartagena de Indias, waar middeleeuwse luxe en modern comfort elkaar ontmoeten voor een onvergetelijk verblijf.",
     "navigation": "Navigatie",
     "suites": "Suites",
-    "gastronomy": "Gastronomie",
+    "reviews": "Beoordelingen",
     "contact": "Neem contact op met",
     "location_label": "Locatie",
     "reservations_label": "Reserveringen",
     "rights": "Alle rechten voorbehouden.",
-    "terms": "Algemene Voorwaarden",
+    "terms": "Algemene voorwaarden",
     "rnt": "RNT"
   }
 }

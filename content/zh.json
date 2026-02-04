@@ -5,7 +5,7 @@
     "reserva": "立即预订",
     "close": "关闭",
     "reseñas": "评论",
-    "nosotros": "关于我们"
+    "nosotros": "我们"
   },
   "hero": {
     "title": "阿尔塔别墅宾馆"
@@ -31,7 +31,7 @@
   "carousel": {
     "meta": "阿尔塔别墅宾馆，2026",
     "heritage": "建筑遗产",
-    "discover": "了解更多信息"
+    "discover": "了解更多"
   },
   "gallery": {
     "title": "我们的画廊",
@@ -58,26 +58,26 @@
         "score": 9.2
       },
       {
-        "label": "舒适与休息",
+        "label": "Confort y Descanso",
         "score": 9.3
       },
       {
-        "label": "质量 - 价格",
+        "label": "Calidad - Precio",
         "score": 8.9
       },
       {
-        "label": "位于历史中心",
+        "label": "Ubicación en el Centro Histórico",
         "score": 9.8
       },
       {
-        "label": "WiFi 连接",
+        "label": "Conectividad WiFi",
         "score": 8.2
       }
     ],
     "testimonials": [
       {
-        "text": "\"卡塔赫纳历史中心的绝佳位置和壮观的两层豪华客房\"。",
-        "author": "抛光",
+        "text": "“Ubicación perfecta en el Centro Histórico de Cartagena y una habitación de lujo de 2 pisos espectacular.”",
+        "author": "Pulido",
         "country": "哥伦比亚"
       },
       {
@@ -111,72 +111,98 @@
     "meta_rooms": "房间",
     "label": "房间",
     "next": "下一页",
-    "reserveNow": "预订",
+    "reserveNow": "图书",
     "list": [
       {
         "id": "01",
-        "titleTop": "特大号床",
-        "titleBottom": "湖景",
-        "description": "度假酒店的客房均配有空调、书桌、水壶、迷你吧、保险箱、平板电视、阳台和带淋浴的私人浴室。每间客房均提供毛巾和床单。每天早晨供应自助早餐。",
-        "price": "200/天",
+        "titleTop": "复式房间",
+        "titleBottom": "带露台",
+        "description": "我们的复式客房结合了房屋的原始建筑风格，采用分层布局，增加了特色和私密性。上层是卧室，配有床、电视和迷你吧，营造出一个私密的空间。下层是社交休闲区、私人浴室和设备齐全的酒吧区，是在室内放松的理想场所。私人阳台通向小巷，让您从高处静静欣赏历史中心的氛围。自然采光、殖民风格的细节以及与城市的直接联系，对于那些追求真实体验的人来说，这是一个理想的选择。",
+        "price": "735 900 美元/天",
         "images": [
-          "/hero-back.png",
-          "/hero-back3.png",
-          "/hero-back4.png"
+          "/FOTOS HOTEL VILLA ALTA/HABITACION SUITE BALCON 1/SUITE ALCOBA 1.jpg",
+          "/FOTOS HOTEL VILLA ALTA/HABITACION SUITE BALCON 1/EXPERIENCIAS VILLA ALTA.jpeg",
+          "/FOTOS HOTEL VILLA ALTA/HABITACION SUITE BALCON 1/FACHADA.jpg",
+          "/FOTOS HOTEL VILLA ALTA/HABITACION SUITE BALCON 1/LOBBY HUESPEDES.jpg",
+          "/FOTOS HOTEL VILLA ALTA/HABITACION SUITE BALCON 1/LOBBY HOTEL.jpg",
+          "/FOTOS HOTEL VILLA ALTA/HABITACION SUITE BALCON 1/SUITE DUPLEX 1 ANTESALA.jpg",
+          "/FOTOS HOTEL VILLA ALTA/HABITACION SUITE BALCON 1/SUITE SALA.jpg",
+          "/FOTOS HOTEL VILLA ALTA/HABITACION SUITE BALCON 1/VISTA.jpg",
+          "/FOTOS HOTEL VILLA ALTA/HABITACION SUITE BALCON 1/BAÑO SUITE 1.jpg",
+          "/FOTOS HOTEL VILLA ALTA/HABITACION SUITE BALCON 1/HAB SUITE DUPLEX 1.jpg",
+          "/FOTOS HOTEL VILLA ALTA/HABITACION SUITE BALCON 1/LOBBY 2PISO.jpg",
+          "/FOTOS HOTEL VILLA ALTA/HABITACION SUITE BALCON 1/ENTRADA HOTEL.jpg",
+          "/FOTOS HOTEL VILLA ALTA/HABITACION SUITE BALCON 1/LOOBY.jpg"
         ],
         "services": [
-          "1 张特大号床",
-          "露台",
-          "湖景",
-          "平板电视",
-          "空调",
-          "迷你酒吧",
-          "免费 WIFI",
-          "独立式浴缸"
+          "两层复式房间",
+          "卧室位于上层，配有床、电视和迷你吧",
+          "下层的社交休闲区",
+          "私人浴室",
+          "设备齐全的酒吧区",
+          "俯瞰小巷的私人阳台",
+          "自然光",
+          "殖民时期的建筑和细节",
+          "历史中心的宁静氛围",
+          "含早餐",
+          "提前办理登机手续",
+          "延迟退房"
         ]
       },
       {
         "id": "02",
-        "titleTop": "豪华套房",
-        "titleBottom": "海景",
-        "description": "我们的豪华套房宽敞而精致，高高的天花板和宽大的窗户让您尽享加勒比海的微风。专为在卡塔赫纳市中心寻求难忘住宿体验的客人而设计。",
-        "price": "350/天",
+        "titleTop": "复式房间",
+        "titleBottom": "无景观，带大起居室",
+        "description": "这间复式客房布局宽敞、安静，非常适合长期居住或寻求安静工作和休息空间的人。房间分为上下两层：上层是卧室，配有床、电视和迷你吧；下层是宽敞的客厅，是阅读、工作或休息的理想场所，还有私人浴室和设备齐全的酒吧区。虽然没有外部景观，但宽敞的空间、高高的天花板和暖色调的装饰营造出一种舒适宁静的氛围。对于那些注重舒适、安静和室内空间的人来说，这是一个绝佳的选择。",
+        "price": "620,900 美元/天",
         "images": [
-          "/hero-back3.png",
-          "/hero-back4.png",
-          "/hero-back.png"
+          "/FOTOS HOTEL VILLA ALTA/HABITACION SUITE 6/SUITE DUPLEX HAB-6 CAMA.jpg",
+          "/FOTOS HOTEL VILLA ALTA/HABITACION SUITE 6/SUITE DUPLEX -6 SIN BALCON.jpg",
+          "/FOTOS HOTEL VILLA ALTA/HABITACION SUITE 6/SUITE DUPLEX -HAB 6 SIN BALCON.jpg",
+          "/FOTOS HOTEL VILLA ALTA/HABITACION SUITE 6/BAÑO - HAB 6 Y 7.jpg",
+          "/FOTOS HOTEL VILLA ALTA/HABITACION SUITE 6/BAÑO HAB 6 Y 7.jpg"
         ],
         "services": [
-          "1 张特大号床",
-          "私人露台",
-          "海景",
-          "高级音响系统",
-          "空调",
-          "奈斯派索咖啡机",
-          "高速无线网络",
-          "私人按摩浴缸"
+          "宽敞安静的复式客房",
+          "适合长期居住或工作",
+          "卧室位于上层，配有床、电视和迷你吧",
+          "位于下层的宽敞起居室",
+          "私人浴室",
+          "设备齐全的酒吧区",
+          "高高的天花板和温暖的装饰",
+          "环境宁静，无外部景观",
+          "含早餐",
+          "提前办理登机手续",
+          "延迟退房"
         ]
       },
       {
         "id": "03",
-        "titleTop": "LOFT STUDIO",
-        "titleBottom": "历史中心",
-        "description": "这是一个将原始石墙与现代设计相结合的前卫空间。对于那些既想沉浸于城市历史，又想享受现代舒适生活的创意人士来说，这里是理想之选。",
-        "price": "280 美元/天",
+        "titleTop": "套房",
+        "titleBottom": "单层",
+        "description": "我们的套房设计为单层，无楼梯，为您提供最舒适的体验。睡眠区和社交空间位于同一楼层，是酒店内最方便、最实用的选择。套房内有一张特大号床，布局宽敞，更显宁静和放松。套房没有外景，环境更加安静私密。套房内设有私人浴室和设备齐全的酒吧区，是游览城市一天后放松身心的理想之选。",
+        "price": "620,900 美元/天",
         "images": [
-          "/hero-back4.png",
-          "/hero-back.png",
-          "/hero-back3.png"
+          "/FOTOS HOTEL VILLA ALTA/HABITACION SUITE BALCON 2/SUITE DUPLEX 2.jpg",
+          "/FOTOS HOTEL VILLA ALTA/HABITACION SUITE BALCON 2/SUITE DUPLEX -2.jpg",
+          "/FOTOS HOTEL VILLA ALTA/HABITACION SUITE BALCON 2/SUITE DUPLEX 2-CAMA HAB.jpg",
+          "/FOTOS HOTEL VILLA ALTA/HABITACION SUITE BALCON 2/SUITE DUPLEX 2-CAMA.jpg",
+          "/FOTOS HOTEL VILLA ALTA/HABITACION SUITE BALCON 2/HAB SUITE DUPLEX -2.jpg",
+          "/FOTOS HOTEL VILLA ALTA/HABITACION SUITE BALCON 2/BAÑO SUITE 2.jpg",
+          "/FOTOS HOTEL VILLA ALTA/HABITACION SUITE BALCON 2/UBICACION.jpg"
         ],
         "services": [
-          "开放式设计",
-          "原石墙",
-          "美食",
-          "工作区",
-          "空调",
-          "智能电视 65",
-          "高速无线网络",
-          "雨淋"
+          "单层套房，无楼梯",
+          "卧室和社交区位于同一楼层",
+          "特大床",
+          "私人浴室",
+          "设备齐全的酒吧区",
+          "宽敞舒适的布局",
+          "安静、私密的环境",
+          "没有外部景观",
+          "含早餐",
+          "提前办理登机手续",
+          "延迟退房"
         ]
       }
     ]
@@ -185,7 +211,7 @@
     "description": "卡塔赫纳德印第亚斯市中心的建筑瑰宝，中世纪的奢华与现代的舒适交相辉映，为您带来难忘的住宿体验。",
     "navigation": "导航",
     "suites": "套间",
-    "gastronomy": "美食",
+    "reviews": "评论",
     "contact": "联系方式",
     "location_label": "地点",
     "reservations_label": "预订",

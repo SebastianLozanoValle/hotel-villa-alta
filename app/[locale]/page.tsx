@@ -58,9 +58,9 @@ export default function Page() {
     "image": "https://hotelvillaalta.com/hero-back3.png",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "Calle Callejon los Estribos 2-116 p2 AT1 Barrio Centro",
+      "streetAddress": "CL Callejon De Los Estribos",
       "addressLocality": "Cartagena",
-      "addressRegion": "Bolívar",
+      "addressRegion": "Centro Histórico",
       "postalCode": "130001",
       "addressCountry": "CO"
     },
@@ -78,21 +78,21 @@ export default function Page() {
       <LuxuryLoader />
       <Navbar content={content.navbar} />
       <div id="hero">
-        <Hero content={content.hero} bookingContent={content.booking} />
+      <Hero content={content.hero} bookingContent={content.booking} />
       </div>
       <div className="relative z-30 mt-[100vh]">
         <CarouselSection content={content.carousel} />
         <section id="rooms">
-          <RoomsSection content={content.rooms} />
+        <RoomsSection content={content.rooms} />
         </section>
         <section id="gallery">
-          <GallerySection content={content.gallery} />
+        <GallerySection content={content.gallery} />
         </section>
         <section id="reviews">
-          <ReviewsSection content={content.reviews} />
+        <ReviewsSection content={content.reviews} />
         </section>
         <footer id="contact">
-          <Footer content={content} />
+        <Footer content={content} />
         </footer>
       </div>
     </main>
