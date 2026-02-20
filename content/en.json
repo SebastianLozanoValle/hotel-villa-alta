@@ -26,7 +26,50 @@
       "2 Adults / 1 Child",
       "2 Adults / 2 Children"
     ],
-    "cta": "BOOK NOW"
+    "cta": "BOOK NOW",
+    "select_dates": "Select dates",
+    "select_arrival": "Select arrival",
+    "select_departure": "Select departure",
+    "prev_month": "Previous month",
+    "next_month": "Next month",
+    "close": "Close",
+    "months": [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December"
+    ],
+    "months_short": [
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
+      "May",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct",
+      "Nov",
+      "Dec"
+    ],
+    "days_short": [
+      "S",
+      "M",
+      "T",
+      "W",
+      "T",
+      "F",
+      "S"
+    ]
   },
   "carousel": {
     "meta": "Villa Alta Guest House, 2026",

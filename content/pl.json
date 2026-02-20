@@ -26,7 +26,50 @@
       "2 osoby dorosłe / 1 dziecko",
       "2 osoby dorosłe / 2 dzieci"
     ],
-    "cta": "ZAREZERWUJ TERAZ"
+    "cta": "ZAREZERWUJ TERAZ",
+    "select_dates": "Wybierz daty",
+    "select_arrival": "Wybierz datę przyjazdu",
+    "select_departure": "Wybierz datę wyjazdu",
+    "prev_month": "Poprzedni miesiąc",
+    "next_month": "Następny miesiąc",
+    "close": "Zamknij",
+    "months": [
+      "Styczeń",
+      "Luty",
+      "Marzec",
+      "Kwiecień",
+      "Maj",
+      "Czerwiec",
+      "Lipiec",
+      "Sierpień",
+      "Wrzesień",
+      "Październik",
+      "Listopad",
+      "Grudzień"
+    ],
+    "months_short": [
+      "Sty",
+      "Lut",
+      "Mar",
+      "Kwi",
+      "Maj",
+      "Cze",
+      "Lip",
+      "Sie",
+      "Wrz",
+      "Paź",
+      "Lis",
+      "Gru"
+    ],
+    "days_short": [
+      "N",
+      "P",
+      "W",
+      "Ś",
+      "C",
+      "P",
+      "S"
+    ]
   },
   "carousel": {
     "meta": "Villa Alta Guest House, 2026",
@@ -77,7 +120,7 @@
     "testimonials": [
       {
         "text": "\"Doskonała lokalizacja w zabytkowym centrum Cartageny i spektakularny 2-piętrowy pokój typu deluxe.\"",
-        "author": "Polerowanie",
+        "author": "Pulito",
         "country": "Kolumbia"
       },
       {
@@ -111,7 +154,7 @@
     "meta_rooms": "POKOJE",
     "label": "Pokój",
     "next": "Następny",
-    "reserveNow": "Książka",
+    "reserveNow": "Zarezerwuj",
     "list": [
       {
         "id": "01",

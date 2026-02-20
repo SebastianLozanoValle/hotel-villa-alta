@@ -26,7 +26,50 @@
       "2 Volwassenen / 1 Kind",
       "2 Volwassenen / 2 Kinderen"
     ],
-    "cta": "RESERVEER NU"
+    "cta": "RESERVEER NU",
+    "select_dates": "Data selecteren",
+    "select_arrival": "Aankomst selecteren",
+    "select_departure": "Vertrek selecteren",
+    "prev_month": "Vorige maand",
+    "next_month": "Volgende maand",
+    "close": "Sluiten",
+    "months": [
+      "Januari",
+      "Februari",
+      "Maart",
+      "April",
+      "Mei",
+      "Juni",
+      "Juli",
+      "Augustus",
+      "September",
+      "Oktober",
+      "November",
+      "December"
+    ],
+    "months_short": [
+      "Jan",
+      "Feb",
+      "Mrt",
+      "Apr",
+      "Mei",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep",
+      "Okt",
+      "Nov",
+      "Dec"
+    ],
+    "days_short": [
+      "Z",
+      "M",
+      "D",
+      "W",
+      "D",
+      "V",
+      "Z"
+    ]
   },
   "carousel": {
     "meta": "Villa Alta Guest House, 2026",

@@ -14,9 +14,62 @@
     "arrival": "Llegada / Salida",
     "rooms": "Habitaciones",
     "guests": "Huéspedes",
-    "rooms_options": ["1 Habitación", "2 Habitaciones", "3 Habitaciones", "4+ Habitaciones"],
-    "guests_options": ["2 Adultos / 0 Niños", "1 Adulto / 0 Niños", "2 Adultos / 1 Niño", "2 Adultos / 2 Niños"],
-    "cta": "RESERVAR AHORA"
+    "rooms_options": [
+      "1 Habitación",
+      "2 Habitaciones",
+      "3 Habitaciones",
+      "4+ Habitaciones"
+    ],
+    "guests_options": [
+      "2 Adultos / 0 Niños",
+      "1 Adulto / 0 Niños",
+      "2 Adultos / 1 Niño",
+      "2 Adultos / 2 Niños"
+    ],
+    "cta": "RESERVAR AHORA",
+    "select_dates": "Seleccionar fechas",
+    "select_arrival": "Selecciona llegada",
+    "select_departure": "Selecciona salida",
+    "prev_month": "Mes anterior",
+    "next_month": "Mes siguiente",
+    "close": "Cerrar",
+    "months": [
+      "Enero",
+      "Febrero",
+      "Marzo",
+      "Abril",
+      "Mayo",
+      "Junio",
+      "Julio",
+      "Agosto",
+      "Septiembre",
+      "Octubre",
+      "Noviembre",
+      "Diciembre"
+    ],
+    "months_short": [
+      "Ene",
+      "Feb",
+      "Mar",
+      "Abr",
+      "May",
+      "Jun",
+      "Jul",
+      "Ago",
+      "Sep",
+      "Oct",
+      "Nov",
+      "Dic"
+    ],
+    "days_short": [
+      "D",
+      "L",
+      "M",
+      "X",
+      "J",
+      "V",
+      "S"
+    ]
   },
   "carousel": {
     "meta": "Villa Alta Guest House, 2026",
@@ -35,13 +88,34 @@
     "comments_count": "206 comentarios",
     "categories_title": "Categorías del Hotel:",
     "categories": [
-      { "label": "Servicio al Cliente", "score": 9.4 },
-      { "label": "Instalaciones de Lujo", "score": 8.8 },
-      { "label": "Limpieza Impecable", "score": 9.2 },
-      { "label": "Confort y Descanso", "score": 9.3 },
-      { "label": "Calidad - Precio", "score": 8.9 },
-      { "label": "Ubicación en el Centro Histórico", "score": 9.8 },
-      { "label": "Conectividad WiFi", "score": 8.2 }
+      {
+        "label": "Servicio al Cliente",
+        "score": 9.4
+      },
+      {
+        "label": "Instalaciones de Lujo",
+        "score": 8.8
+      },
+      {
+        "label": "Limpieza Impecable",
+        "score": 9.2
+      },
+      {
+        "label": "Confort y Descanso",
+        "score": 9.3
+      },
+      {
+        "label": "Calidad - Precio",
+        "score": 8.9
+      },
+      {
+        "label": "Ubicación en el Centro Histórico",
+        "score": 9.8
+      },
+      {
+        "label": "Conectividad WiFi",
+        "score": 8.2
+      }
     ],
     "testimonials": [
       {

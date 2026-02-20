@@ -26,7 +26,50 @@
       "2 adultes / 1 enfant",
       "2 adultes / 2 enfants"
     ],
-    "cta": "RÉSERVEZ MAINTENANT"
+    "cta": "RÉSERVEZ MAINTENANT",
+    "select_dates": "Sélectionner les dates",
+    "select_arrival": "Sélectionner l'arrivée",
+    "select_departure": "Sélectionner le départ",
+    "prev_month": "Mois précédent",
+    "next_month": "Mois suivant",
+    "close": "Fermer",
+    "months": [
+      "Janvier",
+      "Février",
+      "Mars",
+      "Avril",
+      "Mai",
+      "Juin",
+      "Juillet",
+      "Août",
+      "Septembre",
+      "Octobre",
+      "Novembre",
+      "Décembre"
+    ],
+    "months_short": [
+      "Janv.",
+      "Févr.",
+      "Mars",
+      "Avr.",
+      "Mai",
+      "Juin",
+      "Juil.",
+      "Août",
+      "Sept.",
+      "Oct.",
+      "Nov.",
+      "Déc."
+    ],
+    "days_short": [
+      "D",
+      "L",
+      "M",
+      "M",
+      "J",
+      "V",
+      "S"
+    ]
   },
   "carousel": {
     "meta": "Villa Alta Guest House, 2026",
@@ -86,7 +129,7 @@
         "country": "Colombie"
       },
       {
-        "text": "\"L'hôtel est parfaitement situé pour découvrir Carthagène. Le personnel de l'hôtel est très attentif. Petit déjeuner exquis servi dans la chambre de style loft.\"",
+        "text": "\"L'hôtel es parfaitement situé pour découvrir Carthagène. Le personnel de l'hôtel est très attentif. Petit déjeuner exquis servi dans la chambre de style loft.\"",
         "author": "Beatriz",
         "country": "Espagne"
       },
@@ -111,7 +154,7 @@
     "meta_rooms": "CHAMBRES",
     "label": "Chambre",
     "next": "Suivant",
-    "reserveNow": "Livre",
+    "reserveNow": "Réserver",
     "list": [
       {
         "id": "01",

@@ -26,7 +26,50 @@
       "2 adulti / 1 bambino",
       "2 adulti / 2 bambini"
     ],
-    "cta": "PRENOTA ORA"
+    "cta": "PRENOTA ORA",
+    "select_dates": "Seleziona le date",
+    "select_arrival": "Seleziona l'arrivo",
+    "select_departure": "Seleziona la partenza",
+    "prev_month": "Mese precedente",
+    "next_month": "Mese successivo",
+    "close": "Chiudi",
+    "months": [
+      "Gennaio",
+      "Febbraio",
+      "Marzo",
+      "Aprile",
+      "Maggio",
+      "Giugno",
+      "Luglio",
+      "Agosto",
+      "Settembre",
+      "Ottobre",
+      "Novembre",
+      "Dicembre"
+    ],
+    "months_short": [
+      "Gen",
+      "Feb",
+      "Mar",
+      "Apr",
+      "Mag",
+      "Giu",
+      "Lug",
+      "Ago",
+      "Set",
+      "Ott",
+      "Nov",
+      "Dic"
+    ],
+    "days_short": [
+      "D",
+      "L",
+      "M",
+      "M",
+      "G",
+      "V",
+      "S"
+    ]
   },
   "carousel": {
     "meta": "Villa Alta Guest House, 2026",
@@ -111,7 +154,7 @@
     "meta_rooms": "CAMERE",
     "label": "La camera",
     "next": "Avanti",
-    "reserveNow": "Libro",
+    "reserveNow": "Prenota",
     "list": [
       {
         "id": "01",

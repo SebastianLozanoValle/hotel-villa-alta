@@ -3,6 +3,7 @@
 import { useState, useRef, useEffect } from "react";
 import gsap from "gsap";
 import { TranslatedText } from "../translation/TranslatedText";
+import { useLanguage } from "../../contexts/LanguageContext";
 
 interface LuxuryCalendarProps {
   arrivalDate: string;
@@ -11,9 +12,15 @@ interface LuxuryCalendarProps {
   onDepartureChange: (date: string) => void;
   isOpen: boolean;
   onClose: () => void;
+  content: any;
 }
 
-const LuxuryCalendar = ({ arrivalDate, departureDate, onArrivalChange, onDepartureChange, isOpen, onClose }: LuxuryCalendarProps) => {
+const LuxuryCalendar = ({ arrivalDate, departureDate, onArrivalChange, onDepartureChange, isOpen, onClose, content }: LuxuryCalendarProps) => {
+  const { dictionary, language } = useLanguage();
+  const t = (text: string) => {
+    if (language === 'es') return text;
+    return (dictionary && dictionary[text]) || text;
+  };
   const calendarRef = useRef<HTMLDivElement>(null);
   const [currentMonth, setCurrentMonth] = useState(new Date());
   const [selectingArrival, setSelectingArrival] = useState(true);
@@ -26,9 +33,8 @@ const LuxuryCalendar = ({ arrivalDate, departureDate, onArrivalChange, onDepartu
     }
   }, [isOpen, arrivalDate]);
 
-  const monthNames = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
-  const dayNames = ['Dom', 'Lun', 'Mar', 'Mié', 'Jue', 'Vie', 'Sáb'];
-  const dayNamesShort = ['D', 'L', 'M', 'X', 'J', 'V', 'S'];
+  const monthNames = content.months || ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
+  const dayNamesShort = content.days_short || ['D', 'L', 'M', 'X', 'J', 'V', 'S'];
 
   const getDaysInMonth = (date: Date) => {
     const year = date.getFullYear();
@@ -37,7 +43,7 @@ const LuxuryCalendar = ({ arrivalDate, departureDate, onArrivalChange, onDepartu
     const lastDay = new Date(year, month + 1, 0);
     const daysInMonth = lastDay.getDate();
     const startingDayOfWeek = firstDay.getDay();
-    
+
     const days = [];
     // Días del mes anterior
     const prevMonthLastDay = new Date(year, month, 0).getDate();
@@ -87,9 +93,9 @@ const LuxuryCalendar = ({ arrivalDate, departureDate, onArrivalChange, onDepartu
 
   const handleDateClick = (date: Date) => {
     if (isDateDisabled(date)) return;
-    
+
     const dateStr = date.toISOString().split('T')[0];
-    
+
     if (selectingArrival) {
       onArrivalChange(dateStr);
       // Si hay fecha de salida y la nueva llegada es posterior, resetear salida
@@ -171,19 +177,19 @@ const LuxuryCalendar = ({ arrivalDate, departureDate, onArrivalChange, onDepartu
         <button
           onClick={prevMonth}
           className="p-3 md:p-2 hover:bg-white/10 active:bg-white/20 rounded transition-colors touch-manipulation"
-          aria-label="Mes anterior"
+          aria-label={t(content.prev_month)}
         >
           <svg width="16" height="16" viewBox="0 0 12 12" fill="none" stroke="white" strokeWidth="2" className="w-4 h-4 md:w-3 md:h-3">
             <path d="M7 2L3 6l4 4" />
           </svg>
         </button>
         <h3 className="font-source text-base md:text-sm text-white tracking-wider uppercase px-4 text-center font-medium">
-          {monthNames[currentMonth.getMonth()]} {currentMonth.getFullYear()}
+          <TranslatedText>{monthNames[currentMonth.getMonth()]}</TranslatedText> {currentMonth.getFullYear()}
         </h3>
         <button
           onClick={nextMonth}
           className="p-3 md:p-2 hover:bg-white/10 active:bg-white/20 rounded transition-colors touch-manipulation"
-          aria-label="Mes siguiente"
+          aria-label={t(content.next_month)}
         >
           <svg width="16" height="16" viewBox="0 0 12 12" fill="none" stroke="white" strokeWidth="2" className="w-4 h-4 md:w-3 md:h-3">
             <path d="M5 2l4 4-4 4" />
@@ -192,10 +198,10 @@ const LuxuryCalendar = ({ arrivalDate, departureDate, onArrivalChange, onDepartu
       </div>
 
       <div className="grid grid-cols-7 gap-2 md:gap-1 mb-3 md:mb-2">
-        {dayNamesShort.map((day) => (
+        {dayNamesShort.map((day: string) => (
           <div key={day} className="text-center py-2 md:py-2">
             <span className="text-[10px] md:text-[9px] font-source text-white/50 uppercase tracking-wider font-medium">
-              {day}
+              <TranslatedText>{day}</TranslatedText>
             </span>
           </div>
         ))}
@@ -236,13 +242,13 @@ const LuxuryCalendar = ({ arrivalDate, departureDate, onArrivalChange, onDepartu
 
       <div className="mt-6 pt-4 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4 md:gap-0 text-sm md:text-xs font-source text-white/60">
         <span className="uppercase tracking-wider text-center md:text-left font-medium">
-          {selectingArrival ? 'Selecciona llegada' : 'Selecciona salida'}
+          <TranslatedText>{selectingArrival ? content.select_arrival : content.select_departure}</TranslatedText>
         </span>
         <button
           onClick={onClose}
           className="uppercase tracking-wider hover:text-white active:text-white transition-colors touch-manipulation px-6 py-3 md:px-4 md:py-2 bg-white/10 hover:bg-white/20 rounded-full md:rounded-sm font-medium"
         >
-          Cerrar
+          <TranslatedText>{content.close}</TranslatedText>
         </button>
       </div>
     </>
@@ -252,15 +258,13 @@ const LuxuryCalendar = ({ arrivalDate, departureDate, onArrivalChange, onDepartu
     <>
       {/* Modal móvil - CSS puro, sin GSAP - Visible solo en móvil */}
       <div
-        className={`fixed inset-0 bg-black/70 z-[9998] md:!hidden transition-opacity duration-300 ${
-          isOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
-        }`}
+        className={`fixed inset-0 bg-black/70 z-[9998] md:!hidden transition-opacity duration-300 ${isOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
+          }`}
         onClick={onClose}
       />
       <div
-        className={`fixed left-4 right-4 bg-secondary shadow-2xl z-[9999] p-6 max-h-[85vh] overflow-y-auto md:!hidden transition-all duration-400 ${
-          isOpen ? 'opacity-100 scale-100 pointer-events-auto' : 'opacity-0 scale-95 pointer-events-none'
-        }`}
+        className={`fixed left-4 right-4 bg-secondary shadow-2xl z-[9999] p-6 max-h-[85vh] overflow-y-auto md:!hidden transition-all duration-400 ${isOpen ? 'opacity-100 scale-100 pointer-events-auto' : 'opacity-0 scale-95 pointer-events-none'
+          }`}
         style={{ top: 'calc(50% - 30px)', transform: 'translateY(-50%)' }}
         onClick={(e) => e.stopPropagation()}
       >
@@ -295,23 +299,23 @@ const LuxurySelect = ({ label, value, options, onChange, isOpen, onToggle, onClo
 
   useEffect(() => {
     if (isOpen) {
-      gsap.fromTo(dropdownRef.current, 
+      gsap.fromTo(dropdownRef.current,
         { opacity: 0, y: 10, display: 'none' },
         { opacity: 1, y: 0, display: 'block', duration: 0.3, ease: "power2.out" }
       );
       gsap.to(iconRef.current, { rotation: 180, duration: 0.3 });
     } else {
-      gsap.to(dropdownRef.current, { 
+      gsap.to(dropdownRef.current, {
         opacity: 0, y: 10, duration: 0.2, ease: "power2.in",
-        onComplete: () => { if(dropdownRef.current) dropdownRef.current.style.display = 'none'; }
+        onComplete: () => { if (dropdownRef.current) dropdownRef.current.style.display = 'none'; }
       });
       gsap.to(iconRef.current, { rotation: 0, duration: 0.3 });
     }
   }, [isOpen]);
 
   return (
-    <div className="flex flex-col gap-1 w-full md:min-w-[220px] relative group border-b border-white/30 pb-2 cursor-pointer" 
-         onClick={onToggle}>
+    <div className="flex flex-col gap-1 w-full md:min-w-[220px] relative group border-b border-white/30 pb-2 cursor-pointer"
+      onClick={onToggle}>
       <label className="text-[10px] font-source tracking-[0.2em] uppercase opacity-50 text-white">
         <TranslatedText>{label}</TranslatedText>
       </label>
@@ -319,7 +323,7 @@ const LuxurySelect = ({ label, value, options, onChange, isOpen, onToggle, onClo
         <span className="text-lg font-source text-white tracking-wide">
           <TranslatedText>{value}</TranslatedText>
         </span>
-        <svg 
+        <svg
           ref={iconRef}
           width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg"
           className="opacity-70 group-hover:opacity-100 transition-opacity"
@@ -328,12 +332,12 @@ const LuxurySelect = ({ label, value, options, onChange, isOpen, onToggle, onClo
         </svg>
       </div>
 
-      <div 
+      <div
         ref={dropdownRef}
         className="luxury-select-dropdown absolute bottom-full left-0 w-full bg-secondary shadow-2xl z-[100] mb-4 py-2 border border-white/10 hidden"
       >
         {options.map((opt) => (
-          <div 
+          <div
             key={opt}
             onClick={(e) => {
               e.stopPropagation();
@@ -358,10 +362,20 @@ interface BookingEngineProps {
     rooms_options: string[];
     guests_options: string[];
     cta: string;
+    select_dates: string;
+    select_arrival: string;
+    select_departure: string;
+    prev_month: string;
+    next_month: string;
+    close: string;
+    months: string[];
+    months_short: string[];
+    days_short: string[];
   };
 }
 
 const BookingEngine = ({ content }: BookingEngineProps) => {
+  const { dictionary, language } = useLanguage();
   const [rooms, setRooms] = useState(content.rooms_options[0]);
   const [guests, setGuests] = useState(content.guests_options[0]);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
@@ -369,20 +383,19 @@ const BookingEngine = ({ content }: BookingEngineProps) => {
   const [departureDate, setDepartureDate] = useState<string>('');
   const dateContainerRef = useRef<HTMLDivElement>(null);
 
-  const formatDate = (dateString: string): string => {
-    if (!dateString) return '';
+  const formatDate = (dateString: string) => {
     const date = new Date(dateString);
     const day = date.getDate();
-    const monthNames = ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'];
+    const monthNames = content.months_short || ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'];
     const month = monthNames[date.getMonth()];
-    return `${day} ${month}`;
+    return <>{day} <TranslatedText>{month}</TranslatedText></>;
   };
 
-  const formatDateRange = (): string => {
-    if (!arrivalDate && !departureDate) return 'Seleccionar fechas';
-    if (arrivalDate && !departureDate) return `${formatDate(arrivalDate)} - ...`;
-    if (arrivalDate && departureDate) return `${formatDate(arrivalDate)} - ${formatDate(departureDate)}`;
-    return 'Seleccionar fechas';
+  const formatDateRange = () => {
+    if (!arrivalDate && !departureDate) return <TranslatedText>{content.select_dates}</TranslatedText>;
+    if (arrivalDate && !departureDate) return <>{formatDate(arrivalDate)} - ...</>;
+    if (arrivalDate && departureDate) return <>{formatDate(arrivalDate)} - {formatDate(departureDate)}</>;
+    return <TranslatedText>{content.select_dates}</TranslatedText>;
   };
 
   const handleDateClick = () => {
@@ -398,7 +411,7 @@ const BookingEngine = ({ content }: BookingEngineProps) => {
     const handleClickOutside = (event: MouseEvent) => {
       const target = event.target as Node;
       if (
-        dateContainerRef.current && 
+        dateContainerRef.current &&
         !dateContainerRef.current.contains(target) &&
         !(target as Element).closest('.luxury-select-dropdown')
       ) {
@@ -412,73 +425,74 @@ const BookingEngine = ({ content }: BookingEngineProps) => {
 
   return (
     <div className='flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12 mt-12 md:mt-16 w-full max-w-5xl px-4 mx-auto relative z-10'>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 w-full">
-          <div 
-            ref={dateContainerRef}
-            className="flex flex-col gap-1 w-full border-b border-white/30 pb-2 cursor-pointer relative group"
-            onClick={handleDateClick}
-          >
-            <label className="text-[10px] font-source tracking-[0.2em] uppercase opacity-50 text-white">
-              <TranslatedText>{content.arrival}</TranslatedText>
-            </label>
-            <div className="flex justify-between items-center">
-              <span className="text-lg font-source text-white tracking-wide">{formatDateRange()}</span>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1.5" className="opacity-70 group-hover:opacity-100 transition-opacity">
-                <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
-                <line x1="16" y1="2" x2="16" y2="6" />
-                <line x1="8" y1="2" x2="8" y2="6" />
-                <line x1="3" y1="10" x2="21" y2="10" />
-              </svg>
-            </div>
-            
-            <LuxuryCalendar
-              arrivalDate={arrivalDate}
-              departureDate={departureDate}
-              onArrivalChange={(date) => {
-                setArrivalDate(date);
-                if (!departureDate || new Date(date) >= new Date(departureDate)) {
-                  const nextDay = new Date(date);
-                  nextDay.setDate(nextDay.getDate() + 1);
-                  setDepartureDate(nextDay.toISOString().split('T')[0]);
-                }
-              }}
-              onDepartureChange={(date) => {
-                setDepartureDate(date);
-              }}
-              isOpen={openDropdown === 'date'}
-              onClose={() => setOpenDropdown(null)}
-            />
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 w-full">
+        <div
+          ref={dateContainerRef}
+          className="flex flex-col gap-1 w-full border-b border-white/30 pb-2 cursor-pointer relative group"
+          onClick={handleDateClick}
+        >
+          <label className="text-[10px] font-source tracking-[0.2em] uppercase opacity-50 text-white">
+            <TranslatedText>{content.arrival}</TranslatedText>
+          </label>
+          <div className="flex justify-between items-center">
+            <span className="text-lg font-source text-white tracking-wide">{formatDateRange()}</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1.5" className="opacity-70 group-hover:opacity-100 transition-opacity">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+              <line x1="16" y1="2" x2="16" y2="6" />
+              <line x1="8" y1="2" x2="8" y2="6" />
+              <line x1="3" y1="10" x2="21" y2="10" />
+            </svg>
           </div>
-          
-          <LuxurySelect 
-            label={content.rooms} 
-            value={rooms}
-            options={content.rooms_options}
-            onChange={setRooms}
-            isOpen={openDropdown === 'rooms'}
-            onToggle={() => setOpenDropdown(openDropdown === 'rooms' ? null : 'rooms')}
-            onClose={() => setOpenDropdown(null)}
-          />
 
-          <LuxurySelect 
-            label={content.guests} 
-            value={guests}
-            options={content.guests_options}
-            onChange={setGuests}
-            isOpen={openDropdown === 'guests'}
-            onToggle={() => setOpenDropdown(openDropdown === 'guests' ? null : 'guests')}
+          <LuxuryCalendar
+            arrivalDate={arrivalDate}
+            departureDate={departureDate}
+            onArrivalChange={(date) => {
+              setArrivalDate(date);
+              if (!departureDate || new Date(date) >= new Date(departureDate)) {
+                const nextDay = new Date(date);
+                nextDay.setDate(nextDay.getDate() + 1);
+                setDepartureDate(nextDay.toISOString().split('T')[0]);
+              }
+            }}
+            onDepartureChange={(date) => {
+              setDepartureDate(date);
+            }}
+            isOpen={openDropdown === 'date'}
             onClose={() => setOpenDropdown(null)}
+            content={content}
           />
         </div>
-        
-        <button className='w-full md:w-auto flex items-center justify-center gap-6 bg-secondary border border-secondary rounded-full px-10 py-4 hover:bg-white text-white hover:text-secondary transition-all duration-300 group shadow-xl'>
-            <span className='font-source tracking-[0.2em] text-sm font-medium'>
-              <TranslatedText>{content.cta}</TranslatedText>
-            </span>
-            <svg width="24" height="12" viewBox="0 0 24 12" fill="none" xmlns="http://www.w3.org/2000/svg" className="transform group-hover:translate-x-1 transition-transform">
-                <path d="M0 6H22M22 6L17 1M22 6L17 11" stroke="currentColor" strokeWidth="1.5" />
-            </svg>
-        </button>
+
+        <LuxurySelect
+          label={content.rooms}
+          value={rooms}
+          options={content.rooms_options}
+          onChange={setRooms}
+          isOpen={openDropdown === 'rooms'}
+          onToggle={() => setOpenDropdown(openDropdown === 'rooms' ? null : 'rooms')}
+          onClose={() => setOpenDropdown(null)}
+        />
+
+        <LuxurySelect
+          label={content.guests}
+          value={guests}
+          options={content.guests_options}
+          onChange={setGuests}
+          isOpen={openDropdown === 'guests'}
+          onToggle={() => setOpenDropdown(openDropdown === 'guests' ? null : 'guests')}
+          onClose={() => setOpenDropdown(null)}
+        />
+      </div>
+
+      <button className='w-full md:w-auto flex items-center justify-center gap-6 bg-secondary border border-secondary rounded-full px-10 py-4 hover:bg-white text-white hover:text-secondary transition-all duration-300 group shadow-xl'>
+        <span className='font-source tracking-[0.2em] text-sm font-medium'>
+          <TranslatedText>{content.cta}</TranslatedText>
+        </span>
+        <svg width="24" height="12" viewBox="0 0 24 12" fill="none" xmlns="http://www.w3.org/2000/svg" className="transform group-hover:translate-x-1 transition-transform">
+          <path d="M0 6H22M22 6L17 1M22 6L17 11" stroke="currentColor" strokeWidth="1.5" />
+        </svg>
+      </button>
     </div>
   )
 }
